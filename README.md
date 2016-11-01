@@ -19,15 +19,15 @@ Object.isExtensible()
 
 - 'use strict';
 - Strict Mode: 
-  No more implied global variables within functions.
-  this is not bound to the global object by function form.
-  apply and call do not default to the global object.
-  No with statement.
-  Setting a writeable: false property will throw.
-  Deleting a configurable: false property will throw.
-  Restrictions on eval.
-  eval and arguments are reserved.
-  arguments not linked to parameters.
-  No more arguments.caller or arguments.callee.
-  No more octal literals.
-  Duplicate names in an object literal or function parameters are a syntax error
+  -  No more implied global variables within functions.
+  -  this is not bound to the global object by function form.
+  -  apply and call do not default to the global object.
+  -  No with statement.
+  -  Setting a writeable: false property will throw.
+  -  Deleting a configurable: false property will throw.
+  -  Restrictions on eval.
+  -  eval and arguments are reserved.
+  -  arguments not linked to parameters.
+  -  No more arguments.caller or arguments.callee.
+  -  No more octal literals.
+  -  Duplicate names in an object literal or function parameters are a syntax error
