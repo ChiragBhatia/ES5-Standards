@@ -9,13 +9,13 @@ The Object.create() method creates a new object with the specified prototype obj
 <h3>Need for this</h3>
 Object.create() is very similar to the `new` keyword. Both create a new instance of the Object type specified. The only difference is that Object.create() does not execute the constructor unless specified to do so.
 
-<h3>Disadvantages of this tag</h3>
+<h3>Disadvantages</h3>
 <ol>
   <li>Object.create does not call the constructor function unless specifically asked to do so.</li>
   <li>A limited variant of Object.create is available as a polyfill for older browsers which do not have support for the same.</li>
 </ol>
 
-<h3>Advantages of this tag</h3>
+<h3>Advantages</h3>
 <ol>
   <li>Object.create allows you to initialize properties of the created object using the second argument of its function, with an object literal using a syntax similar to the one used by the Object.defineProperties and Object.defineProperty methods.</li>
   <li>It lets you set the property attributes during initialization (enumerable, writable, or configurable), which can be really useful.</li>
