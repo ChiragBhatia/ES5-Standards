@@ -11,7 +11,7 @@ Objects are extensible by default: they can have new properties added to them, a
 
 <h3>Advantage</h3>
 <ol>
-  <li>Object.isExtensible is a single function that can check whether an object is sealed, frozen or is marked with `Object.preventExtension`.</li>
+  <li>Object.isExtensible is a single function that can check whether an object is sealed, frozen or is marked with Object.preventExtension.</li>
 </ol>
 
 <h3>Working Example</h3>
