@@ -17,7 +17,7 @@ Array.prototype.filter() provides a clean method for developers to iterate throu
 <h3>Advantages</h3>
 <ol>
 	<li>Array.prototype.filter() provides a clean way for filtering out unwanted array items based on a filter criteria without having to iterate through the array using for loops.</li>
-	<li>A polyfill is available for `Array.prototype.filter()` for older browsers where the method is not supported by the browser.</li>
+	<li>A polyfill is available for Array.prototype.filter() for older browsers where the method is not supported by the browser.</li>
 </ol>
 
 <h3>Working Example</h3>
