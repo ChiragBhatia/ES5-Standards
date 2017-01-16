@@ -1,0 +1,804 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Js on ES5 Standards</title>
+    <link>/js/index.xml</link>
+    <description>Recent content in Js on ES5 Standards</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en-us</language>
+    <lastBuildDate>Sat, 01 Oct 2016 00:44:16 +0530</lastBuildDate>
+    <atom:link href="/js/index.xml" rel="self" type="application/rss+xml" />
+    
+    <item>
+      <title>ES5 Objects</title>
+      <link>/js/</link>
+      <pubDate>Sat, 01 Oct 2016 00:44:16 +0530</pubDate>
+      
+      <guid>/js/</guid>
+      <description>
+
+&lt;h1 id=&#34;es-5-objects&#34;&gt;ES-5 Objects&lt;/h1&gt;
+
+&lt;p&gt;Click on any Object in left side menu to know about that object.&lt;/p&gt;
+</description>
+    </item>
+    
+    <item>
+      <title>Array.isArray()</title>
+      <link>/js/Array.isArray/</link>
+      <pubDate>Fri, 11 Nov 2016 00:45:05 +0530</pubDate>
+      
+      <guid>/js/Array.isArray/</guid>
+      <description>&lt;p&gt;The &lt;em&gt;Array.isArray()&lt;/em&gt; determines whether the passed value is an Array.&lt;/p&gt;
+
+&lt;p&gt;&lt;h3&gt;Need for this&lt;/h3&gt;
+If the passed object is an Array, true is returned, otherwise false is returned.&lt;/p&gt;
+
+&lt;pre&gt;&lt;code&gt;Array.isArray(obj)
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;p&gt;&lt;h3&gt;Advantages&lt;/h3&gt;
+&lt;ol&gt;
+  &lt;li&gt;In most cases instanceof Array should be enough. However, since instanceof Array doesn&amp;rsquo;t work correctly across iframes/window, Array.isArray() would be more robust solution.&lt;/li&gt;
+&lt;/ol&gt;&lt;/p&gt;
+
+&lt;p&gt;&lt;h3&gt;Disadvantages&lt;/h3&gt;
+&lt;ol&gt;
+  &lt;li&gt;&lt;i&gt;Array.isArray()&lt;/i&gt; is slow comparative to &lt;i&gt;instanceof Array&lt;/i&gt; as it performs more robust check and takes a slight performance hit. &lt;/li&gt;
+&lt;/ol&gt;&lt;/p&gt;
+
+&lt;p&gt;&lt;h3&gt;Working Example&lt;/h3&gt;
+The following example illustrates the use of the &lt;em&gt;Array.isArray()&lt;/em&gt; function.&lt;/p&gt;
+
+&lt;pre&gt;&lt;code&gt;// Using Array string litteral
+var ar = [];
+ var result = Array.isArray(ar);
+ // Output: true
+
+// Using new Array with an empty set
+ var ar = new Array();
+ var result = Array.isArray(ar);
+ // Output: true
+
+ var ar = [1, 2, 3];
+ var result = Array.isArray(ar);
+ // Output: true
+
+// Testing with a string litteral &amp;quot;an array&amp;quot;
+ var injectingString = Array.isArray(&amp;quot;an array&amp;quot;);
+ document.write(injectingString);
+ // Output: false
+
+// Testing with an object litteral
+ var injectingObject = Array.isArray({});
+ document.write(injectingObject);
+ // Output: false
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;p&gt;&lt;h3&gt;References&lt;/h3&gt;
+&lt;a href=&#34;https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Array/isArray&#34;&gt;https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Array/isArray&lt;/a&gt;&lt;br/&gt;
+&lt;a href=&#34;https://docs.webplatform.org/wiki/javascript/Array/isArray&#34;&gt;https://docs.webplatform.org/wiki/javascript/Array/isArray&lt;/a&gt;&lt;/p&gt;
+</description>
+    </item>
+    
+    <item>
+      <title>Array.prototype.every()</title>
+      <link>/js/Array.prototype.every/</link>
+      <pubDate>Wed, 16 Nov 2016 00:45:05 +0530</pubDate>
+      
+      <guid>/js/Array.prototype.every/</guid>
+      <description>&lt;p&gt;The &lt;code&gt;every()&lt;/code&gt; method tests whether all the elements in an array passes the test implemented by the provided function.&lt;/p&gt;
+
+&lt;h3&gt;Need for this&lt;/h3&gt;
+Array.prototype.every() provides a clean method for developers to iterate through an array and check if all items in the array pass a certain test criteria without having to loop through the Array manually using a for loop.
+
+&lt;h3&gt;Advantages&lt;/h3&gt;
+&lt;ol&gt;
+    &lt;li&gt;Array.prototype.every() provides a clean way for checking if all array items pass the test criteria without having to iterate through the array using for loops.&lt;/li&gt;
+    &lt;li&gt;A polyfill is available for Array.prototype.every() for older browsers where the method is not supported by the browser.&lt;/li&gt;
+&lt;/ol&gt;
+
+&lt;h3&gt;Working Example&lt;/h3&gt;
+
+&lt;pre&gt;&lt;code&gt;function isEven(element, index, array) {
+  return (element % 2 === 0);
+}
+
+[50, 37, 49, 94, 4].every(isEven);   // false
+[40, 32, 16, 128, 78].every(isEven); // true
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;p&gt;&lt;h3&gt;References&lt;/h3&gt;
+&lt;a href=&#34;https://developer.mozilla.org/en/docs/Web/JavaScript/Reference/Global_Objects/Array/every&#34;&gt;https://developer.mozilla.org/en/docs/Web/JavaScript/Reference/Global_Objects/Array/every&lt;/a&gt;
+&lt;br&gt;
+&lt;a href=&#34;https://docs.webplatform.org/wiki/javascript/Array/every&#34;&gt;https://docs.webplatform.org/wiki/javascript/Array/every&lt;/a&gt;
+&lt;br&gt;
+&lt;a href=&#34;https://www.tutorialspoint.com/javascript/array_every.htm&#34;&gt;https://www.tutorialspoint.com/javascript/array_every.htm&lt;/a&gt;&lt;/p&gt;
+</description>
+    </item>
+    
+    <item>
+      <title>Array.prototype.filter()</title>
+      <link>/js/Array.prototype.filter/</link>
+      <pubDate>Wed, 16 Nov 2016 00:45:05 +0530</pubDate>
+      
+      <guid>/js/Array.prototype.filter/</guid>
+      <description>&lt;p&gt;The &lt;code&gt;Array.prototype.filter()&lt;/code&gt; method creates a new array with all elements that pass the filter test implemented by the provided function.&lt;/p&gt;
+
+&lt;h3&gt;Need for this&lt;/h3&gt;
+Array.prototype.filter() provides a clean method for developers to iterate through an array and filter out array items based on a certain criteria without having to loop through the Array manually using a for loop.
+
+&lt;h3&gt;Disadvantage&lt;/h3&gt;
+&lt;ol&gt;
+  &lt;li&gt;The method does not directly modify the original array, but creates a new array instead. This results in usage of extra memory in cases where the original array needs to be replaced.&lt;/li&gt;
+&lt;/ol&gt;
+
+&lt;h3&gt;Advantages&lt;/h3&gt;
+&lt;ol&gt;
+    &lt;li&gt;Array.prototype.filter() provides a clean way for filtering out unwanted array items based on a filter criteria without having to iterate through the array using for loops.&lt;/li&gt;
+    &lt;li&gt;A polyfill is available for Array.prototype.filter() for older browsers where the method is not supported by the browser.&lt;/li&gt;
+&lt;/ol&gt;
+
+&lt;h3&gt;Working Example&lt;/h3&gt;
+
+&lt;pre&gt;&lt;code&gt;// Define a callback function to filter prime numbers.
+function CheckIfPrime(value, index, ar) {
+    var high = Math.floor(Math.sqrt(value)) + 1;
+
+    for (var i = 2; i &amp;lt;= high; i++) {
+        if (value % i == 0) {
+            return false;
+        }
+    }
+    return true;
+}
+
+// Create the original array.
+var numbers = [51, 53, 55, 57, 59, 61, 63, 65, 67, 69, 71, 73];
+
+// Get the prime numbers that are in the original array.
+var primes = numbers.filter(CheckIfPrime);
+
+console.log(primes);
+// Output: 53, 59, 61, 67, 71, 73
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;p&gt;&lt;h3&gt;References&lt;/h3&gt;
+&lt;a href=&#34;https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Array/filter&#34;&gt;https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Array/filter&lt;/a&gt;
+&lt;br&gt;
+&lt;a href=&#34;https://msdn.microsoft.com/en-us/library/ff679973(v=vs.94).aspx&#34;&gt;https://msdn.microsoft.com/en-us/library/ff679973(v=vs.94).aspx&lt;/a&gt;
+&lt;br&gt;
+&lt;a href=&#34;https://www.tutorialspoint.com/javascript/array_filter.htm&#34;&gt;https://www.tutorialspoint.com/javascript/array_filter.htm&lt;/a&gt;&lt;/p&gt;
+</description>
+    </item>
+    
+    <item>
+      <title>Array.prototype.reduce()</title>
+      <link>/js/Array.prototype.reduce/</link>
+      <pubDate>Fri, 11 Nov 2016 00:45:05 +0530</pubDate>
+      
+      <guid>/js/Array.prototype.reduce/</guid>
+      <description>&lt;p&gt;The &lt;em&gt;reduce()&lt;/em&gt; method applies a function against an accumulator and each value of the array (from left-to-right) to reduce it to a single value.&lt;/p&gt;
+
+&lt;p&gt;&lt;h3&gt;Need for this&lt;/h3&gt;
+Calls the specified callback function for all the elements in an array. The return value of the callback function is the accumulated result, and is provided as an argument in the next call to the callback function.&lt;/p&gt;
+
+&lt;pre&gt;&lt;code&gt;arr.reduce(callback[, initialValue])
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;p&gt;reduce executes the callback function once for each element present in the array, excluding holes in the array, receiving four arguments:&lt;/p&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;previousValue&lt;/li&gt;
+  &lt;li&gt;currentValue&lt;/li&gt;
+  &lt;li&gt;currentIndex&lt;/li&gt;
+  &lt;li&gt;array&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;&lt;h3&gt;Advantages&lt;/h3&gt;
+&lt;ol&gt;
+  &lt;li&gt;Searching for a particular element in a JavaScript array is often carried out using a typical iteration. In some cases, forEach and some can be used as well. What is often overlooked is the potential use of Array.prototype.reduce to perform such an operation.&lt;/li&gt;
+  &lt;li&gt;Every time you find yourself going from a list of values to one value ( reducing ) ask yourself if you could leverage the built-in &lt;em&gt;Array.prototype.reduce()&lt;/em&gt; function. You can reduce with any sort of operation that combines two values. Not just addition. And not just arithmetic operations.&lt;/li&gt;
+&lt;/ol&gt;&lt;/p&gt;
+
+&lt;p&gt;Let’s take a look at the following problem (part of JavaScript Under Pressure): &lt;strong&gt;find the longest string&lt;/strong&gt; in an array of strings. An imperative solution looks something like the following code (using forEach may simplify the loop but the idea remains the same):&lt;/p&gt;
+
+&lt;pre&gt;&lt;code&gt;function findLongest(entries) {
+  for (var i = , longest = &#39;&#39;; i &amp;lt; entries.length; ++i)
+    if (entries[i].length &amp;gt; longest.length) longest = entries[i];
+  return longest;
+}
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;p&gt;A version which relies on &lt;strong&gt;reduce&lt;/strong&gt; is a single statement:&lt;/p&gt;
+
+&lt;pre&gt;&lt;code&gt;function findLongest(entries) {
+  return entries.reduce(function (longest, entry) {
+    return entry.length &amp;gt; longest.length ? entry : longest;
+  }, &#39;&#39;);
+}
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;p&gt;&lt;h3&gt;Disadvantages&lt;/h3&gt;
+&lt;ol&gt;
+  &lt;li&gt;If an initialValue is provided, the reduce method calls the callbackfn function one time for each element present in the array, in ascending index order. If an initialValue is not provided, the reduce method calls the callbackfn function on each element, starting with the second element.&lt;/li&gt;
+  &lt;li&gt;The return value of the callback function is provided as the previousValue argument on the next call to the callback function. The return value of the last call to the callback function is the return value of the reduce method.&lt;/li&gt;
+  &lt;li&gt;The callback function is not called for missing elements of the array.&lt;/li&gt;
+&lt;/ol&gt;&lt;/p&gt;
+
+&lt;p&gt;&lt;h3&gt;Working Example&lt;/h3&gt;
+The following example illustrates the use of the &lt;em&gt;Array.prototype.reduce()&lt;/em&gt; method.&lt;/p&gt;
+
+&lt;pre&gt;&lt;code&gt;var total = [0, 1, 2, 3].reduce(function(a, b) {
+  return a + b;
+});
+// total == 6
+
+var flattened = [[0, 1], [2, 3], [4, 5]].reduce(function(a, b) {
+  return a.concat(b);
+}, []);
+// flattened is [0, 1, 2, 3, 4, 5]
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;p&gt;&lt;br/&gt;&lt;/p&gt;
+
+&lt;pre&gt;&lt;code&gt;// Define the callback function.
+function appendCurrent (previousValue, currentValue) {
+return previousValue + &amp;quot;::&amp;quot; + currentValue;
+}
+
+// Create an array.
+var elements = [&amp;quot;abc&amp;quot;, &amp;quot;def&amp;quot;, 123, 456];
+
+// Call the reduce method, which calls the callback function
+// for each array element.
+var result = elements.reduce(appendCurrent);
+
+document.write(result);
+
+// Output:
+//  abc::def::123::456
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;p&gt;&lt;h3&gt;References&lt;/h3&gt;
+&lt;a href=&#34;https://developer.mozilla.org/en/docs/Web/JavaScript/Reference/Global_Objects/Array/reduce&#34;&gt;https://developer.mozilla.org/en/docs/Web/JavaScript/Reference/Global_Objects/Array/reduce&lt;/a&gt;&lt;br/&gt;
+&lt;a href=&#34;https://github.com/FreeCodeCamp/FreeCodeCamp/wiki/JS-Array-Prototype-Reduce&#34;&gt;https://github.com/FreeCodeCamp/FreeCodeCamp/wiki/JS-Array-Prototype-Reduce&lt;/a&gt;&lt;br/&gt;
+&lt;a href=&#34;https://msdn.microsoft.com/en-us/library/ff679975(v=VS.94).aspx&#34;&gt;https://msdn.microsoft.com/en-us/library/ff679975(v=VS.94).aspx&lt;/a&gt;
+&lt;br/&gt;
+&lt;a href=&#34;https://ariya.io/2013/10/searching-using-array-prototype-reduce&#34;&gt;https://ariya.io/2013/10/searching-using-array-prototype-reduce&lt;/a&gt;&lt;/p&gt;
+</description>
+    </item>
+    
+    <item>
+      <title>Array.prototype.reduceRight()</title>
+      <link>/js/Array.prototype.reduceRight/</link>
+      <pubDate>Fri, 11 Nov 2016 00:45:05 +0530</pubDate>
+      
+      <guid>/js/Array.prototype.reduceRight/</guid>
+      <description>&lt;p&gt;The &lt;em&gt;reduceRight()&lt;/em&gt; method applies a function against an accumulator and each value of the array (from right-to-left) has to reduce it to a single value.&lt;/p&gt;
+
+&lt;p&gt;&lt;h3&gt;Need for this&lt;/h3&gt;
+Calls the specified callback function for all the elements in an array, in descending order. The return value of the callback function is the accumulated result, and is provided as an argument in the next call to the callback function.&lt;/p&gt;
+
+&lt;pre&gt;&lt;code&gt;arr.reduceRight(callback[, initialValue])
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;p&gt;reduceRight executes the callback function once for each element present in the array, excluding holes in the array, receiving four arguments: the initial value (or value from the previous callback call), the value of the current element, the current index, and the array over which iteration is occurring.&lt;/p&gt;
+
+&lt;p&gt;&lt;h3&gt;Advantages&lt;/h3&gt;
+&lt;ol&gt;
+  &lt;li&gt;Having grasped reduce(), it is not a far stretch to get reduceRight(). Whereas reduce() iterates over an array from left to right, reduceRight() iterates from right to left. This does not make a difference for the standard sum/count use cases, but it can come in handy for other purposes. For example, if we have an array of Ang Lee movies sorted in reverse chronological order, we could use reduceRight() to sort these movies in chronological order by decade.&lt;/li&gt;
+&lt;/ol&gt;&lt;/p&gt;
+
+&lt;pre&gt;&lt;code&gt;var angLeeMovies = [
+{title: &#39;Life of Pi&#39;, year: 2012},
+{title: &#39;Brokeback Mountain&#39;, year: 2005},
+{title: &#39;Crouching Tiger, Hidden Dragon&#39;, year: 2000},
+{title: &#39;The Wedding Banquet&#39;, year: 1993}
+  ],
+  moviesByDecade;
+
+function addMovieToDecade(filmography, decade, title) {
+  filmography[decade] ? filmography[decade].push(title) : filmography[decade] = [title];
+  return filmography;
+}
+
+moviesByDecade = angLeeMovies.reduceRight(function(previousValue, currentValue) {
+  if (currentValue.year &amp;gt;= 2010) {
+return addMovieToDecade(previousValue, &amp;quot;2010s&amp;quot;, currentValue.title);
+  } else if (currentValue.year &amp;gt;= 2000) {
+return addMovieToDecade(previousValue, &amp;quot;2000s&amp;quot;, currentValue.title);
+  } else {
+return addMovieToDecade(previousValue, &amp;quot;1990s&amp;quot;, currentValue.title);
+  }
+}, {});
+
+console.log(moviesByDecade);
+// {
+//   &amp;quot;1990s&amp;quot;: [&amp;quot;The Wedding Banquet&amp;quot;],
+//   &amp;quot;2000s&amp;quot;: [&amp;quot;Crouching Tiger, Hidden Dragon&amp;quot;, &amp;quot;Brokeback Mountain&amp;quot;],
+//   &amp;quot;2010s&amp;quot;: [&amp;quot;Life of Pi&amp;quot;]
+// }
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;p&gt;&lt;h3&gt;Disadvantages&lt;/h3&gt;
+&lt;ol&gt;
+  &lt;li&gt;If an initialValue is provided, the reduceRight method calls the callback function one time for each element in the array, in descending index order. If no initialValue is provided, the reduceRight method calls the callbackfn function on each element, starting with the second-to-last element, in descending index order.&lt;/li&gt;
+&lt;/ol&gt;&lt;/p&gt;
+
+&lt;p&gt;&lt;h3&gt;Working Example&lt;/h3&gt;
+The following example concatenates array values into a string, separating the values with &amp;ldquo;::&amp;ldquo;. Because no initial value is provided to the &lt;em&gt;reduceRight&lt;/em&gt; method, the first call to the callback function has 456 as the previousValue argument and 123 as the currentValue argument.&lt;/p&gt;
+
+&lt;pre&gt;&lt;code&gt; // Define the callback function.
+ function appendCurrent (previousValue, currentValue) {
+ return previousValue + &amp;quot;::&amp;quot; + currentValue;
+ }
+
+ // Create an array.
+ var elements = [&amp;quot;abc&amp;quot;, &amp;quot;def&amp;quot;, 123, 456];
+
+ // Call the reduceRight method, which calls the callback function
+ // for each array element, in descending index order.
+ var result = elements.reduceRight(appendCurrent);
+
+ document.write(result);
+
+ // Output:
+ //  456::123::def::abc
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;p&gt;&lt;h3&gt;References&lt;/h3&gt;
+&lt;a href=&#34;https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Array/ReduceRight&#34;&gt;https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Array/ReduceRight&lt;/a&gt;&lt;br/&gt;
+&lt;a href=&#34;https://docs.webplatform.org/wiki/javascript/Array/reduceRight&#34;&gt;https://docs.webplatform.org/wiki/javascript/Array/reduceRight&lt;/a&gt;&lt;br/&gt;&lt;/p&gt;
+</description>
+    </item>
+    
+    <item>
+      <title>Array.prototype.some()</title>
+      <link>/js/Array.prototype.some/</link>
+      <pubDate>Fri, 11 Nov 2016 00:45:05 +0530</pubDate>
+      
+      <guid>/js/Array.prototype.some/</guid>
+      <description>&lt;p&gt;The &lt;em&gt;some()&lt;/em&gt; method tests whether some element in the array passes the test implemented by the provided function.&lt;/p&gt;
+
+&lt;p&gt;&lt;h3&gt;Need for this&lt;/h3&gt;
+&lt;em&gt;.some()&lt;/em&gt; will run the callback function for each element in the array. Once the callback returns true, .some() will return true. If the callback returns a falsy value for every element in the array then .some() returns false.&lt;/p&gt;
+
+&lt;p&gt;&lt;em&gt;.some()&lt;/em&gt; will not change/mutate the array that called it.&lt;/p&gt;
+
+&lt;pre&gt;&lt;code&gt;arr.some(callback[, thisArg])
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;p&gt;some() executes the callback function once for each element present in the array until it finds one where callback returns a truthy value (a value that becomes true when converted to a Boolean). If such an element is found, some() immediately returns true. Otherwise, some() returns false. callback is invoked only for indexes of the array which have assigned values; it is not invoked for indexes which have been deleted or which have never been assigned values.&lt;/p&gt;
+
+&lt;p&gt;&lt;h3&gt;Advantages&lt;/h3&gt;
+&lt;ol&gt;
+  &lt;li&gt;Iterating over an array to search for an item is a pretty common task. With JavaScript, Array.prototype.forEach is often the popular choice. In some cases however, Array.prototype.some can be a better fit for the job if there is no need to search the entire array once a condition is fulfilled.&lt;/li&gt;
+  &lt;li&gt;.some() will not change/mutate the array that called it.&lt;/li&gt;
+&lt;/ol&gt;&lt;/p&gt;
+
+&lt;p&gt;&lt;h3&gt;Working Example&lt;/h3&gt;
+The following example illustrates the use of the &lt;em&gt;Array.prototype.some()&lt;/em&gt; function.&lt;/p&gt;
+
+&lt;pre&gt;&lt;code&gt;var isEven = function isEven(currentElement, index, array) {
+if(currentElement % 2 === 0) {
+return true;
+} else {
+return false;
+}
+}
+
+var arr1 = [1, 2, 3, 4, 5, 6];
+arr1.some(isEven);  // returns true
+var arr2 = [1, 3, 5, 7];
+arr2.some(isEven);  // returns false
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;p&gt;&lt;h3&gt;References&lt;/h3&gt;
+&lt;a href=&#34;https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Array/some&#34;&gt;https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Array/some&lt;/a&gt;&lt;br/&gt;
+&lt;a href=&#34;https://ariya.io/2013/08/searching-with-array-prototype-some&#34;&gt;https://ariya.io/2013/08/searching-with-array-prototype-some&lt;/a&gt;&lt;/p&gt;
+</description>
+    </item>
+    
+    <item>
+      <title>JSON.parse()</title>
+      <link>/js/JSON.parse/</link>
+      <pubDate>Fri, 11 Nov 2016 00:45:05 +0530</pubDate>
+      
+      <guid>/js/JSON.parse/</guid>
+      <description>&lt;p&gt;The JSON.parse() method parses a JSON string, constructing the JavaScript value or object described by the string. An optional reviver function can be provided to perform a transformation on the resulting object before it is returned.&lt;/p&gt;
+
+&lt;h3&gt;Need for this&lt;/h3&gt;
+JSON.parse allows developers to fetch JSON strings through ajax requests or other similar methods and convert them into a JSON object. Prior to the introduction of `JSON.parse()`, a common approach used by developers to convert a string to a JSON object was to use `eval()`. Using `eval()` for conversion of data can be dangerous since the JSON data may be suffixed with malicious code which can get evaluated unintentionally. `JSON.parse` ensures that no code is run within the string as it is only responsible for conversion.
+
+&lt;h3&gt;Advantages&lt;/h3&gt;
+&lt;ol&gt;
+  &lt;li&gt;JSON.parse() ensures that the JSON string is not malformed.&lt;/li&gt;
+  &lt;li&gt;JSON.parse() allows a second (reviver) parameter to transform the JSON values before they are returned as a JSON object.&lt;/li&gt;
+&lt;/ol&gt;
+
+&lt;h3&gt;Working Example&lt;/h3&gt;
+
+&lt;pre&gt;&lt;code&gt;JSON.parse(&#39;{&amp;quot;p&amp;quot;: 5}&#39;, (key, value) =&amp;gt;
+typeof value === &#39;number&#39;
+? value * 2 // return value * 2 for numbers
+: value     // return everything else unchanged
+);
+
+// { p: 10 }
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;p&gt;&lt;h3&gt;References&lt;/h3&gt;
+&lt;a href=&#34;https://developer.mozilla.org/en/docs/Web/JavaScript/Reference/Global_Objects/JSON/parse&#34;&gt;https://developer.mozilla.org/en/docs/Web/JavaScript/Reference/Global_Objects/JSON/parse&lt;/a&gt;
+&lt;br&gt;
+&lt;a href=&#34;https://msdn.microsoft.com/library/cc836466(v=vs.94).aspx&#34;&gt;https://msdn.microsoft.com/library/cc836466(v=vs.94).aspx&lt;/a&gt;&lt;/p&gt;
+</description>
+    </item>
+    
+    <item>
+      <title>JSON.parse()</title>
+      <link>/js/JSON.stringify/</link>
+      <pubDate>Wed, 16 Nov 2016 00:45:05 +0530</pubDate>
+      
+      <guid>/js/JSON.stringify/</guid>
+      <description>&lt;p&gt;The JSON.stringify() method converts a JavaScript value to a JSON string, optionally replacing values if a replacer function is specified, or optionally including only the specified properties if a replacer array is specified.&lt;/p&gt;
+
+&lt;h3&gt;Need for this&lt;/h3&gt;
+JSON.stringify allows developers to convert JavaScript objects into strings for processing. Optionally, it also allows the developer to pass a `replacer` function that allows manipulation / filter of key / values of the input Object before it is returned as a string.
+
+&lt;h3&gt;Advantages&lt;/h3&gt;
+&lt;ol&gt;
+  &lt;li&gt;JSON.stringify() ensures that the JSON object passed is not malformed and in some cases fixes the syntax of malformed JSON objects.&lt;/li&gt;
+  &lt;li&gt;JSON.stringify() allows a second (replacer) parameter to transform / filter out the JSON values before they are returned as a string.&lt;/li&gt;
+&lt;/ol&gt;
+
+&lt;h3&gt;Working Example&lt;/h3&gt;
+
+&lt;pre&gt;&lt;code&gt;JSON.stringify({ x: 15, y: 26 });
+// &#39;{&amp;quot;x&amp;quot;:5,&amp;quot;y&amp;quot;:6}&#39;
+
+function replacer(key, value) {
+    // Filtering out properties
+    if (typeof value === &amp;quot;number&amp;quot; || typeof value === &amp;quot;object&amp;quot;) {
+        return value;
+    }
+    return undefined;
+}
+var foo = {name: &amp;quot;Deloitte&amp;quot;, city: &amp;quot;Mumbai&amp;quot;, offices: 1, location: &amp;quot;Powai&amp;quot;, employees: 15000};
+JSON.stringify(foo, replacer);
+// &#39;{&amp;quot;offices&amp;quot;:1,&amp;quot;employees&amp;quot;:15000}&#39;
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;p&gt;&lt;h3&gt;References&lt;/h3&gt;
+&lt;a href=&#34;https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/JSON/stringify&#34;&gt;https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/JSON/stringify&lt;/a&gt;
+&lt;br&gt;
+&lt;a href=&#34;https://msdn.microsoft.com/library/cc836459(v=vs.94).aspx&#34;&gt;https://msdn.microsoft.com/library/cc836459(v=vs.94).aspx&lt;/a&gt;&lt;/p&gt;
+</description>
+    </item>
+    
+    <item>
+      <title>Object.create()</title>
+      <link>/js/Object.create/</link>
+      <pubDate>Thu, 03 Nov 2016 00:45:05 +0530</pubDate>
+      
+      <guid>/js/Object.create/</guid>
+      <description>&lt;p&gt;The Object.create() method creates a new object with the specified prototype object and properties.&lt;/p&gt;
+
+&lt;h3&gt;Need for this&lt;/h3&gt;
+Object.create() is very similar to the `new` keyword. Both create a new instance of the Object type specified. The only difference is that Object.create() does not execute the constructor unless specified to do so.
+
+&lt;h3&gt;Disadvantages&lt;/h3&gt;
+&lt;ol&gt;
+  &lt;li&gt;Object.create does not call the constructor function unless specifically asked to do so.&lt;/li&gt;
+  &lt;li&gt;A limited variant of Object.create is available as a polyfill for older browsers which do not have support for the same.&lt;/li&gt;
+&lt;/ol&gt;
+
+&lt;h3&gt;Advantages&lt;/h3&gt;
+&lt;ol&gt;
+  &lt;li&gt;Object.create allows you to initialize properties of the created object using the second argument of its function, with an object literal using a syntax similar to the one used by the Object.defineProperties and Object.defineProperty methods.&lt;/li&gt;
+  &lt;li&gt;It lets you set the property attributes during initialization (enumerable, writable, or configurable), which can be really useful.&lt;/li&gt;
+&lt;/ol&gt;
+
+&lt;h3&gt;Working Example&lt;/h3&gt;
+
+&lt;pre&gt;&lt;code&gt;    // Shape - superclass
+    function Shape() {
+      this.x = 0;
+      this.y = 0;
+    }
+
+    // superclass method
+    Shape.prototype.move = function(x, y) {
+      this.x += x;
+      this.y += y;
+      console.info(&#39;Shape moved.&#39;);
+    };
+
+    // Rectangle - subclass
+    function Rectangle() {
+      Shape.call(this); // call super constructor.
+    }
+
+    // subclass extends superclass
+    Rectangle.prototype = Object.create(Shape.prototype);
+    Rectangle.prototype.constructor = Rectangle;
+
+    var rect = new Rectangle();
+
+    console.log(&#39;Is rect an instance of Rectangle?&#39;, rect instanceof Rectangle);// true
+    console.log(&#39;Is rect an instance of Shape?&#39;, rect instanceof Shape);// true
+    rect.move(1, 1); // Outputs, &#39;Shape moved.&#39;
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;p&gt;&lt;h3&gt;References&lt;/h3&gt;
+&lt;a href=&#34;https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Object/create&#34;&gt;https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Object/create&lt;/a&gt;
+&lt;br&gt;
+&lt;a href=&#34;http://stackoverflow.com/a/2709811/976897&#34;&gt;http://stackoverflow.com/a/2709811/976897&lt;/a&gt;
+&lt;br&gt;
+&lt;a href=&#34;http://speakingjs.com/es5/ch17.html&#34;&gt;http://speakingjs.com/es5/ch17.html&lt;/a&gt;&lt;/p&gt;
+</description>
+    </item>
+    
+    <item>
+      <title>Object.defineProperties()</title>
+      <link>/js/Object.defineProperties/</link>
+      <pubDate>Wed, 02 Nov 2016 00:45:05 +0530</pubDate>
+      
+      <guid>/js/Object.defineProperties/</guid>
+      <description>&lt;p&gt;The Object.defineProperties() method defines new or modifies existing properties directly on an object, returning the object.&lt;/p&gt;
+
+&lt;h3&gt;Need for this&lt;/h3&gt;
+Object.defineProperties works similar to `Object.defineProperty` in the sense that both are used to create or modify properties of an object. The only difference is that Object.defineProperties allows the developer to work on multiple properties in a single line of code as opposed to Object.defineProperty which can only handle one property at a time.
+
+&lt;h3&gt;Advantage&lt;/h3&gt;
+&lt;ol&gt;
+  &lt;li&gt;Object.defineProperties allows the developer to work on multiple properties of an object in a single line of code.&lt;/li&gt;
+&lt;/ol&gt;
+
+&lt;h3&gt;Working Example&lt;/h3&gt;
+
+&lt;pre&gt;&lt;code&gt;    var obj = {};
+    Object.defineProperties(obj, {
+      &amp;quot;property1&amp;quot;: {
+        value: true,
+        writable: true
+      },
+      &amp;quot;property2&amp;quot;: {
+        value: &amp;quot;Hello&amp;quot;,
+        writable: false
+      }
+      // etc. etc.
+    });
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;p&gt;&lt;h3&gt;References&lt;/h3&gt;
+&lt;a href=&#34;https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Object/defineProperties&#34;&gt;https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Object/defineProperties&lt;/a&gt;
+&lt;br&gt;
+&lt;a href=&#34;https://msdn.microsoft.com/en-us/library/ff800817(v=vs.94).aspx&#34;&gt;https://msdn.microsoft.com/en-us/library/ff800817(v=vs.94).aspx&lt;/a&gt;&lt;/p&gt;
+</description>
+    </item>
+    
+    <item>
+      <title>Object.defineProperty()</title>
+      <link>/js/Object.defineProperty/</link>
+      <pubDate>Wed, 02 Nov 2016 00:45:05 +0530</pubDate>
+      
+      <guid>/js/Object.defineProperty/</guid>
+      <description>&lt;p&gt;The Object.defineProperty() method defines a new property directly on an object, or modifies an existing property on an object, and returns the object.&lt;/p&gt;
+
+&lt;h3&gt;Need for this&lt;/h3&gt;
+This method allows precise addition to or modification of a property on an object. Normal property addition through assignment creates properties which show up during property enumeration (for...in loop or Object.keys method), whose values may be changed, and which may be deleted. This method allows these extra details to be changed from their defaults. By default, values added using Object.defineProperty() are immutable.
+
+&lt;h3&gt;Advantages&lt;/h3&gt;
+&lt;ol&gt;
+  &lt;li&gt;Object.defineProperty allows the developer to modify data properties of an object. e.g. to make an Object property read-only.&lt;/li&gt;
+  &lt;li&gt;Object.defineProperty allows the developer to override the default browser properties which are otherwise not overridable. This can be useful during unit testing.&lt;/li&gt;
+&lt;/ol&gt;
+
+&lt;h3&gt;Working Example&lt;/h3&gt;
+
+&lt;pre&gt;&lt;code&gt;    // Create a user-defined object.
+    var obj = {};
+
+    // Add a read-only data property to the object.
+    Object.defineProperty(obj, &amp;quot;newDataProperty&amp;quot;, {
+        value: 101,
+        writable: false,
+        enumerable: true,
+        configurable: true
+    });
+
+    console.log(obj.newDataProperty);   // 101
+    obj.newDataProperty = 202;
+    console.log(obj.newDataProperty);   // 101
+
+    // Change read-only property to writable
+    Object.defineProperty(obj, &amp;quot;newDataProperty&amp;quot;, {
+        writable: true
+    });
+
+    console.log(obj.newDataProperty);   // 101
+    obj.newDataProperty = 202;
+    console.log(obj.newDataProperty);   // 202
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;p&gt;&lt;h3&gt;References&lt;/h3&gt;
+&lt;a href=&#34;https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Object/defineProperty&#34;&gt;https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Object/defineProperty&lt;/a&gt;
+&lt;br&gt;
+&lt;a href=&#34;https://msdn.microsoft.com/en-us/library/dd548687(v=vs.94).aspx&#34;&gt;https://msdn.microsoft.com/en-us/library/dd548687(v=vs.94).aspx&lt;/a&gt;
+&lt;br&gt;
+&lt;a href=&#34;https://davidwalsh.name/defineproperty&#34;&gt;https://davidwalsh.name/defineproperty&lt;/a&gt;&lt;/p&gt;
+</description>
+    </item>
+    
+    <item>
+      <title>Object.freeze()</title>
+      <link>/js/Object.freeze/</link>
+      <pubDate>Fri, 04 Nov 2016 00:45:05 +0530</pubDate>
+      
+      <guid>/js/Object.freeze/</guid>
+      <description>&lt;p&gt;The &lt;em&gt;Object.freeze()&lt;/em&gt; method freezes an object: that is, prevents new properties from being added to it; prevents existing properties from being removed; and prevents existing properties, or their enumerability, configurability, or writability, from being changed. In essence the object is made effectively immutable. The method returns the object being frozen.&lt;/p&gt;
+
+&lt;p&gt;&lt;h3&gt;Need for this&lt;/h3&gt;
+Prevents the modification of existing property attributes and values, and prevents the addition of new properties.&lt;/p&gt;
+
+&lt;pre&gt;&lt;code&gt;Object.freeze(obj)
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;p&gt;Nothing can be added to or removed from the properties set of a frozen object. Any attempt to do so will fail, either silently or by throwing a TypeError exception (most commonly, but not exclusively, when in strict mode).&lt;/p&gt;
+
+&lt;p&gt;Values cannot be changed for data properties. Accessor properties (getters and setters) work the same (and still give the illusion that you are changing the value). Note that values that are objects can still be modified, unless they are also frozen.&lt;/p&gt;
+
+&lt;p&gt;&lt;h3&gt;Advantages&lt;/h3&gt;
+&lt;ol&gt;
+  &lt;li&gt;You can use this when you have an object representing a logically immutable data structure, especially if:
+   &lt;ul&gt;&lt;li&gt;Changing the properties of the object or altering its &amp;ldquo;duck type&amp;rdquo; could lead to bad behavior elsewhere in your application&lt;/li&gt;
+   &lt;li&gt;The object is similar to a mutable type or otherwise looks mutable, and you want programmers to be warned on attempting to change it rather than obtain undefined behavior.&lt;/li&gt;
+   &lt;/ul&gt;
+  &lt;/li&gt;
+  &lt;li&gt;Freezing an object is the ultimate form of lock-down. Once an object has been frozen it cannot be unfrozen – nor can it be tampered in any manner. This is the best way to make sure that your objects will stay exactly as you left them, indefinitely&lt;/li&gt;
+&lt;/ol&gt;&lt;/p&gt;
+
+&lt;p&gt;&lt;h3&gt;Disadvantages&lt;/h3&gt;
+&lt;ol&gt;
+  &lt;li&gt;In ES5, if the argument to this method is not an object (a primitive), then it will cause a TypeError. In ES6, a non-object argument will be treated as if it were a frozen ordinary object, and be simply returned.&lt;/li&gt;
+&lt;/ol&gt;&lt;/p&gt;
+
+&lt;p&gt;&lt;h3&gt;Working Example&lt;/h3&gt;
+The following example illustrates the use of the &lt;em&gt;Object.freeze&lt;/em&gt; function.&lt;/p&gt;
+
+&lt;pre&gt;&lt;code&gt;// Create an object that has two properties.
+ var obj = { pasta: &amp;quot;spaghetti&amp;quot;, length: 10 };
+
+ // Freeze the object.
+ Object.freeze(obj);
+
+ // Try to add a new property, and then verify that it is not added.
+ obj.newProp = 50;
+ document.write(obj.newProp);
+ document.write(&amp;quot;&amp;lt;br/&amp;gt;&amp;quot;);
+
+ // Try to delete a property, and then verify that it is still present.
+ delete obj.length;
+ document.write(obj.length);
+ document.write(&amp;quot;&amp;lt;br/&amp;gt;&amp;quot;);
+
+ // Try to change a property value, and then verify that it is not changed.
+ obj.pasta = &amp;quot;linguini&amp;quot;;
+ document.write(obj.pasta);
+
+ // Output:
+ // undefined
+ // 10
+ // spaghetti
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;p&gt;&lt;h3&gt;References&lt;/h3&gt;
+&lt;a href=&#34;https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Object/freeze&#34;&gt;https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Object/freeze&lt;/a&gt;
+&lt;a href=&#34;https://docs.webplatform.org/wiki/javascript/Object/freeze&#34;&gt;https://docs.webplatform.org/wiki/javascript/Object/freeze&lt;/a&gt;&lt;/p&gt;
+</description>
+    </item>
+    
+    <item>
+      <title>Object.getOwnPropertyDescriptor()</title>
+      <link>/js/Object.getOwnPropertyDescriptor/</link>
+      <pubDate>Thu, 17 Nov 2016 00:45:05 +0530</pubDate>
+      
+      <guid>/js/Object.getOwnPropertyDescriptor/</guid>
+      <description>&lt;p&gt;The Object.getOwnPropertyDescriptor() method returns a property descriptor for an own property (that is, one directly present on an object and not in the object&amp;rsquo;s prototype chain) of a given object.&lt;/p&gt;
+
+&lt;p&gt;&lt;h3&gt;Need for this&lt;/h3&gt;
+This method allows you to access the descriptor of a property. This method is the only way to get at this information (it is, otherwise, not available to the user – these don’t exist as visible properties on the property, they’re stored internally in the ECMAScript engine).&lt;/p&gt;
+
+&lt;p&gt;This method permits examination of the precise description of a property. A property in JavaScript consists of a string-valued name and a property descriptor. Further information about property descriptor types and their attributes can be found in Object.defineProperty().&lt;/p&gt;
+
+&lt;p&gt;&lt;h3&gt;Advantages&lt;/h3&gt;
+&lt;ol&gt;
+  &lt;li&gt;You can use the Object.getOwnPropertyDescriptor function to obtain a descriptor object that describes attributes of the property.&lt;/li&gt;
+  &lt;li&gt;Object.getOwnPropertyDescriptor allows the developer to override the default browser properties which are otherwise not overridable. This can be useful during unit testing.&lt;/li&gt;
+&lt;/ol&gt;&lt;/p&gt;
+
+&lt;p&gt;&lt;h3&gt;Working Example&lt;/h3&gt;
+// Create a user-defined object.
+var obj = {};&lt;/p&gt;
+
+&lt;p&gt;// Add a data property.
+obj.newDataProperty = &amp;ldquo;abc&amp;rdquo;;&lt;/p&gt;
+
+&lt;p&gt;// Get the property descriptor.
+var descriptor = Object.getOwnPropertyDescriptor(obj, &amp;ldquo;newDataProperty&amp;rdquo;);&lt;/p&gt;
+
+&lt;p&gt;// Change a property attribute.
+descriptor.writable = false;
+Object.defineProperty(obj, &amp;ldquo;newDataProperty&amp;rdquo;, descriptor);&lt;/p&gt;
+
+&lt;p&gt;// Get the descriptor from the object.
+var desc2 = Object.getOwnPropertyDescriptor(obj, &amp;ldquo;newDataProperty&amp;rdquo;);&lt;/p&gt;
+
+&lt;p&gt;// List the descriptor attributes.
+for (var prop in desc2) {
+    document.write(prop + &amp;lsquo;: &amp;lsquo; + desc2[prop]);
+    document.write(&amp;rdquo;&lt;br /&gt;&amp;rdquo;);
+}&lt;/p&gt;
+
+&lt;p&gt;// Output:
+// value: abc
+// writable: false
+// enumerable: true
+// configurable: true&lt;/p&gt;
+
+&lt;p&gt;&lt;h3&gt;References&lt;/h3&gt;
+&lt;a href=&#34;https://developer.mozilla.org/en/docs/Web/JavaScript/Reference/Global_Objects/Object/getOwnPropertyDescriptor&#34;&gt;https://developer.mozilla.org/en/docs/Web/JavaScript/Reference/Global_Objects/Object/getOwnPropertyDescriptor&lt;/a&gt;
+&lt;br /&gt;
+&lt;a href=&#34;https://msdn.microsoft.com/en-us/library/dd548686(v=vs.94).aspx&#34;&gt;https://msdn.microsoft.com/en-us/library/dd548686(v=vs.94).aspx&lt;/a&gt;
+&lt;br /&gt;
+&lt;a href=&#34;http://www.2ality.com/2016/02/object-getownpropertydescriptors.html&#34;&gt;http://www.2ality.com/2016/02/object-getownpropertydescriptors.html&lt;/a&gt;
+&lt;br /&gt;
+&lt;a href=&#34;https://docs.webplatform.org/wiki/javascript/Object/getOwnPropertyDescriptor&#34;&gt;https://docs.webplatform.org/wiki/javascript/Object/getOwnPropertyDescriptor&lt;/a&gt;&lt;/p&gt;
+</description>
+    </item>
+    
+    <item>
+      <title>Object.isExtensible()</title>
+      <link>/js/Object.isExtensible/</link>
+      <pubDate>Wed, 02 Nov 2016 00:45:05 +0530</pubDate>
+      
+      <guid>/js/Object.isExtensible/</guid>
+      <description>&lt;p&gt;The Object.isExtensible() method determines if an object is extensible (whether it can have new properties added to it).&lt;/p&gt;
+
+&lt;h3&gt;Need for this&lt;/h3&gt;
+Objects are extensible by default: they can have new properties added to them, and (in engines that support __proto__) their __proto__ property can be modified. An object can be marked as non-extensible using `Object.preventExtensions()`, `Object.seal()`, or `Object.freeze()`. `Object.isExtensible()` helps find out if an object is extensible.
+
+&lt;h3&gt;Advantage&lt;/h3&gt;
+&lt;ol&gt;
+  &lt;li&gt;Object.isExtensible is a single function that can check whether an object is sealed, frozen or is marked with Object.preventExtension.&lt;/li&gt;
+&lt;/ol&gt;
+
+&lt;h3&gt;Working Example&lt;/h3&gt;
+
+&lt;pre&gt;&lt;code&gt;    // New objects are extensible.
+    var empty = {};
+    Object.isExtensible(empty); // === true
+
+    // ...but that can be changed.
+    Object.preventExtensions(empty);
+    Object.isExtensible(empty); // === false
+
+    // Sealed objects are by definition non-extensible.
+    var sealed = Object.seal({});
+    Object.isExtensible(sealed); // === false
+
+    // Frozen objects are also by definition non-extensible.
+    var frozen = Object.freeze({});
+    Object.isExtensible(frozen); // === false
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;p&gt;&lt;h3&gt;References&lt;/h3&gt;
+&lt;a href=&#34;https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Object/isExtensible&#34;&gt;https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Object/isExtensible&lt;/a&gt;
+&lt;br&gt;
+&lt;a href=&#34;https://msdn.microsoft.com/vi-vn/library/ff806188(v=vs.94).aspx&#34;&gt;https://msdn.microsoft.com/vi-vn/library/ff806188(v=vs.94).aspx&lt;/a&gt;&lt;/p&gt;
+</description>
+    </item>
+    
+  </channel>
+</rss>

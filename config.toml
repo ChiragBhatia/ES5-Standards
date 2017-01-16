@@ -1,7 +1,5 @@
 languageCode = "en-us"
 title = "ES5 Standards"
-baseurl = "https://es5-standards.herokuapp.com/"
-theme = "hugo-theme-learn"
 
 [Params]
   Author = "Chirag Bhatia || Bharath Kalagotla || Dheeraj Sampath"
