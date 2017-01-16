@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en" class="js csstransforms3d">
+  <head>
+    <meta charset="utf-8">
+    {{ partial "meta.html" . }}
+    {{ partial "favicon.html" . }}
+{{ .Scratch.Add "title" "" }}{{ if isset .Site.Data.titles .Title }}{{ .Scratch.Set "title" (index .Site.Data.titles .Title).title }}{{ else }}{{ .Scratch.Set "title" .Title}}{{end}}
+    <title>{{ .Scratch.Get "title" }}</title>
+    {{ partial "style.html" . }}
+    <link href="{{ .Site.BaseURL }}/css/nucleus.css" rel="stylesheet">
+    <link href="{{ .Site.BaseURL }}/css/font-awesome.min.css" rel="stylesheet">
+    <link href="{{ .Site.BaseURL }}/css/hybrid.css" rel="stylesheet">
+    <link href="{{ .Site.BaseURL }}/css/featherlight.min.css" rel="stylesheet">
+    <link href="{{ .Site.BaseURL }}/css/perfect-scrollbar.min.css" rel="stylesheet">
+    <link href="{{ .Site.BaseURL }}/css/theme.css" rel="stylesheet">
+    <link href="{{ .Site.BaseURL }}/css/hugo-theme.css" rel="stylesheet">
+    <style type="text/css">
+    :root #header + #content > #left > #rlblock_left {
+      display:none !important;
+    }
+
+    p,li,ul {
+      text-align: center
+    }
+
+    ul
+    {
+        list-style-type: none;
+    }
+</style>
+  </head>
+  <body>
+    <body class="" data-url="/">
+
+          <section id="body" style="margin-left:0px;">
+          <div id="overlay"></div>
+
+          <div class="padding highlightable">
+            <h1>Introduction to ES5 Standards</h1>
+            <p>
+              The document is under progress
+              <br>
+              <progress value="50" max="100">50%</progress>
+            </p>
+            <p><a href="/js/">Check existing content</a></p>
+          </div>
+        </section>
+  </body>
+</html>
