@@ -4,7 +4,7 @@ title = "Object.keys()"
 next = "/js/Object.preventExtensions"
 prev = "/js/Object.isSealed"
 toc = true
-weight = 16
+weight = 17
 
 +++
 

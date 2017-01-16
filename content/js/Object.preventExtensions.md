@@ -4,7 +4,7 @@ title = "Object.preventExtensions()"
 next = "/js/Object.preventExtensions"
 prev = "/js/Object.keys"
 toc = true
-weight = 17
+weight = 18
 
 +++
 

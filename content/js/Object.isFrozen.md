@@ -4,7 +4,7 @@ title = "Object.isFrozen()"
 next = "/js/Object.isSealed"
 prev = "/js/Object.isExtensible"
 toc = true
-weight = 14
+weight = 15
 
 +++
 

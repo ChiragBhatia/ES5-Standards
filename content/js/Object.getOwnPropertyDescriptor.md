@@ -1,6 +1,10 @@
 +++
 date = "2016-11-17T00:45:05+05:30"
 title = "Object.getOwnPropertyDescriptor()"
+next = "/js/Object.isExtensible"
+prev = "/js/Object.freeze"
+toc = true
+weight = 13
 
 +++
 
@@ -20,26 +24,26 @@ This method permits examination of the precise description of a property. A prop
 <h3>Working Example</h3>
 // Create a user-defined object.
 var obj = {};
- 
+
 // Add a data property.
 obj.newDataProperty = "abc";
- 
+
 // Get the property descriptor.
 var descriptor = Object.getOwnPropertyDescriptor(obj, "newDataProperty");
- 
+
 // Change a property attribute.
 descriptor.writable = false;
 Object.defineProperty(obj, "newDataProperty", descriptor);
 
 // Get the descriptor from the object.
 var desc2 = Object.getOwnPropertyDescriptor(obj, "newDataProperty");
- 
+
 // List the descriptor attributes.
 for (var prop in desc2) {
     document.write(prop + ': ' + desc2[prop]);
     document.write("<br />");
 }
- 
+
 // Output:
 // value: abc
 // writable: false

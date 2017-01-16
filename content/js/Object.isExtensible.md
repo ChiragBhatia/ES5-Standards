@@ -2,9 +2,9 @@
 date = "2016-11-02T00:45:05+05:30"
 title = "Object.isExtensible()"
 next = "/js/Object.isFrozen"
-prev = "/js/Object.freeze"
+prev = "/js/Object.getOwnPropertyDescriptor"
 toc = true
-weight = 13
+weight = 14
 
 +++
 

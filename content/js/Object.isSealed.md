@@ -4,7 +4,7 @@ title = "Object.isSealed()"
 next = "/js/Object.keys"
 prev = "/js/Object.isFrozen"
 toc = true
-weight = 15
+weight = 16
 
 +++
 
