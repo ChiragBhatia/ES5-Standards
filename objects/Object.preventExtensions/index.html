@@ -1,0 +1,399 @@
+<!DOCTYPE html>
+<html lang="en" class="js csstransforms3d">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
+    <meta name="generator" content="Hugo 0.18" />
+    <meta name="description" content="">
+<meta name="author" content="Chirag Bhatia || Bharath Kalagotla || Dheeraj Sampath">
+
+    <link rel="shortcut icon" href="/images/favicon.png" type="image/x-icon" />
+
+    
+    <title>Object.preventExtensions()</title>
+    <link href="https://chiragbhatia.github.io/ES5-Standards//css/nucleus.css" rel="stylesheet">
+    <link href="https://chiragbhatia.github.io/ES5-Standards//css/font-awesome.min.css" rel="stylesheet">
+    <link href="https://chiragbhatia.github.io/ES5-Standards//css/hybrid.css" rel="stylesheet">
+    <link href="https://chiragbhatia.github.io/ES5-Standards//css/featherlight.min.css" rel="stylesheet">
+    <link href="https://chiragbhatia.github.io/ES5-Standards//css/perfect-scrollbar.min.css" rel="stylesheet">
+    <link href="https://chiragbhatia.github.io/ES5-Standards//css/horsey.css" rel="stylesheet">
+    <link href="https://chiragbhatia.github.io/ES5-Standards//css/theme.css" rel="stylesheet">
+    <link href="https://chiragbhatia.github.io/ES5-Standards//css/hugo-theme.css" rel="stylesheet">
+    <script src="https://chiragbhatia.github.io/ES5-Standards//js/jquery-2.x.min.js"></script>
+    <style type="text/css">:root #header + #content > #left > #rlblock_left
+    {display:none !important;}</style>
+    
+<link href="https://chiragbhatia.github.io/ES5-Standards//css/custom.css" rel="stylesheet">
+  </head>
+  <body class="" data-url="/ES5-Standards/objects/Object.preventExtensions/">
+    <nav id="sidebar">
+  <div id="header-wrapper">
+    <div id="header">
+      <h2 class="logo-header">
+  <i class="fa fa-code fa-4x" aria-hidden="true"></i>
+</h2>
+
+    </div>
+    
+</div>
+
+
+  <div class="highlightable">
+    <ul class="topics">
+      
+      
+        
+      
+      
+      
+      
+
+      
+        
+      
+      
+      
+
+      <li class="dd-item  " data-nav-id="/ES5-Standards/objects/Date.now/">
+        <a href="/ES5-Standards/objects/Date.now/">
+          <span>
+            
+             Date.now()
+            
+           </span>
+        </a>
+        
+        <ul>
+          
+          
+          
+          
+            <li class="dd-item " data-nav-id="/ES5-Standards/objects/Date.prototype.toISOString/">
+              <a href="/ES5-Standards/objects/Date.prototype.toISOString/">
+                <span>Date.prototype.toISOString()     </i></span>
+              </a>
+            </li>
+          
+          
+          
+            <li class="dd-item " data-nav-id="/ES5-Standards/objects/Date.prototype.toJSON/">
+              <a href="/ES5-Standards/objects/Date.prototype.toJSON/">
+                <span>Date.prototype.toJSON()     </i></span>
+              </a>
+            </li>
+          
+          
+          
+            <li class="dd-item " data-nav-id="/ES5-Standards/objects/Function.prototype.bind/">
+              <a href="/ES5-Standards/objects/Function.prototype.bind/">
+                <span>Function.prototype.bind()     </i></span>
+              </a>
+            </li>
+          
+          
+          
+            <li class="dd-item " data-nav-id="/ES5-Standards/objects/strict%20mode/">
+              <a href="/ES5-Standards/objects/strict%20mode/">
+                <span>Strict Mode     </i></span>
+              </a>
+            </li>
+          
+          
+          
+            <li class="dd-item " data-nav-id="/ES5-Standards/objects/String.prototype.trim/">
+              <a href="/ES5-Standards/objects/String.prototype.trim/">
+                <span>String.prototype.trim()     </i></span>
+              </a>
+            </li>
+          
+          
+          
+            <li class="dd-item " data-nav-id="/ES5-Standards/objects/">
+              <a href="/ES5-Standards/objects/">
+                <span>ES5 Objects     </i></span>
+              </a>
+            </li>
+          
+          
+          
+            <li class="dd-item " data-nav-id="/ES5-Standards/objects/Array.isArray/">
+              <a href="/ES5-Standards/objects/Array.isArray/">
+                <span>Array.isArray()     </i></span>
+              </a>
+            </li>
+          
+          
+          
+            <li class="dd-item " data-nav-id="/ES5-Standards/objects/Array.prototype.every/">
+              <a href="/ES5-Standards/objects/Array.prototype.every/">
+                <span>Array.prototype.every()     </i></span>
+              </a>
+            </li>
+          
+          
+          
+            <li class="dd-item " data-nav-id="/ES5-Standards/objects/Array.prototype.filter/">
+              <a href="/ES5-Standards/objects/Array.prototype.filter/">
+                <span>Array.prototype.filter()     </i></span>
+              </a>
+            </li>
+          
+          
+          
+            <li class="dd-item " data-nav-id="/ES5-Standards/objects/Array.prototype.reduce/">
+              <a href="/ES5-Standards/objects/Array.prototype.reduce/">
+                <span>Array.prototype.reduce()     </i></span>
+              </a>
+            </li>
+          
+          
+          
+            <li class="dd-item " data-nav-id="/ES5-Standards/objects/Array.prototype.reduceRight/">
+              <a href="/ES5-Standards/objects/Array.prototype.reduceRight/">
+                <span>Array.prototype.reduceRight()     </i></span>
+              </a>
+            </li>
+          
+          
+          
+            <li class="dd-item " data-nav-id="/ES5-Standards/objects/Array.prototype.some/">
+              <a href="/ES5-Standards/objects/Array.prototype.some/">
+                <span>Array.prototype.some()     </i></span>
+              </a>
+            </li>
+          
+          
+          
+            <li class="dd-item " data-nav-id="/ES5-Standards/objects/JSON.parse/">
+              <a href="/ES5-Standards/objects/JSON.parse/">
+                <span>JSON.parse()     </i></span>
+              </a>
+            </li>
+          
+          
+          
+            <li class="dd-item " data-nav-id="/ES5-Standards/objects/JSON.stringify/">
+              <a href="/ES5-Standards/objects/JSON.stringify/">
+                <span>JSON.parse()     </i></span>
+              </a>
+            </li>
+          
+          
+          
+            <li class="dd-item " data-nav-id="/ES5-Standards/objects/Object.create/">
+              <a href="/ES5-Standards/objects/Object.create/">
+                <span>Object.create()     </i></span>
+              </a>
+            </li>
+          
+          
+          
+            <li class="dd-item " data-nav-id="/ES5-Standards/objects/Object.defineProperties/">
+              <a href="/ES5-Standards/objects/Object.defineProperties/">
+                <span>Object.defineProperties()     </i></span>
+              </a>
+            </li>
+          
+          
+          
+            <li class="dd-item " data-nav-id="/ES5-Standards/objects/Object.defineProperty/">
+              <a href="/ES5-Standards/objects/Object.defineProperty/">
+                <span>Object.defineProperty()     </i></span>
+              </a>
+            </li>
+          
+          
+          
+            <li class="dd-item " data-nav-id="/ES5-Standards/objects/Object.freeze/">
+              <a href="/ES5-Standards/objects/Object.freeze/">
+                <span>Object.freeze()     </i></span>
+              </a>
+            </li>
+          
+          
+          
+            <li class="dd-item " data-nav-id="/ES5-Standards/objects/Object.getOwnPropertyDescriptor/">
+              <a href="/ES5-Standards/objects/Object.getOwnPropertyDescriptor/">
+                <span>Object.getOwnPropertyDescriptor()     </i></span>
+              </a>
+            </li>
+          
+          
+          
+            <li class="dd-item " data-nav-id="/ES5-Standards/objects/Object.isExtensible/">
+              <a href="/ES5-Standards/objects/Object.isExtensible/">
+                <span>Object.isExtensible()     </i></span>
+              </a>
+            </li>
+          
+          
+          
+            <li class="dd-item " data-nav-id="/ES5-Standards/objects/Object.isFrozen/">
+              <a href="/ES5-Standards/objects/Object.isFrozen/">
+                <span>Object.isFrozen()     </i></span>
+              </a>
+            </li>
+          
+          
+          
+            <li class="dd-item " data-nav-id="/ES5-Standards/objects/Object.isSealed/">
+              <a href="/ES5-Standards/objects/Object.isSealed/">
+                <span>Object.isSealed()     </i></span>
+              </a>
+            </li>
+          
+          
+          
+            <li class="dd-item " data-nav-id="/ES5-Standards/objects/Object.keys/">
+              <a href="/ES5-Standards/objects/Object.keys/">
+                <span>Object.keys()     </i></span>
+              </a>
+            </li>
+          
+          
+          
+            <li class="dd-item active" data-nav-id="/ES5-Standards/objects/Object.preventExtensions/">
+              <a href="/ES5-Standards/objects/Object.preventExtensions/">
+                <span>Object.preventExtensions()     </i></span>
+              </a>
+            </li>
+          
+          
+        </ul>
+        
+      </li>
+      
+      
+    </ul>
+    <hr>
+     
+    <section id="footer">
+     <p>Built using <a href="https://github.com/matcornic/hugo-theme-learn">Hugo Learn</a> theme</p>
+    </section>
+  </div>
+</nav>
+
+        <section id="body">
+        <div id="overlay"></div>
+
+        <div class="padding highlightable">
+
+            <div id="top-bar">
+              
+              <div id="breadcrumbs" itemscope="" itemtype="http://data-vocabulary.org/Breadcrumb">
+                  <span id="sidebar-toggle-span">
+                      <a href="#" id="sidebar-toggle" data-sidebar-toggle="">
+                        <i class="fa fa-bars"></i>
+                      </a>
+                  </span>
+                
+                <span id="toc-menu"><a href=""><i class="fa fa-list-alt"></i></a></span>
+                
+                
+                
+                
+                  
+                    
+                    
+                <a href="/ES5-Standards/objects/Date.now/" itemprop="url"><span itemprop="title">Date.now()</span></a> <i class="fa fa-angle-right"></i>
+                    
+                  
+                
+                <span itemprop="title"> Object.preventExtensions()</span>
+              </div>
+              
+                  <div class="progress">
+    <div class="wrapper">
+
+    </div>
+</div>
+
+              
+
+            </div>
+            
+    	        <div id="body-inner">
+                
+                <h1>Object.preventExtensions()</h1>
+                
+
+<p>The <em>Object.preventExtensions()</em> method prevents new properties from ever being added to an object (i.e. prevents future extensions to the object).</p>
+
+<p><h3>Need for this</h3>
+Prevents the addition of new properties to an object.</p>
+
+<pre><code>Object.preventExtensions(obj)
+</code></pre>
+
+<p><em>Object.preventExtensions()</em> marks an object as no longer extensible, so that it will never have properties beyond the ones it had at the time it was marked as non-extensible. Note that the properties of a non-extensible object, in general, may still be deleted. Attempting to add new properties to a non-extensible object will fail, either silently or by throwing a TypeError (most commonly, but not exclusively, when in strict mode).</p>
+
+<p><em>Object.preventExtensions()</em> only prevents addition of own properties. Properties can still be added to the object prototype. However, calling Object.preventExtensions() on an object will also prevent extensions on its <strong>proto</strong>  property.</p>
+
+<p><h3>Advantages</h3>
+<ol>
+  <li>Preventing extenstions using this method is an excellent way to ensure that your objects aren&rsquo;t modified without your knowledge.</li>
+  <li>If you are a library author, you may want to lock down certain parts of the core library to make sure they&rsquo;re not accidentally changed or to enforce where extensions are allowed to live.</li>
+</ol></p>
+
+<p><h3>Disadvantages</h3>
+<ol>
+  <li><i>Object.preventExtensions()</i> sets the extensible attribute of o to false so that no new properties can be added to it. This is a permanent change: once an object has been made non-extensible, it cannot be make extensible again.</li>
+  <li>Note that Object.preventExtensions() does not affect the prototype chain, and a nonextensible object can still gain new inherited properties.</li>
+  <li>Note that this is not a method to be invoked on an object: it is a global function and you must pass an object to it.</li>
+</ol></p>
+
+<p><h3>Working Example</h3>
+The following example illustrates the use of the <em>Object.preventExtensions</em> function.</p>
+
+<pre><code>// Create an object that has two properties.
+ var obj = { pasta: &quot;spaghetti&quot;, length: 10 };
+
+ // Make the object non-extensible.
+ Object.preventExtensions(obj);
+ document.write(Object.isExtensible(obj));
+ document.write(&quot;&lt;br/&gt;&quot;);
+
+ // Try to add a new property, and then verify that it is not added.
+ obj.newProp = 50;
+ document.write(obj.newProp);
+
+ // Output:
+ // false
+ // undefined
+</code></pre>
+
+<p><h3>References</h3>
+<a href="https://developer.mozilla.org/en/docs/Web/JavaScript/Reference/Global_Objects/Object/preventExtensions">https://developer.mozilla.org/en/docs/Web/JavaScript/Reference/Global_Objects/Object/preventExtensions</a>
+<a href="https://docs.webplatform.org/wiki/javascript/Object/preventExtensions">https://docs.webplatform.org/wiki/javascript/Object/preventExtensions</a></p>
+
+
+      
+      </div>
+    </div>
+
+    <div id="navigation">
+        
+        <a class="nav nav-prev" href="https://chiragbhatia.github.io/ES5-Standards//objects/Object.keys"> <i class="fa fa-chevron-left"></i></a>
+        <a class="nav nav-next" href="https://chiragbhatia.github.io/ES5-Standards//objects/Object.preventExtensions" style="margin-right: 0px;"><i class="fa fa-chevron-right"></i></a>
+    </div>
+
+    </section>
+    <div style="left: -1000px; overflow: scroll; position: absolute; top: -1000px; border: none; box-sizing: content-box; height: 200px; margin: 0px; padding: 0px; width: 200px;">
+      <div style="border: none; box-sizing: content-box; height: 200px; margin: 0px; padding: 0px; width: 200px;"></div>
+    </div>
+    <script src="https://chiragbhatia.github.io/ES5-Standards//js/clipboard.min.js"></script>
+    <script src="https://chiragbhatia.github.io/ES5-Standards//js/perfect-scrollbar.min.js"></script>
+    <script src="https://chiragbhatia.github.io/ES5-Standards//js/perfect-scrollbar.jquery.min.js"></script>
+    <script src="https://chiragbhatia.github.io/ES5-Standards//js/jquery.sticky-kit.min.js"></script>
+    <script src="https://chiragbhatia.github.io/ES5-Standards//js/featherlight.min.js"></script>
+    <script src="https://chiragbhatia.github.io/ES5-Standards//js/html5shiv-printshiv.min.js"></script>
+    <script src="https://chiragbhatia.github.io/ES5-Standards//js/highlight.pack.js"></script>
+    <script>hljs.initHighlightingOnLoad();</script>
+    <script src="https://chiragbhatia.github.io/ES5-Standards//js/modernizr.custom.71422.js"></script>
+    <script src="https://chiragbhatia.github.io/ES5-Standards//js/learn.js"></script>
+    <script src="https://chiragbhatia.github.io/ES5-Standards//js/hugo-learn.js"></script>
+    
+
+  </body>
+</html>
+

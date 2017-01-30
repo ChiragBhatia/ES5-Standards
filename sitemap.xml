@@ -2,97 +2,127 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   
   <url>
-    <loc>https://chiragbhatia.github.io/ES5-Standards/js/Array.isArray/</loc>
+    <loc>https://chiragbhatia.github.io/ES5-Standards/objects/Array.isArray/</loc>
     <lastmod>2016-11-11T00:45:05+05:30</lastmod>
   </url>
   
   <url>
-    <loc>https://chiragbhatia.github.io/ES5-Standards/js/Array.prototype.every/</loc>
+    <loc>https://chiragbhatia.github.io/ES5-Standards/objects/Array.prototype.every/</loc>
     <lastmod>2016-11-16T00:45:05+05:30</lastmod>
   </url>
   
   <url>
-    <loc>https://chiragbhatia.github.io/ES5-Standards/js/Array.prototype.filter/</loc>
+    <loc>https://chiragbhatia.github.io/ES5-Standards/objects/Array.prototype.filter/</loc>
     <lastmod>2016-11-16T00:45:05+05:30</lastmod>
   </url>
   
   <url>
-    <loc>https://chiragbhatia.github.io/ES5-Standards/js/Array.prototype.reduce/</loc>
+    <loc>https://chiragbhatia.github.io/ES5-Standards/objects/Array.prototype.reduce/</loc>
     <lastmod>2016-11-11T00:45:05+05:30</lastmod>
   </url>
   
   <url>
-    <loc>https://chiragbhatia.github.io/ES5-Standards/js/Array.prototype.reduceRight/</loc>
+    <loc>https://chiragbhatia.github.io/ES5-Standards/objects/Array.prototype.reduceRight/</loc>
     <lastmod>2016-11-11T00:45:05+05:30</lastmod>
   </url>
   
   <url>
-    <loc>https://chiragbhatia.github.io/ES5-Standards/js/Array.prototype.some/</loc>
+    <loc>https://chiragbhatia.github.io/ES5-Standards/objects/Array.prototype.some/</loc>
     <lastmod>2016-11-11T00:45:05+05:30</lastmod>
   </url>
   
   <url>
-    <loc>https://chiragbhatia.github.io/ES5-Standards/js/JSON.parse/</loc>
+    <loc>https://chiragbhatia.github.io/ES5-Standards/objects/JSON.parse/</loc>
     <lastmod>2016-11-11T00:45:05+05:30</lastmod>
   </url>
   
   <url>
-    <loc>https://chiragbhatia.github.io/ES5-Standards/js/JSON.stringify/</loc>
+    <loc>https://chiragbhatia.github.io/ES5-Standards/objects/JSON.stringify/</loc>
     <lastmod>2016-11-16T00:45:05+05:30</lastmod>
   </url>
   
   <url>
-    <loc>https://chiragbhatia.github.io/ES5-Standards/js/Object.create/</loc>
+    <loc>https://chiragbhatia.github.io/ES5-Standards/objects/Object.create/</loc>
     <lastmod>2016-11-03T00:45:05+05:30</lastmod>
   </url>
   
   <url>
-    <loc>https://chiragbhatia.github.io/ES5-Standards/js/Object.defineProperties/</loc>
+    <loc>https://chiragbhatia.github.io/ES5-Standards/objects/Object.defineProperties/</loc>
     <lastmod>2016-11-02T00:45:05+05:30</lastmod>
   </url>
   
   <url>
-    <loc>https://chiragbhatia.github.io/ES5-Standards/js/Object.defineProperty/</loc>
+    <loc>https://chiragbhatia.github.io/ES5-Standards/objects/Object.defineProperty/</loc>
     <lastmod>2016-11-02T00:45:05+05:30</lastmod>
   </url>
   
   <url>
-    <loc>https://chiragbhatia.github.io/ES5-Standards/js/Object.freeze/</loc>
+    <loc>https://chiragbhatia.github.io/ES5-Standards/objects/Object.freeze/</loc>
     <lastmod>2016-11-04T00:45:05+05:30</lastmod>
   </url>
   
   <url>
-    <loc>https://chiragbhatia.github.io/ES5-Standards/js/Object.getOwnPropertyDescriptor/</loc>
+    <loc>https://chiragbhatia.github.io/ES5-Standards/objects/Object.getOwnPropertyDescriptor/</loc>
     <lastmod>2016-11-17T00:45:05+05:30</lastmod>
   </url>
   
   <url>
-    <loc>https://chiragbhatia.github.io/ES5-Standards/js/Object.isExtensible/</loc>
+    <loc>https://chiragbhatia.github.io/ES5-Standards/objects/Object.isExtensible/</loc>
     <lastmod>2016-11-02T00:45:05+05:30</lastmod>
   </url>
   
   <url>
-    <loc>https://chiragbhatia.github.io/ES5-Standards/js/Object.isFrozen/</loc>
+    <loc>https://chiragbhatia.github.io/ES5-Standards/objects/Object.isFrozen/</loc>
     <lastmod>2016-11-04T00:45:05+05:30</lastmod>
   </url>
   
   <url>
-    <loc>https://chiragbhatia.github.io/ES5-Standards/js/Object.isSealed/</loc>
+    <loc>https://chiragbhatia.github.io/ES5-Standards/objects/Object.isSealed/</loc>
     <lastmod>2016-11-04T00:45:05+05:30</lastmod>
   </url>
   
   <url>
-    <loc>https://chiragbhatia.github.io/ES5-Standards/js/Object.keys/</loc>
+    <loc>https://chiragbhatia.github.io/ES5-Standards/objects/Object.keys/</loc>
     <lastmod>2016-11-02T00:45:05+05:30</lastmod>
   </url>
   
   <url>
-    <loc>https://chiragbhatia.github.io/ES5-Standards/js/Object.preventExtensions/</loc>
+    <loc>https://chiragbhatia.github.io/ES5-Standards/objects/Object.preventExtensions/</loc>
     <lastmod>2016-11-04T00:45:05+05:30</lastmod>
   </url>
   
   <url>
-    <loc>https://chiragbhatia.github.io/ES5-Standards/js/</loc>
+    <loc>https://chiragbhatia.github.io/ES5-Standards/objects/Date.now/</loc>
+    <lastmod>2017-01-20T00:45:05+05:30</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://chiragbhatia.github.io/ES5-Standards/objects/Date.prototype.toISOString/</loc>
+    <lastmod>2017-01-20T00:45:05+05:30</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://chiragbhatia.github.io/ES5-Standards/objects/Date.prototype.toJSON/</loc>
+    <lastmod>2017-01-20T00:45:05+05:30</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://chiragbhatia.github.io/ES5-Standards/objects/Function.prototype.bind/</loc>
+    <lastmod>2017-01-20T00:45:05+05:30</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://chiragbhatia.github.io/ES5-Standards/objects/strict%20mode/</loc>
+    <lastmod>2017-01-20T00:45:05+05:30</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://chiragbhatia.github.io/ES5-Standards/objects/String.prototype.trim/</loc>
+    <lastmod>2017-01-20T00:45:05+05:30</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://chiragbhatia.github.io/ES5-Standards/objects/</loc>
     <lastmod>2016-10-01T00:44:16+05:30</lastmod>
   </url>
   
@@ -103,8 +133,8 @@
   </url>
   
   <url>
-    <loc>https://chiragbhatia.github.io/ES5-Standards/js/</loc>
-    <lastmod>2016-10-01T00:44:16+05:30</lastmod>
+    <loc>https://chiragbhatia.github.io/ES5-Standards/objects/</loc>
+    <lastmod>2017-01-20T00:45:05+05:30</lastmod>
     <priority>0</priority>
   </url>
   

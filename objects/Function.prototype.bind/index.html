@@ -1,0 +1,401 @@
+<!DOCTYPE html>
+<html lang="en" class="js csstransforms3d">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
+    <meta name="generator" content="Hugo 0.18" />
+    <meta name="description" content="">
+<meta name="author" content="Chirag Bhatia || Bharath Kalagotla || Dheeraj Sampath">
+
+    <link rel="shortcut icon" href="/images/favicon.png" type="image/x-icon" />
+
+    
+    <title>Function.prototype.bind()</title>
+    <link href="https://chiragbhatia.github.io/ES5-Standards//css/nucleus.css" rel="stylesheet">
+    <link href="https://chiragbhatia.github.io/ES5-Standards//css/font-awesome.min.css" rel="stylesheet">
+    <link href="https://chiragbhatia.github.io/ES5-Standards//css/hybrid.css" rel="stylesheet">
+    <link href="https://chiragbhatia.github.io/ES5-Standards//css/featherlight.min.css" rel="stylesheet">
+    <link href="https://chiragbhatia.github.io/ES5-Standards//css/perfect-scrollbar.min.css" rel="stylesheet">
+    <link href="https://chiragbhatia.github.io/ES5-Standards//css/horsey.css" rel="stylesheet">
+    <link href="https://chiragbhatia.github.io/ES5-Standards//css/theme.css" rel="stylesheet">
+    <link href="https://chiragbhatia.github.io/ES5-Standards//css/hugo-theme.css" rel="stylesheet">
+    <script src="https://chiragbhatia.github.io/ES5-Standards//js/jquery-2.x.min.js"></script>
+    <style type="text/css">:root #header + #content > #left > #rlblock_left
+    {display:none !important;}</style>
+    
+<link href="https://chiragbhatia.github.io/ES5-Standards//css/custom.css" rel="stylesheet">
+  </head>
+  <body class="" data-url="/ES5-Standards/objects/Function.prototype.bind/">
+    <nav id="sidebar">
+  <div id="header-wrapper">
+    <div id="header">
+      <h2 class="logo-header">
+  <i class="fa fa-code fa-4x" aria-hidden="true"></i>
+</h2>
+
+    </div>
+    
+</div>
+
+
+  <div class="highlightable">
+    <ul class="topics">
+      
+      
+        
+      
+      
+      
+      
+
+      
+        
+      
+      
+      
+
+      <li class="dd-item  " data-nav-id="/ES5-Standards/objects/Date.now/">
+        <a href="/ES5-Standards/objects/Date.now/">
+          <span>
+            
+             Date.now()
+            
+           </span>
+        </a>
+        
+        <ul>
+          
+          
+          
+          
+            <li class="dd-item " data-nav-id="/ES5-Standards/objects/Date.prototype.toISOString/">
+              <a href="/ES5-Standards/objects/Date.prototype.toISOString/">
+                <span>Date.prototype.toISOString()     </i></span>
+              </a>
+            </li>
+          
+          
+          
+            <li class="dd-item " data-nav-id="/ES5-Standards/objects/Date.prototype.toJSON/">
+              <a href="/ES5-Standards/objects/Date.prototype.toJSON/">
+                <span>Date.prototype.toJSON()     </i></span>
+              </a>
+            </li>
+          
+          
+          
+            <li class="dd-item active" data-nav-id="/ES5-Standards/objects/Function.prototype.bind/">
+              <a href="/ES5-Standards/objects/Function.prototype.bind/">
+                <span>Function.prototype.bind()     </i></span>
+              </a>
+            </li>
+          
+          
+          
+            <li class="dd-item " data-nav-id="/ES5-Standards/objects/strict%20mode/">
+              <a href="/ES5-Standards/objects/strict%20mode/">
+                <span>Strict Mode     </i></span>
+              </a>
+            </li>
+          
+          
+          
+            <li class="dd-item " data-nav-id="/ES5-Standards/objects/String.prototype.trim/">
+              <a href="/ES5-Standards/objects/String.prototype.trim/">
+                <span>String.prototype.trim()     </i></span>
+              </a>
+            </li>
+          
+          
+          
+            <li class="dd-item " data-nav-id="/ES5-Standards/objects/">
+              <a href="/ES5-Standards/objects/">
+                <span>ES5 Objects     </i></span>
+              </a>
+            </li>
+          
+          
+          
+            <li class="dd-item " data-nav-id="/ES5-Standards/objects/Array.isArray/">
+              <a href="/ES5-Standards/objects/Array.isArray/">
+                <span>Array.isArray()     </i></span>
+              </a>
+            </li>
+          
+          
+          
+            <li class="dd-item " data-nav-id="/ES5-Standards/objects/Array.prototype.every/">
+              <a href="/ES5-Standards/objects/Array.prototype.every/">
+                <span>Array.prototype.every()     </i></span>
+              </a>
+            </li>
+          
+          
+          
+            <li class="dd-item " data-nav-id="/ES5-Standards/objects/Array.prototype.filter/">
+              <a href="/ES5-Standards/objects/Array.prototype.filter/">
+                <span>Array.prototype.filter()     </i></span>
+              </a>
+            </li>
+          
+          
+          
+            <li class="dd-item " data-nav-id="/ES5-Standards/objects/Array.prototype.reduce/">
+              <a href="/ES5-Standards/objects/Array.prototype.reduce/">
+                <span>Array.prototype.reduce()     </i></span>
+              </a>
+            </li>
+          
+          
+          
+            <li class="dd-item " data-nav-id="/ES5-Standards/objects/Array.prototype.reduceRight/">
+              <a href="/ES5-Standards/objects/Array.prototype.reduceRight/">
+                <span>Array.prototype.reduceRight()     </i></span>
+              </a>
+            </li>
+          
+          
+          
+            <li class="dd-item " data-nav-id="/ES5-Standards/objects/Array.prototype.some/">
+              <a href="/ES5-Standards/objects/Array.prototype.some/">
+                <span>Array.prototype.some()     </i></span>
+              </a>
+            </li>
+          
+          
+          
+            <li class="dd-item " data-nav-id="/ES5-Standards/objects/JSON.parse/">
+              <a href="/ES5-Standards/objects/JSON.parse/">
+                <span>JSON.parse()     </i></span>
+              </a>
+            </li>
+          
+          
+          
+            <li class="dd-item " data-nav-id="/ES5-Standards/objects/JSON.stringify/">
+              <a href="/ES5-Standards/objects/JSON.stringify/">
+                <span>JSON.parse()     </i></span>
+              </a>
+            </li>
+          
+          
+          
+            <li class="dd-item " data-nav-id="/ES5-Standards/objects/Object.create/">
+              <a href="/ES5-Standards/objects/Object.create/">
+                <span>Object.create()     </i></span>
+              </a>
+            </li>
+          
+          
+          
+            <li class="dd-item " data-nav-id="/ES5-Standards/objects/Object.defineProperties/">
+              <a href="/ES5-Standards/objects/Object.defineProperties/">
+                <span>Object.defineProperties()     </i></span>
+              </a>
+            </li>
+          
+          
+          
+            <li class="dd-item " data-nav-id="/ES5-Standards/objects/Object.defineProperty/">
+              <a href="/ES5-Standards/objects/Object.defineProperty/">
+                <span>Object.defineProperty()     </i></span>
+              </a>
+            </li>
+          
+          
+          
+            <li class="dd-item " data-nav-id="/ES5-Standards/objects/Object.freeze/">
+              <a href="/ES5-Standards/objects/Object.freeze/">
+                <span>Object.freeze()     </i></span>
+              </a>
+            </li>
+          
+          
+          
+            <li class="dd-item " data-nav-id="/ES5-Standards/objects/Object.getOwnPropertyDescriptor/">
+              <a href="/ES5-Standards/objects/Object.getOwnPropertyDescriptor/">
+                <span>Object.getOwnPropertyDescriptor()     </i></span>
+              </a>
+            </li>
+          
+          
+          
+            <li class="dd-item " data-nav-id="/ES5-Standards/objects/Object.isExtensible/">
+              <a href="/ES5-Standards/objects/Object.isExtensible/">
+                <span>Object.isExtensible()     </i></span>
+              </a>
+            </li>
+          
+          
+          
+            <li class="dd-item " data-nav-id="/ES5-Standards/objects/Object.isFrozen/">
+              <a href="/ES5-Standards/objects/Object.isFrozen/">
+                <span>Object.isFrozen()     </i></span>
+              </a>
+            </li>
+          
+          
+          
+            <li class="dd-item " data-nav-id="/ES5-Standards/objects/Object.isSealed/">
+              <a href="/ES5-Standards/objects/Object.isSealed/">
+                <span>Object.isSealed()     </i></span>
+              </a>
+            </li>
+          
+          
+          
+            <li class="dd-item " data-nav-id="/ES5-Standards/objects/Object.keys/">
+              <a href="/ES5-Standards/objects/Object.keys/">
+                <span>Object.keys()     </i></span>
+              </a>
+            </li>
+          
+          
+          
+            <li class="dd-item " data-nav-id="/ES5-Standards/objects/Object.preventExtensions/">
+              <a href="/ES5-Standards/objects/Object.preventExtensions/">
+                <span>Object.preventExtensions()     </i></span>
+              </a>
+            </li>
+          
+          
+        </ul>
+        
+      </li>
+      
+      
+    </ul>
+    <hr>
+     
+    <section id="footer">
+     <p>Built using <a href="https://github.com/matcornic/hugo-theme-learn">Hugo Learn</a> theme</p>
+    </section>
+  </div>
+</nav>
+
+        <section id="body">
+        <div id="overlay"></div>
+
+        <div class="padding highlightable">
+
+            <div id="top-bar">
+              
+              <div id="breadcrumbs" itemscope="" itemtype="http://data-vocabulary.org/Breadcrumb">
+                  <span id="sidebar-toggle-span">
+                      <a href="#" id="sidebar-toggle" data-sidebar-toggle="">
+                        <i class="fa fa-bars"></i>
+                      </a>
+                  </span>
+                
+                
+                
+                
+                  
+                    
+                    
+                <a href="/ES5-Standards/objects/Date.now/" itemprop="url"><span itemprop="title">Date.now()</span></a> <i class="fa fa-angle-right"></i>
+                    
+                  
+                
+                <span itemprop="title"> Function.prototype.bind()</span>
+              </div>
+              
+
+            </div>
+            
+    	        <div id="body-inner">
+                
+                <h1>Function.prototype.bind()</h1>
+                
+
+<p>The <em>bind()</em> method creates a new function that, when called, has its this keyword set to the provided value, with a given sequence of arguments preceding any provided when the new function is called.</p>
+
+<p><h3>Need for this</h3>
+The bind() function creates a new bound function (BF). A BF is an exotic function object (term from ECMAScript 2015)  that wraps the original function object. Calling a BF generally results in the execution of its wrapped function.
+A BF has the following internal properties:</p>
+
+<p><ul><li>[[BoundTargetFunction]] - the wrapped function object;</li>
+   <li>[[BoundThis]] - the value that is always passed as the this value when calling the wrapped function.</li><li>[[BoundArguments]]  - a list of values whose elements are used as the first arguments to any call to the wrapped function.</li><li>[[Call]] - executes code associated with this object. Invoked via a function call expression. The arguments to the internal method are a this value and a list containing the arguments passed to the function by a call expression.</li></p>
+
+<p></ul></p>
+
+<pre><code>fun.bind(thisArg[, arg1[, arg2[, ...]]])
+</code></pre>
+
+<p><h3>Advantages</h3>
+<ol>
+  <li>Function binding is most probably your least concern when beginning with JavaScript, but when you realize that you need a solution to the problem of how to keep the context of this within another function, then you might not realize that what you actually need is Function.prototype.bind().
+  </li>
+  <li>The first time you hit upon the problem, you might be inclined to set this to a variable that you can reference when you change context. Many people opt for self, _this or sometimes context as a variable name. They’re all usable and nothing is wrong with doing that, but this is a better way.</li>
+</ol></p>
+
+<p><h3>Disadvantages</h3>
+<ol>
+  <li>As you can see, unfortunately, Function.prototype.bind isn’t supported in Internet Explorer 8 and below, so you’ll run into problems if you try to use it without a fallback.</li>
+</ol></p>
+
+<p><h3>Working Example</h3>
+The following example illustrates the use of the <em>Function.prototype.bind()</em> function.</p>
+
+<pre><code>var Button = function(content) { 
+  this.content = content;
+};
+Button.prototype.click = function() {
+  console.log(this.content + ' clicked');
+}
+
+var myButton = new Button('OK');
+myButton.click();
+
+var looseClick = myButton.click;
+looseClick(); // not bound, 'this' is not myButton - it is the global object
+
+var boundClick = myButton.click.bind(myButton);
+boundClick(); // bound, 'this' is myButton
+</code></pre>
+
+<p>Which prints out:</p>
+
+<pre><code>OK clicked
+undefined clicked
+OK clicked
+</code></pre>
+
+<p>You can also add extra parameters after the 1st (this) parameter and bind will pass in those values to the original function. Any additional parameters you later pass to the bound function will be passed in after the bound parameters:</p>
+
+<p><h3>References</h3>
+<a href="https://developer.mozilla.org/en/docs/Web/JavaScript/Reference/Global_objects/Function/bind">https://developer.mozilla.org/en/docs/Web/JavaScript/Reference/Global_objects/Function/bind</a>
+<a href="https://www.smashingmagazine.com/2014/01/understanding-javascript-function-prototype-bind/">https://www.smashingmagazine.com/2014/01/understanding-javascript-function-prototype-bind/</a>
+<a href="http://stackoverflow.com/questions/2236747/use-of-the-javascript-bind-method">http://stackoverflow.com/questions/2236747/use-of-the-javascript-bind-method</a></p>
+
+
+      
+      </div>
+    </div>
+
+    <div id="navigation">
+        
+        
+        
+    </div>
+
+    </section>
+    <div style="left: -1000px; overflow: scroll; position: absolute; top: -1000px; border: none; box-sizing: content-box; height: 200px; margin: 0px; padding: 0px; width: 200px;">
+      <div style="border: none; box-sizing: content-box; height: 200px; margin: 0px; padding: 0px; width: 200px;"></div>
+    </div>
+    <script src="https://chiragbhatia.github.io/ES5-Standards//js/clipboard.min.js"></script>
+    <script src="https://chiragbhatia.github.io/ES5-Standards//js/perfect-scrollbar.min.js"></script>
+    <script src="https://chiragbhatia.github.io/ES5-Standards//js/perfect-scrollbar.jquery.min.js"></script>
+    <script src="https://chiragbhatia.github.io/ES5-Standards//js/jquery.sticky-kit.min.js"></script>
+    <script src="https://chiragbhatia.github.io/ES5-Standards//js/featherlight.min.js"></script>
+    <script src="https://chiragbhatia.github.io/ES5-Standards//js/html5shiv-printshiv.min.js"></script>
+    <script src="https://chiragbhatia.github.io/ES5-Standards//js/highlight.pack.js"></script>
+    <script>hljs.initHighlightingOnLoad();</script>
+    <script src="https://chiragbhatia.github.io/ES5-Standards//js/modernizr.custom.71422.js"></script>
+    <script src="https://chiragbhatia.github.io/ES5-Standards//js/learn.js"></script>
+    <script src="https://chiragbhatia.github.io/ES5-Standards//js/hugo-learn.js"></script>
+    
+
+  </body>
+</html>
+

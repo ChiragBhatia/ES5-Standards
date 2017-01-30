@@ -1,0 +1,410 @@
+<!DOCTYPE html>
+<html lang="en" class="js csstransforms3d">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
+    <meta name="generator" content="Hugo 0.18" />
+    <meta name="description" content="">
+<meta name="author" content="Chirag Bhatia || Bharath Kalagotla || Dheeraj Sampath">
+
+    <link rel="shortcut icon" href="/images/favicon.png" type="image/x-icon" />
+
+    
+    <title>Object.freeze()</title>
+    <link href="https://chiragbhatia.github.io/ES5-Standards//css/nucleus.css" rel="stylesheet">
+    <link href="https://chiragbhatia.github.io/ES5-Standards//css/font-awesome.min.css" rel="stylesheet">
+    <link href="https://chiragbhatia.github.io/ES5-Standards//css/hybrid.css" rel="stylesheet">
+    <link href="https://chiragbhatia.github.io/ES5-Standards//css/featherlight.min.css" rel="stylesheet">
+    <link href="https://chiragbhatia.github.io/ES5-Standards//css/perfect-scrollbar.min.css" rel="stylesheet">
+    <link href="https://chiragbhatia.github.io/ES5-Standards//css/horsey.css" rel="stylesheet">
+    <link href="https://chiragbhatia.github.io/ES5-Standards//css/theme.css" rel="stylesheet">
+    <link href="https://chiragbhatia.github.io/ES5-Standards//css/hugo-theme.css" rel="stylesheet">
+    <script src="https://chiragbhatia.github.io/ES5-Standards//js/jquery-2.x.min.js"></script>
+    <style type="text/css">:root #header + #content > #left > #rlblock_left
+    {display:none !important;}</style>
+    
+<link href="https://chiragbhatia.github.io/ES5-Standards//css/custom.css" rel="stylesheet">
+  </head>
+  <body class="" data-url="/ES5-Standards/objects/Object.freeze/">
+    <nav id="sidebar">
+  <div id="header-wrapper">
+    <div id="header">
+      <h2 class="logo-header">
+  <i class="fa fa-code fa-4x" aria-hidden="true"></i>
+</h2>
+
+    </div>
+    
+</div>
+
+
+  <div class="highlightable">
+    <ul class="topics">
+      
+      
+        
+      
+      
+      
+      
+
+      
+        
+      
+      
+      
+
+      <li class="dd-item  " data-nav-id="/ES5-Standards/objects/Date.now/">
+        <a href="/ES5-Standards/objects/Date.now/">
+          <span>
+            
+             Date.now()
+            
+           </span>
+        </a>
+        
+        <ul>
+          
+          
+          
+          
+            <li class="dd-item " data-nav-id="/ES5-Standards/objects/Date.prototype.toISOString/">
+              <a href="/ES5-Standards/objects/Date.prototype.toISOString/">
+                <span>Date.prototype.toISOString()     </i></span>
+              </a>
+            </li>
+          
+          
+          
+            <li class="dd-item " data-nav-id="/ES5-Standards/objects/Date.prototype.toJSON/">
+              <a href="/ES5-Standards/objects/Date.prototype.toJSON/">
+                <span>Date.prototype.toJSON()     </i></span>
+              </a>
+            </li>
+          
+          
+          
+            <li class="dd-item " data-nav-id="/ES5-Standards/objects/Function.prototype.bind/">
+              <a href="/ES5-Standards/objects/Function.prototype.bind/">
+                <span>Function.prototype.bind()     </i></span>
+              </a>
+            </li>
+          
+          
+          
+            <li class="dd-item " data-nav-id="/ES5-Standards/objects/strict%20mode/">
+              <a href="/ES5-Standards/objects/strict%20mode/">
+                <span>Strict Mode     </i></span>
+              </a>
+            </li>
+          
+          
+          
+            <li class="dd-item " data-nav-id="/ES5-Standards/objects/String.prototype.trim/">
+              <a href="/ES5-Standards/objects/String.prototype.trim/">
+                <span>String.prototype.trim()     </i></span>
+              </a>
+            </li>
+          
+          
+          
+            <li class="dd-item " data-nav-id="/ES5-Standards/objects/">
+              <a href="/ES5-Standards/objects/">
+                <span>ES5 Objects     </i></span>
+              </a>
+            </li>
+          
+          
+          
+            <li class="dd-item " data-nav-id="/ES5-Standards/objects/Array.isArray/">
+              <a href="/ES5-Standards/objects/Array.isArray/">
+                <span>Array.isArray()     </i></span>
+              </a>
+            </li>
+          
+          
+          
+            <li class="dd-item " data-nav-id="/ES5-Standards/objects/Array.prototype.every/">
+              <a href="/ES5-Standards/objects/Array.prototype.every/">
+                <span>Array.prototype.every()     </i></span>
+              </a>
+            </li>
+          
+          
+          
+            <li class="dd-item " data-nav-id="/ES5-Standards/objects/Array.prototype.filter/">
+              <a href="/ES5-Standards/objects/Array.prototype.filter/">
+                <span>Array.prototype.filter()     </i></span>
+              </a>
+            </li>
+          
+          
+          
+            <li class="dd-item " data-nav-id="/ES5-Standards/objects/Array.prototype.reduce/">
+              <a href="/ES5-Standards/objects/Array.prototype.reduce/">
+                <span>Array.prototype.reduce()     </i></span>
+              </a>
+            </li>
+          
+          
+          
+            <li class="dd-item " data-nav-id="/ES5-Standards/objects/Array.prototype.reduceRight/">
+              <a href="/ES5-Standards/objects/Array.prototype.reduceRight/">
+                <span>Array.prototype.reduceRight()     </i></span>
+              </a>
+            </li>
+          
+          
+          
+            <li class="dd-item " data-nav-id="/ES5-Standards/objects/Array.prototype.some/">
+              <a href="/ES5-Standards/objects/Array.prototype.some/">
+                <span>Array.prototype.some()     </i></span>
+              </a>
+            </li>
+          
+          
+          
+            <li class="dd-item " data-nav-id="/ES5-Standards/objects/JSON.parse/">
+              <a href="/ES5-Standards/objects/JSON.parse/">
+                <span>JSON.parse()     </i></span>
+              </a>
+            </li>
+          
+          
+          
+            <li class="dd-item " data-nav-id="/ES5-Standards/objects/JSON.stringify/">
+              <a href="/ES5-Standards/objects/JSON.stringify/">
+                <span>JSON.parse()     </i></span>
+              </a>
+            </li>
+          
+          
+          
+            <li class="dd-item " data-nav-id="/ES5-Standards/objects/Object.create/">
+              <a href="/ES5-Standards/objects/Object.create/">
+                <span>Object.create()     </i></span>
+              </a>
+            </li>
+          
+          
+          
+            <li class="dd-item " data-nav-id="/ES5-Standards/objects/Object.defineProperties/">
+              <a href="/ES5-Standards/objects/Object.defineProperties/">
+                <span>Object.defineProperties()     </i></span>
+              </a>
+            </li>
+          
+          
+          
+            <li class="dd-item " data-nav-id="/ES5-Standards/objects/Object.defineProperty/">
+              <a href="/ES5-Standards/objects/Object.defineProperty/">
+                <span>Object.defineProperty()     </i></span>
+              </a>
+            </li>
+          
+          
+          
+            <li class="dd-item active" data-nav-id="/ES5-Standards/objects/Object.freeze/">
+              <a href="/ES5-Standards/objects/Object.freeze/">
+                <span>Object.freeze()     </i></span>
+              </a>
+            </li>
+          
+          
+          
+            <li class="dd-item " data-nav-id="/ES5-Standards/objects/Object.getOwnPropertyDescriptor/">
+              <a href="/ES5-Standards/objects/Object.getOwnPropertyDescriptor/">
+                <span>Object.getOwnPropertyDescriptor()     </i></span>
+              </a>
+            </li>
+          
+          
+          
+            <li class="dd-item " data-nav-id="/ES5-Standards/objects/Object.isExtensible/">
+              <a href="/ES5-Standards/objects/Object.isExtensible/">
+                <span>Object.isExtensible()     </i></span>
+              </a>
+            </li>
+          
+          
+          
+            <li class="dd-item " data-nav-id="/ES5-Standards/objects/Object.isFrozen/">
+              <a href="/ES5-Standards/objects/Object.isFrozen/">
+                <span>Object.isFrozen()     </i></span>
+              </a>
+            </li>
+          
+          
+          
+            <li class="dd-item " data-nav-id="/ES5-Standards/objects/Object.isSealed/">
+              <a href="/ES5-Standards/objects/Object.isSealed/">
+                <span>Object.isSealed()     </i></span>
+              </a>
+            </li>
+          
+          
+          
+            <li class="dd-item " data-nav-id="/ES5-Standards/objects/Object.keys/">
+              <a href="/ES5-Standards/objects/Object.keys/">
+                <span>Object.keys()     </i></span>
+              </a>
+            </li>
+          
+          
+          
+            <li class="dd-item " data-nav-id="/ES5-Standards/objects/Object.preventExtensions/">
+              <a href="/ES5-Standards/objects/Object.preventExtensions/">
+                <span>Object.preventExtensions()     </i></span>
+              </a>
+            </li>
+          
+          
+        </ul>
+        
+      </li>
+      
+      
+    </ul>
+    <hr>
+     
+    <section id="footer">
+     <p>Built using <a href="https://github.com/matcornic/hugo-theme-learn">Hugo Learn</a> theme</p>
+    </section>
+  </div>
+</nav>
+
+        <section id="body">
+        <div id="overlay"></div>
+
+        <div class="padding highlightable">
+
+            <div id="top-bar">
+              
+              <div id="breadcrumbs" itemscope="" itemtype="http://data-vocabulary.org/Breadcrumb">
+                  <span id="sidebar-toggle-span">
+                      <a href="#" id="sidebar-toggle" data-sidebar-toggle="">
+                        <i class="fa fa-bars"></i>
+                      </a>
+                  </span>
+                
+                <span id="toc-menu"><a href=""><i class="fa fa-list-alt"></i></a></span>
+                
+                
+                
+                
+                  
+                    
+                    
+                <a href="/ES5-Standards/objects/Date.now/" itemprop="url"><span itemprop="title">Date.now()</span></a> <i class="fa fa-angle-right"></i>
+                    
+                  
+                
+                <span itemprop="title"> Object.freeze()</span>
+              </div>
+              
+                  <div class="progress">
+    <div class="wrapper">
+
+    </div>
+</div>
+
+              
+
+            </div>
+            
+    	        <div id="body-inner">
+                
+                <h1>Object.freeze()</h1>
+                
+
+<p>The <em>Object.freeze()</em> method freezes an object: that is, prevents new properties from being added to it; prevents existing properties from being removed; and prevents existing properties, or their enumerability, configurability, or writability, from being changed. In essence the object is made effectively immutable. The method returns the object being frozen.</p>
+
+<p><h3>Need for this</h3>
+Prevents the modification of existing property attributes and values, and prevents the addition of new properties.</p>
+
+<pre><code>Object.freeze(obj)
+</code></pre>
+
+<p>Nothing can be added to or removed from the properties set of a frozen object. Any attempt to do so will fail, either silently or by throwing a TypeError exception (most commonly, but not exclusively, when in strict mode).</p>
+
+<p>Values cannot be changed for data properties. Accessor properties (getters and setters) work the same (and still give the illusion that you are changing the value). Note that values that are objects can still be modified, unless they are also frozen.</p>
+
+<p><h3>Advantages</h3>
+<ol>
+  <li>You can use this when you have an object representing a logically immutable data structure, especially if:
+   <ul><li>Changing the properties of the object or altering its &ldquo;duck type&rdquo; could lead to bad behavior elsewhere in your application</li>
+   <li>The object is similar to a mutable type or otherwise looks mutable, and you want programmers to be warned on attempting to change it rather than obtain undefined behavior.</li>
+   </ul>
+  </li>
+  <li>Freezing an object is the ultimate form of lock-down. Once an object has been frozen it cannot be unfrozen – nor can it be tampered in any manner. This is the best way to make sure that your objects will stay exactly as you left them, indefinitely</li>
+</ol></p>
+
+<p><h3>Disadvantages</h3>
+<ol>
+  <li>In ES5, if the argument to this method is not an object (a primitive), then it will cause a TypeError. In ES6, a non-object argument will be treated as if it were a frozen ordinary object, and be simply returned.</li>
+</ol></p>
+
+<p><h3>Working Example</h3>
+The following example illustrates the use of the <em>Object.freeze</em> function.</p>
+
+<pre><code>// Create an object that has two properties.
+ var obj = { pasta: &quot;spaghetti&quot;, length: 10 };
+
+ // Freeze the object.
+ Object.freeze(obj);
+
+ // Try to add a new property, and then verify that it is not added.
+ obj.newProp = 50;
+ document.write(obj.newProp);
+ document.write(&quot;&lt;br/&gt;&quot;);
+
+ // Try to delete a property, and then verify that it is still present.
+ delete obj.length;
+ document.write(obj.length);
+ document.write(&quot;&lt;br/&gt;&quot;);
+
+ // Try to change a property value, and then verify that it is not changed.
+ obj.pasta = &quot;linguini&quot;;
+ document.write(obj.pasta);
+
+ // Output:
+ // undefined
+ // 10
+ // spaghetti
+</code></pre>
+
+<p><h3>References</h3>
+<a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Object/freeze">https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Object/freeze</a>
+<a href="https://docs.webplatform.org/wiki/javascript/Object/freeze">https://docs.webplatform.org/wiki/javascript/Object/freeze</a></p>
+
+
+      
+      </div>
+    </div>
+
+    <div id="navigation">
+        
+        <a class="nav nav-prev" href="https://chiragbhatia.github.io/ES5-Standards//objects/Object.defineProperty"> <i class="fa fa-chevron-left"></i></a>
+        <a class="nav nav-next" href="https://chiragbhatia.github.io/ES5-Standards//objects/Object.getOwnPropertyDescriptor" style="margin-right: 0px;"><i class="fa fa-chevron-right"></i></a>
+    </div>
+
+    </section>
+    <div style="left: -1000px; overflow: scroll; position: absolute; top: -1000px; border: none; box-sizing: content-box; height: 200px; margin: 0px; padding: 0px; width: 200px;">
+      <div style="border: none; box-sizing: content-box; height: 200px; margin: 0px; padding: 0px; width: 200px;"></div>
+    </div>
+    <script src="https://chiragbhatia.github.io/ES5-Standards//js/clipboard.min.js"></script>
+    <script src="https://chiragbhatia.github.io/ES5-Standards//js/perfect-scrollbar.min.js"></script>
+    <script src="https://chiragbhatia.github.io/ES5-Standards//js/perfect-scrollbar.jquery.min.js"></script>
+    <script src="https://chiragbhatia.github.io/ES5-Standards//js/jquery.sticky-kit.min.js"></script>
+    <script src="https://chiragbhatia.github.io/ES5-Standards//js/featherlight.min.js"></script>
+    <script src="https://chiragbhatia.github.io/ES5-Standards//js/html5shiv-printshiv.min.js"></script>
+    <script src="https://chiragbhatia.github.io/ES5-Standards//js/highlight.pack.js"></script>
+    <script>hljs.initHighlightingOnLoad();</script>
+    <script src="https://chiragbhatia.github.io/ES5-Standards//js/modernizr.custom.71422.js"></script>
+    <script src="https://chiragbhatia.github.io/ES5-Standards//js/learn.js"></script>
+    <script src="https://chiragbhatia.github.io/ES5-Standards//js/hugo-learn.js"></script>
+    
+
+  </body>
+</html>
+

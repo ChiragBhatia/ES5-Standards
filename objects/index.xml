@@ -1,13 +1,350 @@
 <?xml version="1.0" encoding="utf-8" standalone="yes" ?>
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
-    <title>ES5 Standards</title>
-    <link>https://chiragbhatia.github.io/ES5-Standards/index.xml</link>
-    <description>Recent content on ES5 Standards</description>
+    <title>Objects on ES5 Standards</title>
+    <link>https://chiragbhatia.github.io/ES5-Standards/objects/index.xml</link>
+    <description>Recent content in Objects on ES5 Standards</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
-    <lastBuildDate>Fri, 11 Nov 2016 00:45:05 +0530</lastBuildDate>
-    <atom:link href="https://chiragbhatia.github.io/ES5-Standards/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Fri, 20 Jan 2017 00:45:05 +0530</lastBuildDate>
+    <atom:link href="https://chiragbhatia.github.io/ES5-Standards/objects/index.xml" rel="self" type="application/rss+xml" />
+    
+    <item>
+      <title>Date.now()</title>
+      <link>https://chiragbhatia.github.io/ES5-Standards/objects/Date.now/</link>
+      <pubDate>Fri, 20 Jan 2017 00:45:05 +0530</pubDate>
+      
+      <guid>https://chiragbhatia.github.io/ES5-Standards/objects/Date.now/</guid>
+      <description>&lt;p&gt;The &lt;em&gt;Date.now()&lt;/em&gt; method returns the number of milliseconds elapsed since 1 January 1970 00:00:00 UTC.&lt;/p&gt;
+
+&lt;p&gt;&lt;h3&gt;Need for this&lt;/h3&gt;
+Returns the number of milliseconds between midnight, January 1, 1970, and the current date and time.&lt;/p&gt;
+
+&lt;pre&gt;&lt;code&gt;var timeInMs = Date.now();
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;p&gt;&lt;h3&gt;Advantages&lt;/h3&gt;
+&lt;ol&gt;
+  &lt;li&gt;Date.getTime() and Date.now() are effectively equivalent but Date.now() is twice faster than the former.
+  &lt;/li&gt;
+&lt;/ol&gt;&lt;/p&gt;
+
+&lt;p&gt;&lt;h3&gt;Working Example&lt;/h3&gt;
+The following example illustrates the use of the &lt;em&gt;Date.now()&lt;/em&gt; function.&lt;/p&gt;
+
+&lt;pre&gt;&lt;code&gt;var start = Date.now();
+var response = prompt(&amp;quot;What is your name?&amp;quot;, &amp;quot;&amp;quot;);
+var end = Date.now();
+var elapsed = (end - start) / 1000;
+document.write(&amp;quot;You took &amp;quot; + elapsed + &amp;quot; seconds&amp;quot; + &amp;quot; to type: &amp;quot; + response);
+
+// Output:
+// You took &amp;lt;seconds&amp;gt; seconds to type: &amp;lt;name&amp;gt;
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;p&gt;&lt;h3&gt;References&lt;/h3&gt;
+&lt;a href=&#34;https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Date/now&#34;&gt;https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Date/now&lt;/a&gt;&lt;br/&gt;
+&lt;a href=&#34;http://stackoverflow.com/questions/12517359/performance-date-now-vs-date-gettime&#34;&gt;http://stackoverflow.com/questions/12517359/performance-date-now-vs-date-gettime&lt;/a&gt;&lt;/p&gt;
+</description>
+    </item>
+    
+    <item>
+      <title>Date.prototype.toISOString()</title>
+      <link>https://chiragbhatia.github.io/ES5-Standards/objects/Date.prototype.toISOString/</link>
+      <pubDate>Fri, 20 Jan 2017 00:45:05 +0530</pubDate>
+      
+      <guid>https://chiragbhatia.github.io/ES5-Standards/objects/Date.prototype.toISOString/</guid>
+      <description>&lt;p&gt;The toISOString() method returns a string in simplified extended ISO format (ISO 8601), which is always 24 or 27 characters long (YYYY-MM-DDTHH:mm:ss.sssZ or ±YYYYYY-MM-DDTHH:mm:ss.sssZ, respectively). The timezone is always zero UTC offset, as denoted by the suffix &amp;ldquo;Z&amp;rdquo;.&lt;/p&gt;
+
+&lt;p&gt;&lt;h3&gt;Need for this&lt;/h3&gt;
+Returns a date as a string value in simplified ISO 8601 Extended format.&lt;/p&gt;
+
+&lt;pre&gt;&lt;code&gt;dateObj.toISOString()
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;p&gt;&lt;h3&gt;Advantages&lt;/h3&gt;
+&lt;ol&gt;
+  &lt;li&gt;The ISO 8601 Extended format is supported by Date.parse(), it is therefore a good choice when dates need to be exchanged between APIs.
+  &lt;/li&gt;
+&lt;/ol&gt;&lt;/p&gt;
+
+&lt;p&gt;&lt;h3&gt;Working Example&lt;/h3&gt;
+The following example illustrates the use of the &lt;em&gt;Date.prototype.toISOString()&lt;/em&gt; function.&lt;/p&gt;
+
+&lt;pre&gt;&lt;code&gt;var today = new Date(&#39;05 October 2011 14:48 UTC&#39;);
+
+console.log(today.toISOString()); // Returns 2011-10-05T14:48:00.000Z
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;p&gt;&lt;h3&gt;References&lt;/h3&gt;
+&lt;a href=&#34;https://developer.mozilla.org/en/docs/Web/JavaScript/Reference/Global_Objects/Date/toISOString&#34;&gt;https://developer.mozilla.org/en/docs/Web/JavaScript/Reference/Global_Objects/Date/toISOString&lt;/a&gt;&lt;br/&gt;
+&lt;a href=&#34;https://docs.webplatform.org/wiki/javascript/Date/toISOString&#34;&gt;https://docs.webplatform.org/wiki/javascript/Date/toISOString&lt;/a&gt;&lt;/p&gt;
+</description>
+    </item>
+    
+    <item>
+      <title>Date.prototype.toJSON()</title>
+      <link>https://chiragbhatia.github.io/ES5-Standards/objects/Date.prototype.toJSON/</link>
+      <pubDate>Fri, 20 Jan 2017 00:45:05 +0530</pubDate>
+      
+      <guid>https://chiragbhatia.github.io/ES5-Standards/objects/Date.prototype.toJSON/</guid>
+      <description>&lt;p&gt;The toJSON() method returns a string representation of the Date object.&lt;/p&gt;
+
+&lt;p&gt;&lt;h3&gt;Need for this&lt;/h3&gt;
+Date instances refer to a specific point in time. Calling toJSON() returns a string (using toISOString()) representing the Date object&amp;rsquo;s value. This method is generally intended to, by default, usefully serialize Date objects during JSON serialization.&lt;/p&gt;
+
+&lt;pre&gt;&lt;code&gt;dateObj.toJSON()
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;p&gt;&lt;h3&gt;Working Example&lt;/h3&gt;
+The following example illustrates the use of the &lt;em&gt;Date.prototype.toJSON()&lt;/em&gt; function.&lt;/p&gt;
+
+&lt;pre&gt;&lt;code&gt;var jsonDate = (new Date()).toJSON();
+var backToDate = new Date(jsonDate);
+
+console.log(jsonDate); //2015-10-26T07:46:36.611Z
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;p&gt;&lt;h3&gt;References&lt;/h3&gt;
+&lt;a href=&#34;https://developer.mozilla.org/en/docs/Web/JavaScript/Reference/Global_Objects/Date/toJSON&#34;&gt;https://developer.mozilla.org/en/docs/Web/JavaScript/Reference/Global_Objects/Date/toJSON&lt;/a&gt;&lt;br/&gt;
+&lt;a href=&#34;http://stackoverflow.com/questions/11382606/javascript-date-tojson-dont-get-the-timezone-offset&#34;&gt;http://stackoverflow.com/questions/11382606/javascript-date-tojson-dont-get-the-timezone-offset&lt;/a&gt;&lt;/p&gt;
+</description>
+    </item>
+    
+    <item>
+      <title>Function.prototype.bind()</title>
+      <link>https://chiragbhatia.github.io/ES5-Standards/objects/Function.prototype.bind/</link>
+      <pubDate>Fri, 20 Jan 2017 00:45:05 +0530</pubDate>
+      
+      <guid>https://chiragbhatia.github.io/ES5-Standards/objects/Function.prototype.bind/</guid>
+      <description>&lt;p&gt;The &lt;em&gt;bind()&lt;/em&gt; method creates a new function that, when called, has its this keyword set to the provided value, with a given sequence of arguments preceding any provided when the new function is called.&lt;/p&gt;
+
+&lt;p&gt;&lt;h3&gt;Need for this&lt;/h3&gt;
+The bind() function creates a new bound function (BF). A BF is an exotic function object (term from ECMAScript 2015)  that wraps the original function object. Calling a BF generally results in the execution of its wrapped function.
+A BF has the following internal properties:&lt;/p&gt;
+
+&lt;p&gt;&lt;ul&gt;&lt;li&gt;[[BoundTargetFunction]] - the wrapped function object;&lt;/li&gt;
+   &lt;li&gt;[[BoundThis]] - the value that is always passed as the this value when calling the wrapped function.&lt;/li&gt;&lt;li&gt;[[BoundArguments]]  - a list of values whose elements are used as the first arguments to any call to the wrapped function.&lt;/li&gt;&lt;li&gt;[[Call]] - executes code associated with this object. Invoked via a function call expression. The arguments to the internal method are a this value and a list containing the arguments passed to the function by a call expression.&lt;/li&gt;&lt;/p&gt;
+
+&lt;p&gt;&lt;/ul&gt;&lt;/p&gt;
+
+&lt;pre&gt;&lt;code&gt;fun.bind(thisArg[, arg1[, arg2[, ...]]])
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;p&gt;&lt;h3&gt;Advantages&lt;/h3&gt;
+&lt;ol&gt;
+  &lt;li&gt;Function binding is most probably your least concern when beginning with JavaScript, but when you realize that you need a solution to the problem of how to keep the context of this within another function, then you might not realize that what you actually need is Function.prototype.bind().
+  &lt;/li&gt;
+  &lt;li&gt;The first time you hit upon the problem, you might be inclined to set this to a variable that you can reference when you change context. Many people opt for self, _this or sometimes context as a variable name. They’re all usable and nothing is wrong with doing that, but this is a better way.&lt;/li&gt;
+&lt;/ol&gt;&lt;/p&gt;
+
+&lt;p&gt;&lt;h3&gt;Disadvantages&lt;/h3&gt;
+&lt;ol&gt;
+  &lt;li&gt;As you can see, unfortunately, Function.prototype.bind isn’t supported in Internet Explorer 8 and below, so you’ll run into problems if you try to use it without a fallback.&lt;/li&gt;
+&lt;/ol&gt;&lt;/p&gt;
+
+&lt;p&gt;&lt;h3&gt;Working Example&lt;/h3&gt;
+The following example illustrates the use of the &lt;em&gt;Function.prototype.bind()&lt;/em&gt; function.&lt;/p&gt;
+
+&lt;pre&gt;&lt;code&gt;var Button = function(content) { 
+  this.content = content;
+};
+Button.prototype.click = function() {
+  console.log(this.content + &#39; clicked&#39;);
+}
+
+var myButton = new Button(&#39;OK&#39;);
+myButton.click();
+
+var looseClick = myButton.click;
+looseClick(); // not bound, &#39;this&#39; is not myButton - it is the global object
+
+var boundClick = myButton.click.bind(myButton);
+boundClick(); // bound, &#39;this&#39; is myButton
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;p&gt;Which prints out:&lt;/p&gt;
+
+&lt;pre&gt;&lt;code&gt;OK clicked
+undefined clicked
+OK clicked
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;p&gt;You can also add extra parameters after the 1st (this) parameter and bind will pass in those values to the original function. Any additional parameters you later pass to the bound function will be passed in after the bound parameters:&lt;/p&gt;
+
+&lt;p&gt;&lt;h3&gt;References&lt;/h3&gt;
+&lt;a href=&#34;https://developer.mozilla.org/en/docs/Web/JavaScript/Reference/Global_objects/Function/bind&#34;&gt;https://developer.mozilla.org/en/docs/Web/JavaScript/Reference/Global_objects/Function/bind&lt;/a&gt;
+&lt;a href=&#34;https://www.smashingmagazine.com/2014/01/understanding-javascript-function-prototype-bind/&#34;&gt;https://www.smashingmagazine.com/2014/01/understanding-javascript-function-prototype-bind/&lt;/a&gt;
+&lt;a href=&#34;http://stackoverflow.com/questions/2236747/use-of-the-javascript-bind-method&#34;&gt;http://stackoverflow.com/questions/2236747/use-of-the-javascript-bind-method&lt;/a&gt;&lt;/p&gt;
+</description>
+    </item>
+    
+    <item>
+      <title>Strict Mode</title>
+      <link>https://chiragbhatia.github.io/ES5-Standards/objects/strict%20mode/</link>
+      <pubDate>Fri, 20 Jan 2017 00:45:05 +0530</pubDate>
+      
+      <guid>https://chiragbhatia.github.io/ES5-Standards/objects/strict%20mode/</guid>
+      <description>&lt;p&gt;&lt;em&gt;Strict Mode&lt;/em&gt; is a new feature in ECMAScript 5 that allows you to place a program, or a function, in a &amp;ldquo;strict&amp;rdquo; operating context. This strict context prevents certain actions from being taken and throws more exceptions.&lt;/p&gt;
+
+&lt;p&gt;You can enable the strict mode by declaring this in the top of your script/function.&lt;/p&gt;
+
+&lt;pre&gt;&lt;code&gt;&#39;use strict&#39;;
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;p&gt;&lt;h3&gt;Why Strict Mode?&lt;/h3&gt;
+&lt;ul&gt;
+  &lt;li&gt;Strict mode makes it easier to write &amp;ldquo;secure&amp;rdquo; JavaScript.
+  &lt;/li&gt;
+  &lt;li&gt;Strict mode changes previously accepted &amp;ldquo;bad syntax&amp;rdquo; into real errors. As an example, in normal JavaScript, mistyping a variable name creates a new global variable. In strict mode, this will throw an error, making it impossible to accidentally create a global variable.
+  &lt;/li&gt;
+  &lt;li&gt;In normal JavaScript, a developer will not receive any error feedback assigning values to non-writable properties.
+  &lt;/li&gt;
+  &lt;li&gt;In strict mode, any assignment to a non-writable property, a getter-only property, a non-existing property, a non-existing variable, or a non-existing object, will throw an error.
+  &lt;/li&gt;&lt;/ul&gt;&lt;/p&gt;
+
+&lt;p&gt;&lt;h3&gt;Where should I use &amp;lsquo;use strict&amp;rsquo;;?&lt;/h3&gt;
+&lt;ul&gt;
+  &lt;li&gt;In my existing JavaScript code: &lt;b&gt;Probably not!&lt;/b&gt; If your existing JavaScript code has statements that are prohibited in strict-mode, the application will simply break. If you want strict mode, you should be prepared to debug and correct your existing code. This is why using &amp;lsquo;use strict&amp;rsquo;; does not suddenly make your code better.
+  &lt;/li&gt;
+  &lt;li&gt;In my new JavaScript application: &lt;b&gt;Absolutely!&lt;/b&gt; Strict mode can be used as a whistleblower when you are doing something stupid with your code.
+  &lt;/li&gt;
+&lt;/ul&gt;&lt;/p&gt;
+
+&lt;p&gt;&lt;h3&gt;How do I use strict mode?&lt;/h3&gt;
+1.Insert a &amp;lsquo;use strict&amp;rsquo;; statement on top of your script:&lt;/p&gt;
+
+&lt;pre&gt;&lt;code&gt;// File: myscript.js
+
+&#39;use strict&#39;;
+var a = 2;
+....
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;p&gt;Note that everything in the file myscript.js will be interpreted in strict mode.&lt;/p&gt;
+
+&lt;p&gt;2.Insert a &amp;lsquo;use strict&amp;rsquo;; statement on top of your function body:&lt;/p&gt;
+
+&lt;pre&gt;&lt;code&gt;function doSomething() {
+    &#39;use strict&#39;;
+    ...
+}
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;p&gt;Everything in the lexical scope of function doSomething will be interpreted in strict mode.&lt;/p&gt;
+
+&lt;p&gt;&lt;h3&gt;List of features&lt;/h3&gt;
+&lt;ul&gt;
+&lt;li&gt;In strict mode all variables have to be declared: if you assign a value to an identifier that has not been declared as variable, function, function parameter, catch-clause parameter or property of the global Object, then you will get a ReferenceError. In normal mode the identifier is implicitly declared as a global variable (as a property of the global Object)&lt;/li&gt;
+&lt;li&gt;In strict mode the keyword this has the value undefined in functions that were invoked as functions (not as methods). (In normal mode this always points to the global Object). This difference can be used to test if an implementation supports the strict mode: &lt;br/&gt;&lt;br/&gt;&lt;/p&gt;
+
+&lt;p&gt;//var hasStrictMode = (function() { &amp;ldquo;use strict&amp;rdquo;; return this===undefined }());&lt;br/&gt;&lt;br/&gt;&lt;/p&gt;
+
+&lt;p&gt;&lt;/li&gt;
+&lt;li&gt;Also when a function is invoked with call() or apply in strict mode, then this is exactly the value of the first argument of the call()or apply() invocation. (In normal mode null and undefined are replaced by the global Object and values, which are not objects, are cast into objects.)&lt;/li&gt;
+&lt;li&gt;You cannot use the with-statement in strict mode.
+&lt;/li&gt;
+&lt;li&gt;In strict mode you will get a TypeError, when you try to assign to readonly properties or to define new properties for a non extensible object. (In normal mode both simply fail without error message.)
+&lt;/li&gt;
+&lt;li&gt;In strict mode, when passing code to eval(), you cannot declare or define variables or functions in the scope of the caller (as you can do it in normal mode). Instead, a new scope is created for eval() and the variables and functions are within that scope. That scope is destroyed after eval() finishes execution.
+&lt;/li&gt;
+&lt;li&gt;In strict mode the arguments-object of a function contains a static copy of the values, which are passed to that function. In normal mode the arguments-object has a somewhat &amp;ldquo;magical&amp;rdquo; behaviour: The elements of the array and the named function parameters reference both the same value.
+&lt;/li&gt;
+&lt;li&gt;In strict mode you will get a SyntaxError when the delete operator is followed by a non qualified identifier (a variable, function or function parameter). In normal mode the delete expression would do nothing and is evaluated to false.
+&lt;/li&gt;
+&lt;li&gt;In strict mode you will get a TypeError when you try to delete a non configurable property. (In normal mode the attempt simply fails and the delete expression is evaluated to false).
+&lt;/li&gt;
+&lt;li&gt;In strict mode it is considered a syntactical error when you try to define several properties with the same name for an object literal. (In normal mode there is no error.)
+&lt;/li&gt;
+&lt;li&gt;In strict mode it is considered a syntactical error when a function declaration has multiple parameters with the same name. (In normal mode there is no error.)
+&lt;/li&gt;
+&lt;li&gt;In strict mode octal literals are not allowed (these are literals that start with 0x. (In normal mode some implementations do allow octal literals.)
+&lt;/li&gt;
+&lt;li&gt;In strict mode are more restrictions on the possibilities to examine the call stack. arguments.caller and arguments.callee cause a TypeError in a function in strict mode. Furthermore, some caller- and arguments properties of functions in strict mode cause a TypeError when you try to read them.
+&lt;/li&gt;
+&lt;/ul&gt;&lt;/p&gt;
+
+&lt;p&gt;&lt;h3&gt;Advantages&lt;/h3&gt;
+&lt;ul&gt;
+&lt;li&gt;Eliminate JavaScript silent errors by throwing error.&lt;/li&gt;
+&lt;li&gt;Fixes mistake that make it difficult for JavaScript engine to perform optimisation.&lt;/li&gt;
+&lt;li&gt;Make code run faster sometime than identical code that’s not in strict mode
+&lt;/li&gt;
+&lt;li&gt;Make code run faster sometime than identical code that’s not in strict mode
+Prohibits some syntax likely to be defined in future version of ECMAScript.&lt;/li&gt;
+&lt;/ul&gt;&lt;/p&gt;
+
+&lt;p&gt;&lt;h3&gt;References&lt;/h3&gt;
+&lt;a href=&#34;https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Strict_mode&#34;&gt;https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Strict_mode&lt;/a&gt;&lt;br/&gt;
+&lt;a href=&#34;https://javascriptweblog.wordpress.com/2011/05/03/javascript-strict-mode/&#34;&gt;https://javascriptweblog.wordpress.com/2011/05/03/javascript-strict-mode/&lt;/a&gt;&lt;br/&gt;
+&lt;a href=&#34;http://cjihrig.com/blog/javascripts-strict-mode-and-why-you-should-use-it/&#34;&gt;http://cjihrig.com/blog/javascripts-strict-mode-and-why-you-should-use-it/&lt;/a&gt;&lt;br/&gt;
+&lt;a href=&#34;http://stackoverflow.com/questions/8651415/what-is-strict-mode-and-how-is-it-used&#34;&gt;http://stackoverflow.com/questions/8651415/what-is-strict-mode-and-how-is-it-used&lt;/a&gt;&lt;/p&gt;
+</description>
+    </item>
+    
+    <item>
+      <title>String.prototype.trim()</title>
+      <link>https://chiragbhatia.github.io/ES5-Standards/objects/String.prototype.trim/</link>
+      <pubDate>Fri, 20 Jan 2017 00:45:05 +0530</pubDate>
+      
+      <guid>https://chiragbhatia.github.io/ES5-Standards/objects/String.prototype.trim/</guid>
+      <description>&lt;p&gt;The &lt;em&gt;trim()&lt;/em&gt; method removes whitespace from both ends of a string. Whitespace in this context is all the whitespace characters (space, tab, no-break space, etc.) and all the line terminator characters (LF, CR, etc.).&lt;/p&gt;
+
+&lt;p&gt;&lt;h3&gt;Need for this&lt;/h3&gt;
+The trim() method returns the string stripped of whitespace from both ends. trim() does not affect the value of the string itself.&lt;/p&gt;
+
+&lt;pre&gt;&lt;code&gt;str.trim()
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;p&gt;&lt;h3&gt;Advantages&lt;/h3&gt;
+&lt;ol&gt;
+  &lt;li&gt;Most JavaScript trim() implementations you see around are based on regular expressions and work fairly well for infrequent use on short strings. But using this method it is better and faster.
+  &lt;/li&gt;
+&lt;/ol&gt;&lt;/p&gt;
+
+&lt;p&gt;&lt;h3&gt;Disadvantages&lt;/h3&gt;
+&lt;ol&gt;
+  &lt;li&gt;For browsers that do not support string.trim(), e.g. Internet Explorer 8 or earlier, you can add your own trim() method to string object&amp;rsquo;s prototype by including the following script in the &lt;HEAD&gt; section of your page, prior to any script that uses string.trim():&lt;/li&gt;
+&lt;/ol&gt;&lt;/p&gt;
+
+&lt;pre&gt;&lt;code&gt;if (!String.prototype.trim) {
+  String.prototype.trim = function () {
+    return this.replace(/^[\s\uFEFF\xA0]+|[\s\uFEFF\xA0]+$/g, &#39;&#39;);
+  };
+}
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;p&gt;&lt;h3&gt;Working Example&lt;/h3&gt;
+The following example illustrates the use of the &lt;em&gt;String.prototype.trim()&lt;/em&gt; function.&lt;/p&gt;
+
+&lt;pre&gt;&lt;code&gt;var orig = &#39;   foo  &#39;;
+console.log(orig.trim()); // &#39;foo&#39;
+
+// Another example of .trim() removing whitespace from just one side.
+
+var orig = &#39;foo    &#39;;
+console.log(orig.trim()); // &#39;foo&#39;
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;p&gt;&lt;h3&gt;References&lt;/h3&gt;
+&lt;a href=&#34;https://developer.mozilla.org/en/docs/Web/JavaScript/Reference/Global_Objects/String/trim&#34;&gt;https://developer.mozilla.org/en/docs/Web/JavaScript/Reference/Global_Objects/String/trim&lt;/a&gt;&lt;br/&gt;
+&lt;a href=&#34;http://stackoverflow.com/questions/498970/trim-string-in-javascript&#34;&gt;http://stackoverflow.com/questions/498970/trim-string-in-javascript&lt;/a&gt;&lt;/p&gt;
+</description>
+    </item>
+    
+    <item>
+      <title>ES5 Objects</title>
+      <link>https://chiragbhatia.github.io/ES5-Standards/objects/</link>
+      <pubDate>Sat, 01 Oct 2016 00:44:16 +0530</pubDate>
+      
+      <guid>https://chiragbhatia.github.io/ES5-Standards/objects/</guid>
+      <description>
+
+&lt;h1 id=&#34;es-5-objects&#34;&gt;ES-5 Objects&lt;/h1&gt;
+
+&lt;p&gt;Click on any Object in left side menu to know about that object.&lt;/p&gt;
+</description>
+    </item>
     
     <item>
       <title>Array.isArray()</title>
@@ -459,393 +796,6 @@ JSON.stringify(foo, replacer);
 &lt;a href=&#34;https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/JSON/stringify&#34;&gt;https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/JSON/stringify&lt;/a&gt;
 &lt;br&gt;
 &lt;a href=&#34;https://msdn.microsoft.com/library/cc836459(v=vs.94).aspx&#34;&gt;https://msdn.microsoft.com/library/cc836459(v=vs.94).aspx&lt;/a&gt;&lt;/p&gt;
-</description>
-    </item>
-    
-    <item>
-      <title>Object.create()</title>
-      <link>https://chiragbhatia.github.io/ES5-Standards/objects/Object.create/</link>
-      <pubDate>Thu, 03 Nov 2016 00:45:05 +0530</pubDate>
-      
-      <guid>https://chiragbhatia.github.io/ES5-Standards/objects/Object.create/</guid>
-      <description>&lt;p&gt;The Object.create() method creates a new object with the specified prototype object and properties.&lt;/p&gt;
-
-&lt;h3&gt;Need for this&lt;/h3&gt;
-Object.create() is very similar to the `new` keyword. Both create a new instance of the Object type specified. The only difference is that Object.create() does not execute the constructor unless specified to do so.
-
-&lt;h3&gt;Disadvantages&lt;/h3&gt;
-&lt;ol&gt;
-  &lt;li&gt;Object.create does not call the constructor function unless specifically asked to do so.&lt;/li&gt;
-  &lt;li&gt;A limited variant of Object.create is available as a polyfill for older browsers which do not have support for the same.&lt;/li&gt;
-&lt;/ol&gt;
-
-&lt;h3&gt;Advantages&lt;/h3&gt;
-&lt;ol&gt;
-  &lt;li&gt;Object.create allows you to initialize properties of the created object using the second argument of its function, with an object literal using a syntax similar to the one used by the Object.defineProperties and Object.defineProperty methods.&lt;/li&gt;
-  &lt;li&gt;It lets you set the property attributes during initialization (enumerable, writable, or configurable), which can be really useful.&lt;/li&gt;
-&lt;/ol&gt;
-
-&lt;h3&gt;Working Example&lt;/h3&gt;
-
-&lt;pre&gt;&lt;code&gt;    // Shape - superclass
-    function Shape() {
-      this.x = 0;
-      this.y = 0;
-    }
-
-    // superclass method
-    Shape.prototype.move = function(x, y) {
-      this.x += x;
-      this.y += y;
-      console.info(&#39;Shape moved.&#39;);
-    };
-
-    // Rectangle - subclass
-    function Rectangle() {
-      Shape.call(this); // call super constructor.
-    }
-
-    // subclass extends superclass
-    Rectangle.prototype = Object.create(Shape.prototype);
-    Rectangle.prototype.constructor = Rectangle;
-
-    var rect = new Rectangle();
-
-    console.log(&#39;Is rect an instance of Rectangle?&#39;, rect instanceof Rectangle);// true
-    console.log(&#39;Is rect an instance of Shape?&#39;, rect instanceof Shape);// true
-    rect.move(1, 1); // Outputs, &#39;Shape moved.&#39;
-&lt;/code&gt;&lt;/pre&gt;
-
-&lt;p&gt;&lt;h3&gt;References&lt;/h3&gt;
-&lt;a href=&#34;https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Object/create&#34;&gt;https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Object/create&lt;/a&gt;
-&lt;br&gt;
-&lt;a href=&#34;http://stackoverflow.com/a/2709811/976897&#34;&gt;http://stackoverflow.com/a/2709811/976897&lt;/a&gt;
-&lt;br&gt;
-&lt;a href=&#34;http://speakingjs.com/es5/ch17.html&#34;&gt;http://speakingjs.com/es5/ch17.html&lt;/a&gt;&lt;/p&gt;
-</description>
-    </item>
-    
-    <item>
-      <title>Object.defineProperties()</title>
-      <link>https://chiragbhatia.github.io/ES5-Standards/objects/Object.defineProperties/</link>
-      <pubDate>Wed, 02 Nov 2016 00:45:05 +0530</pubDate>
-      
-      <guid>https://chiragbhatia.github.io/ES5-Standards/objects/Object.defineProperties/</guid>
-      <description>&lt;p&gt;The Object.defineProperties() method defines new or modifies existing properties directly on an object, returning the object.&lt;/p&gt;
-
-&lt;h3&gt;Need for this&lt;/h3&gt;
-Object.defineProperties works similar to `Object.defineProperty` in the sense that both are used to create or modify properties of an object. The only difference is that Object.defineProperties allows the developer to work on multiple properties in a single line of code as opposed to Object.defineProperty which can only handle one property at a time.
-
-&lt;h3&gt;Advantage&lt;/h3&gt;
-&lt;ol&gt;
-  &lt;li&gt;Object.defineProperties allows the developer to work on multiple properties of an object in a single line of code.&lt;/li&gt;
-&lt;/ol&gt;
-
-&lt;h3&gt;Working Example&lt;/h3&gt;
-
-&lt;pre&gt;&lt;code&gt;    var obj = {};
-    Object.defineProperties(obj, {
-      &amp;quot;property1&amp;quot;: {
-        value: true,
-        writable: true
-      },
-      &amp;quot;property2&amp;quot;: {
-        value: &amp;quot;Hello&amp;quot;,
-        writable: false
-      }
-      // etc. etc.
-    });
-&lt;/code&gt;&lt;/pre&gt;
-
-&lt;p&gt;&lt;h3&gt;References&lt;/h3&gt;
-&lt;a href=&#34;https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Object/defineProperties&#34;&gt;https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Object/defineProperties&lt;/a&gt;
-&lt;br&gt;
-&lt;a href=&#34;https://msdn.microsoft.com/en-us/library/ff800817(v=vs.94).aspx&#34;&gt;https://msdn.microsoft.com/en-us/library/ff800817(v=vs.94).aspx&lt;/a&gt;&lt;/p&gt;
-</description>
-    </item>
-    
-    <item>
-      <title>Object.defineProperty()</title>
-      <link>https://chiragbhatia.github.io/ES5-Standards/objects/Object.defineProperty/</link>
-      <pubDate>Wed, 02 Nov 2016 00:45:05 +0530</pubDate>
-      
-      <guid>https://chiragbhatia.github.io/ES5-Standards/objects/Object.defineProperty/</guid>
-      <description>&lt;p&gt;The Object.defineProperty() method defines a new property directly on an object, or modifies an existing property on an object, and returns the object.&lt;/p&gt;
-
-&lt;h3&gt;Need for this&lt;/h3&gt;
-This method allows precise addition to or modification of a property on an object. Normal property addition through assignment creates properties which show up during property enumeration (for...in loop or Object.keys method), whose values may be changed, and which may be deleted. This method allows these extra details to be changed from their defaults. By default, values added using Object.defineProperty() are immutable.
-
-&lt;h3&gt;Advantages&lt;/h3&gt;
-&lt;ol&gt;
-  &lt;li&gt;Object.defineProperty allows the developer to modify data properties of an object. e.g. to make an Object property read-only.&lt;/li&gt;
-  &lt;li&gt;Object.defineProperty allows the developer to override the default browser properties which are otherwise not overridable. This can be useful during unit testing.&lt;/li&gt;
-&lt;/ol&gt;
-
-&lt;h3&gt;Working Example&lt;/h3&gt;
-
-&lt;pre&gt;&lt;code&gt;    // Create a user-defined object.
-    var obj = {};
-
-    // Add a read-only data property to the object.
-    Object.defineProperty(obj, &amp;quot;newDataProperty&amp;quot;, {
-        value: 101,
-        writable: false,
-        enumerable: true,
-        configurable: true
-    });
-
-    console.log(obj.newDataProperty);   // 101
-    obj.newDataProperty = 202;
-    console.log(obj.newDataProperty);   // 101
-
-    // Change read-only property to writable
-    Object.defineProperty(obj, &amp;quot;newDataProperty&amp;quot;, {
-        writable: true
-    });
-
-    console.log(obj.newDataProperty);   // 101
-    obj.newDataProperty = 202;
-    console.log(obj.newDataProperty);   // 202
-&lt;/code&gt;&lt;/pre&gt;
-
-&lt;p&gt;&lt;h3&gt;References&lt;/h3&gt;
-&lt;a href=&#34;https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Object/defineProperty&#34;&gt;https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Object/defineProperty&lt;/a&gt;
-&lt;br&gt;
-&lt;a href=&#34;https://msdn.microsoft.com/en-us/library/dd548687(v=vs.94).aspx&#34;&gt;https://msdn.microsoft.com/en-us/library/dd548687(v=vs.94).aspx&lt;/a&gt;
-&lt;br&gt;
-&lt;a href=&#34;https://davidwalsh.name/defineproperty&#34;&gt;https://davidwalsh.name/defineproperty&lt;/a&gt;&lt;/p&gt;
-</description>
-    </item>
-    
-    <item>
-      <title>Object.freeze()</title>
-      <link>https://chiragbhatia.github.io/ES5-Standards/objects/Object.freeze/</link>
-      <pubDate>Fri, 04 Nov 2016 00:45:05 +0530</pubDate>
-      
-      <guid>https://chiragbhatia.github.io/ES5-Standards/objects/Object.freeze/</guid>
-      <description>&lt;p&gt;The &lt;em&gt;Object.freeze()&lt;/em&gt; method freezes an object: that is, prevents new properties from being added to it; prevents existing properties from being removed; and prevents existing properties, or their enumerability, configurability, or writability, from being changed. In essence the object is made effectively immutable. The method returns the object being frozen.&lt;/p&gt;
-
-&lt;p&gt;&lt;h3&gt;Need for this&lt;/h3&gt;
-Prevents the modification of existing property attributes and values, and prevents the addition of new properties.&lt;/p&gt;
-
-&lt;pre&gt;&lt;code&gt;Object.freeze(obj)
-&lt;/code&gt;&lt;/pre&gt;
-
-&lt;p&gt;Nothing can be added to or removed from the properties set of a frozen object. Any attempt to do so will fail, either silently or by throwing a TypeError exception (most commonly, but not exclusively, when in strict mode).&lt;/p&gt;
-
-&lt;p&gt;Values cannot be changed for data properties. Accessor properties (getters and setters) work the same (and still give the illusion that you are changing the value). Note that values that are objects can still be modified, unless they are also frozen.&lt;/p&gt;
-
-&lt;p&gt;&lt;h3&gt;Advantages&lt;/h3&gt;
-&lt;ol&gt;
-  &lt;li&gt;You can use this when you have an object representing a logically immutable data structure, especially if:
-   &lt;ul&gt;&lt;li&gt;Changing the properties of the object or altering its &amp;ldquo;duck type&amp;rdquo; could lead to bad behavior elsewhere in your application&lt;/li&gt;
-   &lt;li&gt;The object is similar to a mutable type or otherwise looks mutable, and you want programmers to be warned on attempting to change it rather than obtain undefined behavior.&lt;/li&gt;
-   &lt;/ul&gt;
-  &lt;/li&gt;
-  &lt;li&gt;Freezing an object is the ultimate form of lock-down. Once an object has been frozen it cannot be unfrozen – nor can it be tampered in any manner. This is the best way to make sure that your objects will stay exactly as you left them, indefinitely&lt;/li&gt;
-&lt;/ol&gt;&lt;/p&gt;
-
-&lt;p&gt;&lt;h3&gt;Disadvantages&lt;/h3&gt;
-&lt;ol&gt;
-  &lt;li&gt;In ES5, if the argument to this method is not an object (a primitive), then it will cause a TypeError. In ES6, a non-object argument will be treated as if it were a frozen ordinary object, and be simply returned.&lt;/li&gt;
-&lt;/ol&gt;&lt;/p&gt;
-
-&lt;p&gt;&lt;h3&gt;Working Example&lt;/h3&gt;
-The following example illustrates the use of the &lt;em&gt;Object.freeze&lt;/em&gt; function.&lt;/p&gt;
-
-&lt;pre&gt;&lt;code&gt;// Create an object that has two properties.
- var obj = { pasta: &amp;quot;spaghetti&amp;quot;, length: 10 };
-
- // Freeze the object.
- Object.freeze(obj);
-
- // Try to add a new property, and then verify that it is not added.
- obj.newProp = 50;
- document.write(obj.newProp);
- document.write(&amp;quot;&amp;lt;br/&amp;gt;&amp;quot;);
-
- // Try to delete a property, and then verify that it is still present.
- delete obj.length;
- document.write(obj.length);
- document.write(&amp;quot;&amp;lt;br/&amp;gt;&amp;quot;);
-
- // Try to change a property value, and then verify that it is not changed.
- obj.pasta = &amp;quot;linguini&amp;quot;;
- document.write(obj.pasta);
-
- // Output:
- // undefined
- // 10
- // spaghetti
-&lt;/code&gt;&lt;/pre&gt;
-
-&lt;p&gt;&lt;h3&gt;References&lt;/h3&gt;
-&lt;a href=&#34;https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Object/freeze&#34;&gt;https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Object/freeze&lt;/a&gt;
-&lt;a href=&#34;https://docs.webplatform.org/wiki/javascript/Object/freeze&#34;&gt;https://docs.webplatform.org/wiki/javascript/Object/freeze&lt;/a&gt;&lt;/p&gt;
-</description>
-    </item>
-    
-    <item>
-      <title>Object.getOwnPropertyDescriptor()</title>
-      <link>https://chiragbhatia.github.io/ES5-Standards/objects/Object.getOwnPropertyDescriptor/</link>
-      <pubDate>Thu, 17 Nov 2016 00:45:05 +0530</pubDate>
-      
-      <guid>https://chiragbhatia.github.io/ES5-Standards/objects/Object.getOwnPropertyDescriptor/</guid>
-      <description>&lt;p&gt;The Object.getOwnPropertyDescriptor() method returns a property descriptor for an own property (that is, one directly present on an object and not in the object&amp;rsquo;s prototype chain) of a given object.&lt;/p&gt;
-
-&lt;p&gt;&lt;h3&gt;Need for this&lt;/h3&gt;
-This method allows you to access the descriptor of a property. This method is the only way to get at this information (it is, otherwise, not available to the user – these don’t exist as visible properties on the property, they’re stored internally in the ECMAScript engine).&lt;/p&gt;
-
-&lt;p&gt;This method permits examination of the precise description of a property. A property in JavaScript consists of a string-valued name and a property descriptor. Further information about property descriptor types and their attributes can be found in Object.defineProperty().&lt;/p&gt;
-
-&lt;p&gt;&lt;h3&gt;Advantages&lt;/h3&gt;
-&lt;ol&gt;
-  &lt;li&gt;You can use the Object.getOwnPropertyDescriptor function to obtain a descriptor object that describes attributes of the property.&lt;/li&gt;
-  &lt;li&gt;Object.getOwnPropertyDescriptor allows the developer to override the default browser properties which are otherwise not overridable. This can be useful during unit testing.&lt;/li&gt;
-&lt;/ol&gt;&lt;/p&gt;
-
-&lt;p&gt;&lt;h3&gt;Working Example&lt;/h3&gt;
-// Create a user-defined object.
-var obj = {};&lt;/p&gt;
-
-&lt;p&gt;// Add a data property.
-obj.newDataProperty = &amp;ldquo;abc&amp;rdquo;;&lt;/p&gt;
-
-&lt;p&gt;// Get the property descriptor.
-var descriptor = Object.getOwnPropertyDescriptor(obj, &amp;ldquo;newDataProperty&amp;rdquo;);&lt;/p&gt;
-
-&lt;p&gt;// Change a property attribute.
-descriptor.writable = false;
-Object.defineProperty(obj, &amp;ldquo;newDataProperty&amp;rdquo;, descriptor);&lt;/p&gt;
-
-&lt;p&gt;// Get the descriptor from the object.
-var desc2 = Object.getOwnPropertyDescriptor(obj, &amp;ldquo;newDataProperty&amp;rdquo;);&lt;/p&gt;
-
-&lt;p&gt;// List the descriptor attributes.
-for (var prop in desc2) {
-    document.write(prop + &amp;lsquo;: &amp;lsquo; + desc2[prop]);
-    document.write(&amp;rdquo;&lt;br /&gt;&amp;rdquo;);
-}&lt;/p&gt;
-
-&lt;p&gt;// Output:
-// value: abc
-// writable: false
-// enumerable: true
-// configurable: true&lt;/p&gt;
-
-&lt;p&gt;&lt;h3&gt;References&lt;/h3&gt;
-&lt;a href=&#34;https://developer.mozilla.org/en/docs/Web/JavaScript/Reference/Global_Objects/Object/getOwnPropertyDescriptor&#34;&gt;https://developer.mozilla.org/en/docs/Web/JavaScript/Reference/Global_Objects/Object/getOwnPropertyDescriptor&lt;/a&gt;
-&lt;br /&gt;
-&lt;a href=&#34;https://msdn.microsoft.com/en-us/library/dd548686(v=vs.94).aspx&#34;&gt;https://msdn.microsoft.com/en-us/library/dd548686(v=vs.94).aspx&lt;/a&gt;
-&lt;br /&gt;
-&lt;a href=&#34;http://www.2ality.com/2016/02/object-getownpropertydescriptors.html&#34;&gt;http://www.2ality.com/2016/02/object-getownpropertydescriptors.html&lt;/a&gt;
-&lt;br /&gt;
-&lt;a href=&#34;https://docs.webplatform.org/wiki/javascript/Object/getOwnPropertyDescriptor&#34;&gt;https://docs.webplatform.org/wiki/javascript/Object/getOwnPropertyDescriptor&lt;/a&gt;&lt;/p&gt;
-</description>
-    </item>
-    
-    <item>
-      <title>Object.isExtensible()</title>
-      <link>https://chiragbhatia.github.io/ES5-Standards/objects/Object.isExtensible/</link>
-      <pubDate>Wed, 02 Nov 2016 00:45:05 +0530</pubDate>
-      
-      <guid>https://chiragbhatia.github.io/ES5-Standards/objects/Object.isExtensible/</guid>
-      <description>&lt;p&gt;The Object.isExtensible() method determines if an object is extensible (whether it can have new properties added to it).&lt;/p&gt;
-
-&lt;h3&gt;Need for this&lt;/h3&gt;
-Objects are extensible by default: they can have new properties added to them, and (in engines that support __proto__) their __proto__ property can be modified. An object can be marked as non-extensible using `Object.preventExtensions()`, `Object.seal()`, or `Object.freeze()`. `Object.isExtensible()` helps find out if an object is extensible.
-
-&lt;h3&gt;Advantage&lt;/h3&gt;
-&lt;ol&gt;
-  &lt;li&gt;Object.isExtensible is a single function that can check whether an object is sealed, frozen or is marked with Object.preventExtension.&lt;/li&gt;
-&lt;/ol&gt;
-
-&lt;h3&gt;Working Example&lt;/h3&gt;
-
-&lt;pre&gt;&lt;code&gt;    // New objects are extensible.
-    var empty = {};
-    Object.isExtensible(empty); // === true
-
-    // ...but that can be changed.
-    Object.preventExtensions(empty);
-    Object.isExtensible(empty); // === false
-
-    // Sealed objects are by definition non-extensible.
-    var sealed = Object.seal({});
-    Object.isExtensible(sealed); // === false
-
-    // Frozen objects are also by definition non-extensible.
-    var frozen = Object.freeze({});
-    Object.isExtensible(frozen); // === false
-&lt;/code&gt;&lt;/pre&gt;
-
-&lt;p&gt;&lt;h3&gt;References&lt;/h3&gt;
-&lt;a href=&#34;https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Object/isExtensible&#34;&gt;https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Object/isExtensible&lt;/a&gt;
-&lt;br&gt;
-&lt;a href=&#34;https://msdn.microsoft.com/vi-vn/library/ff806188(v=vs.94).aspx&#34;&gt;https://msdn.microsoft.com/vi-vn/library/ff806188(v=vs.94).aspx&lt;/a&gt;&lt;/p&gt;
-</description>
-    </item>
-    
-    <item>
-      <title>Object.isFrozen()</title>
-      <link>https://chiragbhatia.github.io/ES5-Standards/objects/Object.isFrozen/</link>
-      <pubDate>Fri, 04 Nov 2016 00:45:05 +0530</pubDate>
-      
-      <guid>https://chiragbhatia.github.io/ES5-Standards/objects/Object.isFrozen/</guid>
-      <description>&lt;p&gt;The &lt;em&gt;Object.isFrozen()&lt;/em&gt; determines if an object is frozen.&lt;/p&gt;
-
-&lt;h3&gt;Need for this&lt;/h3&gt;
-Returns true if existing property attributes and values cannot be modified in an object, and new properties cannot be added to the object.&lt;br/&gt;
-
-    Object.isFrozen(obj)
-
-An object is frozen if and only if it is not extensible, all its properties are non-configurable, and all its data properties (that is, properties which are not accessor properties with getter or setter components) are non-writable.
-
-&lt;h3&gt;Advantages&lt;/h3&gt;
-&lt;ol&gt;
-  &lt;li&gt;Using this we can find whether the object is immutable or not.&lt;/li&gt;
-&lt;/ol&gt;
-
-&lt;h3&gt;Disadvantages&lt;/h3&gt;
-&lt;ol&gt;
-  &lt;li&gt;Note that this is not a method to be invoked on an object: it is a global function and you must pass an object to it.&lt;/li&gt;
-&lt;/ol&gt;
-
-&lt;h3&gt;Working Example&lt;/h3&gt;
-The following example illustrates the use of the *Object.isFrozen* function.
-
-    // Create an object that has two properties.
-     var obj = { pasta: &#34;spaghetti&#34;, length: 10 };
-
-     // Freeze the object, and verify that it is frozen.
-     Object.freeze(obj);
-     document.write(obj.isFrozen());
-
-     // Try to add a new property, and then verify that it is not added.
-     obj.newProp = 50;
-     document.write (obj.newProp);
-     document.write (&#34;&lt;br/&gt;&#34;);
-
-     // Try to delete a property, and then verify that it is still present.
-     delete obj.length;
-     document.write (obj.length);
-     document.write (&#34;&lt;br/&gt; &#34;);
-
-     // Try to change a property value, and then verify that it is not changed.
-     obj.pasta = &#34;linguini&#34;;
-     document.write (obj.pasta);
-
-     // Output:
-     // true
-     // undefined
-     // 10
-     // spaghetti
-
-&lt;h3&gt;References&lt;/h3&gt;
-
-&lt;p&gt;&lt;a href=&#34;https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Object/isFrozen&#34;&gt;https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Object/isFrozen&lt;/a&gt;&lt;br/&gt;
-&lt;a href=&#34;https://docs.webplatform.org/wiki/javascript/Object/isFrozen&#34;&gt;https://docs.webplatform.org/wiki/javascript/Object/isFrozen&lt;/a&gt;&lt;br/&gt;
-&lt;a href=&#34;https://www.safaribooksonline.com/library/view/javascript-the-definitive/9781449393854/rn01re159.html&#34;&gt;https://www.safaribooksonline.com/library/view/javascript-the-definitive/9781449393854/rn01re159.html&lt;/a&gt;&lt;/p&gt;
 </description>
     </item>
     
