@@ -1,8 +1,13 @@
 +++
-date = "2017-01-20T00:45:05+05:30"
+date = "2017-01-30T00:45:05+05:30"
 title = "Date.prototype.toISOString()"
+next = "/objects/Date.prototype.toJSON"
+prev = "/objects/Date.now"
+toc = true
+weight = 22
 
 +++
+
 
 The toISOString() method returns a string in simplified extended ISO format (ISO 8601), which is always 24 or 27 characters long (YYYY-MM-DDTHH:mm:ss.sssZ or ±YYYYYY-MM-DDTHH:mm:ss.sssZ, respectively). The timezone is always zero UTC offset, as denoted by the suffix "Z".
 

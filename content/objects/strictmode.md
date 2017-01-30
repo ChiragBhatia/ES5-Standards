@@ -1,6 +1,10 @@
 +++
-date = "2017-01-20T00:45:05+05:30"
+date = "2017-01-30T00:45:05+05:30"
 title = "Strict Mode"
+next = "/objects/strictmode"
+prev = "/objects/Date.prototype.toJSON"
+toc = true
+weight = 24
 
 +++
 
