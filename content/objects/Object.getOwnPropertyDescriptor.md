@@ -1,8 +1,8 @@
 +++
 date = "2016-11-17T00:45:05+05:30"
 title = "Object.getOwnPropertyDescriptor()"
-next = "/js/Object.isExtensible"
-prev = "/js/Object.freeze"
+next = "/objects/Object.isExtensible"
+prev = "/objects/Object.freeze"
 toc = true
 weight = 13
 

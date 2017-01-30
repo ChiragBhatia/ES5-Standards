@@ -1,8 +1,8 @@
 +++
 date = "2016-11-04T00:45:05+05:30"
 title = "Object.freeze()"
-next = "/js/Object.getOwnPropertyDescriptor"
-prev = "/js/Object.defineProperty"
+next = "/objects/Object.getOwnPropertyDescriptor"
+prev = "/objects/Object.defineProperty"
 toc = true
 weight = 12
 

@@ -1,8 +1,8 @@
 +++
 date = "2016-11-11T00:45:05+05:30"
 title = "JSON.parse()"
-next = "/js/JSON.stringify"
-prev = "/js/Array.prototype.some"
+next = "/objects/JSON.stringify"
+prev = "/objects/Array.prototype.some"
 toc = true
 weight = 7
 

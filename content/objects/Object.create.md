@@ -1,8 +1,8 @@
 +++
 date = "2016-11-03T00:45:05+05:30"
 title = "Object.create()"
-next = "/js/Object.defineProperties"
-prev = "/js/JSON.stringify"
+next = "/objects/Object.defineProperties"
+prev = "/objects/JSON.stringify"
 toc = true
 weight = 9
 

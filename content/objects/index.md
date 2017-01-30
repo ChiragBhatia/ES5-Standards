@@ -2,8 +2,8 @@
 chapter = true
 date = "2016-10-01T00:44:16+05:30"
 icon = "<b>1. </b>"
-next = "/js/Array.isArray"
-prev = "/js/"
+next = "/objects/Array.isArray"
+prev = "/objects/"
 title = "ES5 Objects"
 weight = 0
 

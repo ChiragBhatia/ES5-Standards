@@ -1,8 +1,8 @@
 +++
 date = "2016-11-02T00:45:05+05:30"
 title = "Object.defineProperties()"
-next = "/js/Object.defineProperty"
-prev = "/js/Object.create"
+next = "/objects/Object.defineProperty"
+prev = "/objects/Object.create"
 toc = true
 weight = 10
 

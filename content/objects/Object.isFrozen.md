@@ -1,8 +1,8 @@
 +++
 date = "2016-11-04T00:45:05+05:30"
 title = "Object.isFrozen()"
-next = "/js/Object.isSealed"
-prev = "/js/Object.isExtensible"
+next = "/objects/Object.isSealed"
+prev = "/objects/Object.isExtensible"
 toc = true
 weight = 15
 

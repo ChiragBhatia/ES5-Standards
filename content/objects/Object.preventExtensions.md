@@ -1,8 +1,8 @@
 +++
 date = "2016-11-04T00:45:05+05:30"
 title = "Object.preventExtensions()"
-next = "/js/Object.preventExtensions"
-prev = "/js/Object.keys"
+next = "/objects/Object.preventExtensions"
+prev = "/objects/Object.keys"
 toc = true
 weight = 18
 

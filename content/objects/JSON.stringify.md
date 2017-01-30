@@ -1,8 +1,8 @@
 +++
 date = "2016-11-16T00:45:05+05:30"
 title = "JSON.parse()"
-next = "/js/Object.create"
-prev = "/js/JSON.parse"
+next = "/objects/Object.create"
+prev = "/objects/JSON.parse"
 toc = true
 weight = 8
 

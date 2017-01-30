@@ -1,8 +1,8 @@
 +++
 date = "2016-11-11T00:45:05+05:30"
 title = "Array.prototype.some()"
-next = "/js/JSON.parse"
-prev = "/js/Array.prototype.reduceRight"
+next = "/objects/JSON.parse"
+prev = "/objects/Array.prototype.reduceRight"
 toc = true
 weight = 6
 

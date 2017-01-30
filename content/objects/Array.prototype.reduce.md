@@ -1,8 +1,8 @@
 +++
 date = "2016-11-11T00:45:05+05:30"
 title = "Array.prototype.reduce()"
-next = "/js/Array.prototype.reduceRight"
-prev = "/js/Array.prototype.filter"
+next = "/objects/Array.prototype.reduceRight"
+prev = "/objects/Array.prototype.filter"
 toc = true
 weight = 4
 
