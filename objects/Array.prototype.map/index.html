@@ -10,7 +10,7 @@
     <link rel="shortcut icon" href="/images/favicon.png" type="image/x-icon" />
 
     
-    <title>Object.keys()</title>
+    <title>Array.prototype.map()</title>
     <link href="https://chiragbhatia.github.io/ES5-Standards//css/nucleus.css" rel="stylesheet">
     <link href="https://chiragbhatia.github.io/ES5-Standards//css/font-awesome.min.css" rel="stylesheet">
     <link href="https://chiragbhatia.github.io/ES5-Standards//css/hybrid.css" rel="stylesheet">
@@ -25,7 +25,7 @@
     
 <link href="https://chiragbhatia.github.io/ES5-Standards//css/custom.css" rel="stylesheet">
   </head>
-  <body class="" data-url="/ES5-Standards/objects/Object.keys/">
+  <body class="" data-url="/ES5-Standards/objects/Array.prototype.map/">
     <nav id="sidebar">
   <div id="header-wrapper">
     <div id="header">
@@ -118,7 +118,7 @@
           
           
           
-            <li class="dd-item " data-nav-id="/ES5-Standards/objects/Array.prototype.map/">
+            <li class="dd-item active" data-nav-id="/ES5-Standards/objects/Array.prototype.map/">
               <a href="/ES5-Standards/objects/Array.prototype.map/">
                 <span>Array.prototype.map()     </i></span>
               </a>
@@ -278,7 +278,7 @@
           
           
           
-            <li class="dd-item active" data-nav-id="/ES5-Standards/objects/Object.keys/">
+            <li class="dd-item " data-nav-id="/ES5-Standards/objects/Object.keys/">
               <a href="/ES5-Standards/objects/Object.keys/">
                 <span>Object.keys()     </i></span>
               </a>
@@ -357,7 +357,7 @@
                     
                   
                 
-                <span itemprop="title"> Object.keys()</span>
+                <span itemprop="title"> Array.prototype.map()</span>
               </div>
               
                   <div class="progress">
@@ -372,39 +372,51 @@
             
     	        <div id="body-inner">
                 
-                <h1>Object.keys()</h1>
+                <h1>Array.prototype.map()</h1>
                 
 
-<p>Object.keys() returns an array whose elements are strings corresponding to the enumerable properties found directly upon object. The ordering of the properties is the same as that given by looping over the properties of the object manually.</p>
+<p>The Array.prototype.map() method creates a new array with the results of calling a provided function on every element in this array.</p>
 
-<h3>Need for this</h3>
-The Object.keys() method returns an array of a given object's own enumerable properties, in the same order as that provided by a for...in loop (the difference being that a for-in loop enumerates properties in the prototype chain as well). This can be useful when iterating through the keys and values of a JavaScript object.
+<p><h3>Need for this</h3>
+map calls a provided callback function once for each element in an array, in order, and constructs a new array from the results. callback is invoked only for indexes of the array which have assigned values, including undefined. It is not called for missing elements of the array (that is, indexes that have never been set, which have been deleted or which have never been assigned a value).</p>
 
-<h3>Disadvantage</h3>
+<p>callback is invoked with three arguments: the value of the element, the index of the element, and the Array object being traversed.</p>
+
+<p>If a thisArg parameter is provided to map, it will be passed to callback when invoked, for use as its this value. Otherwise, the value undefined will be passed for use as its this value. The this value ultimately observable by callback is determined according to the usual rules for determining the this seen by a function.</p>
+
+<p><h3>Disadvantage</h3>
 <ol>
-  <li>Object.keys might behave slightly differently in different browser versions due to minor changes in ES6. In ES5, if the argument to this method is not an object (a primitive, like string), then it will cause a TypeError. In ES6, a non-object argument will be coerced to an object.</li>
-</ol>
+  <li>Array.prototype.map() method does not mutate the array on which it is called (although callback, if invoked, may do so).</li>
+  <li>The range of elements processed by map is set before the first invocation of callback. Elements which are appended to the array after the call to map begins will not be visited by callback. If existing elements of the array are changed, their value as passed to callback will be the value at the time map visits them. Elements that are deleted after the call to map begins and before being visited are not visited.</li>
+</ol></p>
 
-<h3>Advantages</h3>
+<p><h3>Advantages</h3>
 <ol>
-  <li>for-in loops over the object's own enumerable properties and the enumerable properties of its prototype (and its prototype, etc.). Object.keys only lists the object's own enumerable properties.</li>
-    <li>Working polyfills are available for older environments if the developer is required to support older browser versions which do not have support for Object.keys.</li>
-</ol>
+    <li>Due to the algorithm defined in the specification if the array which map was called upon is sparse, resulting array will also be sparse keeping same indices blank.</li>
+    <li>Using map to reformat objects in an array</li>
+</ol></p>
 
-<h3>Working Example</h3>
+<p><h3>Working Example</h3></p>
 
-<pre><code>    var arr = ['a', 'b', 'c'];
-    console.log(Object.keys(arr)); // console: ['0', '1', '2']
+<pre><code class="language-javascript">var numbers = [1, 5, 10, 15];
+var roots = numbers.map(function(x) {
+   return x * 2;
+});
+// roots is now [2, 10, 20, 30]
+// numbers is still [1, 5, 10, 15]
 
-    // array like object
-    var an_obj = { 100: 'a', 2: 'b', 7: 'c' };
-    console.log(Object.keys(an_obj)); // console: ['2', '7', '100']
+var numbers = [1, 4, 9];
+var roots = numbers.map(Math.sqrt);
+// roots is now [1, 2, 3]
+// numbers is still [1, 4, 9]
 </code></pre>
 
 <p><h3>References</h3>
-<a href="https://developer.mozilla.org/en/docs/Web/JavaScript/Reference/Global_Objects/Object/keys">https://developer.mozilla.org/en/docs/Web/JavaScript/Reference/Global_Objects/Object/keys</a>
+<a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Array/map">https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Array/map</a>
 <br>
-<a href="http://stackoverflow.com/questions/29004314/why-are-object-keys-and-for-in-different">http://stackoverflow.com/questions/29004314/why-are-object-keys-and-for-in-different</a></p>
+<a href="https://msdn.microsoft.com/en-us/library/ff679973(v=vs.94).aspx">https://msdn.microsoft.com/en-us/library/ff679973(v=vs.94).aspx</a>
+<br>
+<a href="https://www.tutorialspoint.com/javascript/array_map.htm">https://www.tutorialspoint.com/javascript/array_map.htm</a></p>
 
 
       
@@ -413,8 +425,8 @@ The Object.keys() method returns an array of a given object's own enumerable pro
 
     <div id="navigation">
         
-        <a class="nav nav-prev" href="https://chiragbhatia.github.io/ES5-Standards//objects/Object.isSealed"> <i class="fa fa-chevron-left"></i></a>
-        <a class="nav nav-next" href="https://chiragbhatia.github.io/ES5-Standards//objects/Object.preventExtensions" style="margin-right: 0px;"><i class="fa fa-chevron-right"></i></a>
+        <a class="nav nav-prev" href="https://chiragbhatia.github.io/ES5-Standards//objects/Array.prototype.lastIndexOf"> <i class="fa fa-chevron-left"></i></a>
+        <a class="nav nav-next" href="https://chiragbhatia.github.io/ES5-Standards//objects/Array.prototype.reduce" style="margin-right: 0px;"><i class="fa fa-chevron-right"></i></a>
     </div>
 
     </section>

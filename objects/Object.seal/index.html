@@ -10,7 +10,7 @@
     <link rel="shortcut icon" href="/images/favicon.png" type="image/x-icon" />
 
     
-    <title>Object.keys()</title>
+    <title>Object.seal()</title>
     <link href="https://chiragbhatia.github.io/ES5-Standards//css/nucleus.css" rel="stylesheet">
     <link href="https://chiragbhatia.github.io/ES5-Standards//css/font-awesome.min.css" rel="stylesheet">
     <link href="https://chiragbhatia.github.io/ES5-Standards//css/hybrid.css" rel="stylesheet">
@@ -25,7 +25,7 @@
     
 <link href="https://chiragbhatia.github.io/ES5-Standards//css/custom.css" rel="stylesheet">
   </head>
-  <body class="" data-url="/ES5-Standards/objects/Object.keys/">
+  <body class="" data-url="/ES5-Standards/objects/Object.seal/">
     <nav id="sidebar">
   <div id="header-wrapper">
     <div id="header">
@@ -278,7 +278,7 @@
           
           
           
-            <li class="dd-item active" data-nav-id="/ES5-Standards/objects/Object.keys/">
+            <li class="dd-item " data-nav-id="/ES5-Standards/objects/Object.keys/">
               <a href="/ES5-Standards/objects/Object.keys/">
                 <span>Object.keys()     </i></span>
               </a>
@@ -294,7 +294,7 @@
           
           
           
-            <li class="dd-item " data-nav-id="/ES5-Standards/objects/Object.seal/">
+            <li class="dd-item active" data-nav-id="/ES5-Standards/objects/Object.seal/">
               <a href="/ES5-Standards/objects/Object.seal/">
                 <span>Object.seal()     </i></span>
               </a>
@@ -357,7 +357,7 @@
                     
                   
                 
-                <span itemprop="title"> Object.keys()</span>
+                <span itemprop="title"> Object.seal()</span>
               </div>
               
                   <div class="progress">
@@ -372,39 +372,73 @@
             
     	        <div id="body-inner">
                 
-                <h1>Object.keys()</h1>
+                <h1>Object.seal()</h1>
                 
 
-<p>Object.keys() returns an array whose elements are strings corresponding to the enumerable properties found directly upon object. The ordering of the properties is the same as that given by looping over the properties of the object manually.</p>
+<p>The Object.seal() method seals an object, preventing new properties from being added to it and marking all existing properties as non-configurable. Values of present properties can still be changed as long as they are writable.</p>
 
-<h3>Need for this</h3>
-The Object.keys() method returns an array of a given object's own enumerable properties, in the same order as that provided by a for...in loop (the difference being that a for-in loop enumerates properties in the prototype chain as well). This can be useful when iterating through the keys and values of a JavaScript object.
+<p><h3>Need for this</h3>
+By default, objects are extensible (new properties can be added to them). Sealing an object prevents new properties from being added and marks all existing properties as non-configurable. This has the effect of making the set of properties on the object fixed and immutable. Making all properties non-configurable also prevents them from being converted from data properties to accessor properties and vice versa, but it does not prevent the values of data properties from being changed. Attempting to delete or add properties to a sealed object, or to convert a data property to accessor or vice versa, will fail, either silently or by throwing a TypeError (most commonly, although not exclusively, when in strict mode code).</p>
 
-<h3>Disadvantage</h3>
+<p>The prototype chain remains untouched. However, the <strong>proto</strong>  property is sealed as well.</p>
+
+<p><h3>Advantages</h3>
 <ol>
-  <li>Object.keys might behave slightly differently in different browser versions due to minor changes in ES6. In ES5, if the argument to this method is not an object (a primitive, like string), then it will cause a TypeError. In ES6, a non-object argument will be coerced to an object.</li>
-</ol>
+  <li>Makes the object non-extensible, so that new properties cannot be added to it.</li>
+  <li>Sets the configurable attribute to false for all properties of the object.</li>
+  <li>When the configurable attribute is false, property attributes cannot be changed and the property cannot be deleted. When configurable is false and writable is true, the value and writable attributes can be changed.
+The Object.seal function does not change the writable attribute.
+For more information about how to set property attributes, see Object.defineProperty Function (JavaScript). To get the attributes of a property, you can use the Object.getOwnPropertyDescriptor Function (JavaScript).</li>
+</ol></p>
 
-<h3>Advantages</h3>
-<ol>
-  <li>for-in loops over the object's own enumerable properties and the enumerable properties of its prototype (and its prototype, etc.). Object.keys only lists the object's own enumerable properties.</li>
-    <li>Working polyfills are available for older environments if the developer is required to support older browser versions which do not have support for Object.keys.</li>
-</ol>
+<p><h3>Working Example</h3></p>
 
-<h3>Working Example</h3>
+<pre><code class="language-javascript">var obj = {
+  prop: function() {},
+  foo: 'bar'
+};
 
-<pre><code>    var arr = ['a', 'b', 'c'];
-    console.log(Object.keys(arr)); // console: ['0', '1', '2']
+// New properties may be added, existing properties may be changed or removed.
+obj.foo = 'baz';
+obj.lumpy = 'woof';
+delete obj.prop;
 
-    // array like object
-    var an_obj = { 100: 'a', 2: 'b', 7: 'c' };
-    console.log(Object.keys(an_obj)); // console: ['2', '7', '100']
+var o = Object.seal(obj);
+
+o === obj; // true
+Object.isSealed(obj); // === true
+
+// Changing property values on a sealed object still works.
+obj.foo = 'quux';
+
+// But you can't convert data properties to accessors, or vice versa.
+Object.defineProperty(obj, 'foo', { get: function() { return 'g'; } }); // throws a TypeError
+
+// Now any changes, other than to property values, will fail.
+obj.quaxxor = 'the friendly duck'; // silently doesn't add the property
+delete obj.foo; // silently doesn't delete the property
+
+// ...and in strict mode such attempts will throw TypeErrors.
+function fail() {
+  'use strict';
+  delete obj.foo; // throws a TypeError
+  obj.sparky = 'arf'; // throws a TypeError
+}
+fail();
+
+// Attempted additions through Object.defineProperty will also throw.
+Object.defineProperty(obj, 'ohai', { value: 17 }); // throws a TypeError
+Object.defineProperty(obj, 'foo', { value: 'eit' }); // changes existing property value
 </code></pre>
 
 <p><h3>References</h3>
-<a href="https://developer.mozilla.org/en/docs/Web/JavaScript/Reference/Global_Objects/Object/keys">https://developer.mozilla.org/en/docs/Web/JavaScript/Reference/Global_Objects/Object/keys</a>
-<br>
-<a href="http://stackoverflow.com/questions/29004314/why-are-object-keys-and-for-in-different">http://stackoverflow.com/questions/29004314/why-are-object-keys-and-for-in-different</a></p>
+<a href="https://developer.mozilla.org/en/docs/Web/JavaScript/Reference/Global_Objects/Object/seal">https://developer.mozilla.org/en/docs/Web/JavaScript/Reference/Global_Objects/Object/seal</a>
+<br />
+<a href="https://msdn.microsoft.com/da-dk/library/ff806192(v=vs.94).aspx">https://msdn.microsoft.com/da-dk/library/ff806192(v=vs.94).aspx</a>
+<br/>
+<a href="https://www.safaribooksonline.com/library/view/javascript-the-definitive/9781449393854/rn01re165.html">https://www.safaribooksonline.com/library/view/javascript-the-definitive/9781449393854/rn01re165.html</a>
+<br/>
+<a href="http://www.2ality.com/2013/08/protecting-objects.html">http://www.2ality.com/2013/08/protecting-objects.html</a></p>
 
 
       
@@ -413,8 +447,8 @@ The Object.keys() method returns an array of a given object's own enumerable pro
 
     <div id="navigation">
         
-        <a class="nav nav-prev" href="https://chiragbhatia.github.io/ES5-Standards//objects/Object.isSealed"> <i class="fa fa-chevron-left"></i></a>
-        <a class="nav nav-next" href="https://chiragbhatia.github.io/ES5-Standards//objects/Object.preventExtensions" style="margin-right: 0px;"><i class="fa fa-chevron-right"></i></a>
+        <a class="nav nav-prev" href="https://chiragbhatia.github.io/ES5-Standards//objects/Object.preventExtensions"> <i class="fa fa-chevron-left"></i></a>
+        <a class="nav nav-next" href="https://chiragbhatia.github.io/ES5-Standards//objects/StrictMode" style="margin-right: 0px;"><i class="fa fa-chevron-right"></i></a>
     </div>
 
     </section>

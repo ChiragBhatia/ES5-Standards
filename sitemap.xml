@@ -17,6 +17,26 @@
   </url>
   
   <url>
+    <loc>https://chiragbhatia.github.io/ES5-Standards/objects/Array.prototype.forEach/</loc>
+    <lastmod>2016-11-16T00:45:05+05:30</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://chiragbhatia.github.io/ES5-Standards/objects/Array.prototype.indexOf/</loc>
+    <lastmod>2016-11-16T00:45:05+05:30</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://chiragbhatia.github.io/ES5-Standards/objects/Array.prototype.lastIndexOf/</loc>
+    <lastmod>2016-11-16T00:45:05+05:30</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://chiragbhatia.github.io/ES5-Standards/objects/Array.prototype.map/</loc>
+    <lastmod>2016-11-16T00:45:05+05:30</lastmod>
+  </url>
+  
+  <url>
     <loc>https://chiragbhatia.github.io/ES5-Standards/objects/Array.prototype.reduce/</loc>
     <lastmod>2016-11-11T00:45:05+05:30</lastmod>
   </url>
@@ -29,6 +49,26 @@
   <url>
     <loc>https://chiragbhatia.github.io/ES5-Standards/objects/Array.prototype.some/</loc>
     <lastmod>2016-11-11T00:45:05+05:30</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://chiragbhatia.github.io/ES5-Standards/objects/Date.now/</loc>
+    <lastmod>2017-01-30T00:45:05+05:30</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://chiragbhatia.github.io/ES5-Standards/objects/Date.prototype.toISOString/</loc>
+    <lastmod>2017-01-30T00:45:05+05:30</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://chiragbhatia.github.io/ES5-Standards/objects/Date.prototype.toJSON/</loc>
+    <lastmod>2017-01-30T00:45:05+05:30</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://chiragbhatia.github.io/ES5-Standards/objects/Function.prototype.bind/</loc>
+    <lastmod>2017-01-30T00:45:05+05:30</lastmod>
   </url>
   
   <url>
@@ -67,6 +107,16 @@
   </url>
   
   <url>
+    <loc>https://chiragbhatia.github.io/ES5-Standards/objects/Object.getOwnPropertyNames/</loc>
+    <lastmod>2016-11-17T00:45:05+05:30</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://chiragbhatia.github.io/ES5-Standards/objects/Object.getProtoypeOf/</loc>
+    <lastmod>2016-11-17T00:45:05+05:30</lastmod>
+  </url>
+  
+  <url>
     <loc>https://chiragbhatia.github.io/ES5-Standards/objects/Object.isExtensible/</loc>
     <lastmod>2016-11-02T00:45:05+05:30</lastmod>
   </url>
@@ -92,33 +142,18 @@
   </url>
   
   <url>
-    <loc>https://chiragbhatia.github.io/ES5-Standards/objects/Date.now/</loc>
-    <lastmod>2017-01-20T00:45:05+05:30</lastmod>
+    <loc>https://chiragbhatia.github.io/ES5-Standards/objects/Object.seal/</loc>
+    <lastmod>2016-11-17T00:45:05+05:30</lastmod>
   </url>
   
   <url>
-    <loc>https://chiragbhatia.github.io/ES5-Standards/objects/Date.prototype.toISOString/</loc>
-    <lastmod>2017-01-20T00:45:05+05:30</lastmod>
-  </url>
-  
-  <url>
-    <loc>https://chiragbhatia.github.io/ES5-Standards/objects/Date.prototype.toJSON/</loc>
-    <lastmod>2017-01-20T00:45:05+05:30</lastmod>
-  </url>
-  
-  <url>
-    <loc>https://chiragbhatia.github.io/ES5-Standards/objects/Function.prototype.bind/</loc>
-    <lastmod>2017-01-20T00:45:05+05:30</lastmod>
-  </url>
-  
-  <url>
-    <loc>https://chiragbhatia.github.io/ES5-Standards/objects/strict%20mode/</loc>
-    <lastmod>2017-01-20T00:45:05+05:30</lastmod>
+    <loc>https://chiragbhatia.github.io/ES5-Standards/objects/StrictMode/</loc>
+    <lastmod>2017-01-30T00:45:05+05:30</lastmod>
   </url>
   
   <url>
     <loc>https://chiragbhatia.github.io/ES5-Standards/objects/String.prototype.trim/</loc>
-    <lastmod>2017-01-20T00:45:05+05:30</lastmod>
+    <lastmod>2017-01-30T00:45:05+05:30</lastmod>
   </url>
   
   <url>
@@ -134,7 +169,7 @@
   
   <url>
     <loc>https://chiragbhatia.github.io/ES5-Standards/objects/</loc>
-    <lastmod>2017-01-20T00:45:05+05:30</lastmod>
+    <lastmod>2016-10-01T00:44:16+05:30</lastmod>
     <priority>0</priority>
   </url>
   

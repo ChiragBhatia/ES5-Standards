@@ -10,7 +10,7 @@
     <link rel="shortcut icon" href="/images/favicon.png" type="image/x-icon" />
 
     
-    <title>Object.keys()</title>
+    <title>Array.prototype.lastIndexOf</title>
     <link href="https://chiragbhatia.github.io/ES5-Standards//css/nucleus.css" rel="stylesheet">
     <link href="https://chiragbhatia.github.io/ES5-Standards//css/font-awesome.min.css" rel="stylesheet">
     <link href="https://chiragbhatia.github.io/ES5-Standards//css/hybrid.css" rel="stylesheet">
@@ -25,7 +25,7 @@
     
 <link href="https://chiragbhatia.github.io/ES5-Standards//css/custom.css" rel="stylesheet">
   </head>
-  <body class="" data-url="/ES5-Standards/objects/Object.keys/">
+  <body class="" data-url="/ES5-Standards/objects/Array.prototype.lastIndexOf/">
     <nav id="sidebar">
   <div id="header-wrapper">
     <div id="header">
@@ -110,7 +110,7 @@
           
           
           
-            <li class="dd-item " data-nav-id="/ES5-Standards/objects/Array.prototype.lastIndexOf/">
+            <li class="dd-item active" data-nav-id="/ES5-Standards/objects/Array.prototype.lastIndexOf/">
               <a href="/ES5-Standards/objects/Array.prototype.lastIndexOf/">
                 <span>Array.prototype.lastIndexOf     </i></span>
               </a>
@@ -278,7 +278,7 @@
           
           
           
-            <li class="dd-item active" data-nav-id="/ES5-Standards/objects/Object.keys/">
+            <li class="dd-item " data-nav-id="/ES5-Standards/objects/Object.keys/">
               <a href="/ES5-Standards/objects/Object.keys/">
                 <span>Object.keys()     </i></span>
               </a>
@@ -357,7 +357,7 @@
                     
                   
                 
-                <span itemprop="title"> Object.keys()</span>
+                <span itemprop="title"> Array.prototype.lastIndexOf</span>
               </div>
               
                   <div class="progress">
@@ -372,39 +372,59 @@
             
     	        <div id="body-inner">
                 
-                <h1>Object.keys()</h1>
+                <h1>Array.prototype.lastIndexOf</h1>
                 
 
-<p>Object.keys() returns an array whose elements are strings corresponding to the enumerable properties found directly upon object. The ordering of the properties is the same as that given by looping over the properties of the object manually.</p>
+<p>The index of the last occurrence of searchElement in the array, or -1 if searchElement is not found.</p>
 
-<h3>Need for this</h3>
-The Object.keys() method returns an array of a given object's own enumerable properties, in the same order as that provided by a for...in loop (the difference being that a for-in loop enumerates properties in the prototype chain as well). This can be useful when iterating through the keys and values of a JavaScript object.
+<p><h3>Need for this</h3>
+The lastIndexOf method searches an array for a specified value. The method returns the index of the first occurrence, or -1 if the specified value is not found.</p>
 
-<h3>Disadvantage</h3>
+<p><h3>Disadvantage</h3>
 <ol>
-  <li>Object.keys might behave slightly differently in different browser versions due to minor changes in ES6. In ES5, if the argument to this method is not an object (a primitive, like string), then it will cause a TypeError. In ES6, a non-object argument will be coerced to an object.</li>
-</ol>
+  <li>The search occurs in descending index order (last member first). To search in ascending order, use the indexOf Method (Array) (JavaScript).</li>
+</ol></p>
 
-<h3>Advantages</h3>
+<p><h3>Advantages</h3>
 <ol>
-  <li>for-in loops over the object's own enumerable properties and the enumerable properties of its prototype (and its prototype, etc.). Object.keys only lists the object's own enumerable properties.</li>
-    <li>Working polyfills are available for older environments if the developer is required to support older browser versions which do not have support for Object.keys.</li>
-</ol>
+    <li>The array elements are compared to the searchElement value by strict equality, similar to the comparison made by the === operator. For more information, see Comparison Operators (JavaScript).</li>
+    <li>The optional fromIndex argument specifies the array index at which to begin the search. If fromIndex is greater than or equal to the array length, the whole array is searched. If fromIndex is negative, the search starts at the array length plus fromIndex. If the computed index is less than 0, -1 is returned.</li>
+</ol></p>
 
-<h3>Working Example</h3>
+<p><h3>Working Example</h3></p>
 
-<pre><code>    var arr = ['a', 'b', 'c'];
-    console.log(Object.keys(arr)); // console: ['0', '1', '2']
+<pre><code class="language-javascript">
+// Create an array.
+var ar = [&quot;ab&quot;, &quot;cd&quot;, &quot;ef&quot;, &quot;ab&quot;, &quot;cd&quot;];
 
-    // array like object
-    var an_obj = { 100: 'a', 2: 'b', 7: 'c' };
-    console.log(Object.keys(an_obj)); // console: ['2', '7', '100']
+// Determine the first location, in descending order, of &quot;cd&quot;.
+document.write(ar.lastIndexOf(&quot;cd&quot;) + &quot;&lt;br/&gt;&quot;);
+
+// Output: 4
+
+// Find &quot;cd&quot; in descending order, starting at index 2.
+document.write(ar.lastIndexOf(&quot;cd&quot;, 2) + &quot;&lt;br/&gt;&quot;);
+
+// Output: 1
+
+// Search for &quot;gh&quot; (which is not found).
+document.write(ar.lastIndexOf(&quot;gh&quot;)+ &quot;&lt;br/&gt;&quot;);
+
+// Output: -1
+
+// Find &quot;ab&quot; with a fromIndex argument of -3.
+// The search in descending order starts at index 3,
+// which is the array length minus 2.
+document.write(ar.lastIndexOf(&quot;ab&quot;, -3) + &quot;&lt;br/&gt;&quot;);
+// Output: 0
 </code></pre>
 
 <p><h3>References</h3>
-<a href="https://developer.mozilla.org/en/docs/Web/JavaScript/Reference/Global_Objects/Object/keys">https://developer.mozilla.org/en/docs/Web/JavaScript/Reference/Global_Objects/Object/keys</a>
+<a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Array/lastIndexOf">https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Array/lastIndexOf</a>
 <br>
-<a href="http://stackoverflow.com/questions/29004314/why-are-object-keys-and-for-in-different">http://stackoverflow.com/questions/29004314/why-are-object-keys-and-for-in-different</a></p>
+<a href="https://msdn.microsoft.com/en-us/library/ff679972(v=VS.94).aspx">https://msdn.microsoft.com/en-us/library/ff679972(v=VS.94).aspx</a>
+<br>
+<a href="https://github.com/FreeCodeCamp/FreeCodeCamp/wiki/JS-Array-Prototype-LastIndexOf">https://github.com/FreeCodeCamp/FreeCodeCamp/wiki/JS-Array-Prototype-LastIndexOf</a></p>
 
 
       
@@ -413,8 +433,8 @@ The Object.keys() method returns an array of a given object's own enumerable pro
 
     <div id="navigation">
         
-        <a class="nav nav-prev" href="https://chiragbhatia.github.io/ES5-Standards//objects/Object.isSealed"> <i class="fa fa-chevron-left"></i></a>
-        <a class="nav nav-next" href="https://chiragbhatia.github.io/ES5-Standards//objects/Object.preventExtensions" style="margin-right: 0px;"><i class="fa fa-chevron-right"></i></a>
+        <a class="nav nav-prev" href="https://chiragbhatia.github.io/ES5-Standards//objects/Array.prototype.indexOf"> <i class="fa fa-chevron-left"></i></a>
+        <a class="nav nav-next" href="https://chiragbhatia.github.io/ES5-Standards//objects/Array.prototype.map" style="margin-right: 0px;"><i class="fa fa-chevron-right"></i></a>
     </div>
 
     </section>

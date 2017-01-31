@@ -10,7 +10,7 @@
     <link rel="shortcut icon" href="/images/favicon.png" type="image/x-icon" />
 
     
-    <title>Object.keys()</title>
+    <title>Array.prototype.indexOf()</title>
     <link href="https://chiragbhatia.github.io/ES5-Standards//css/nucleus.css" rel="stylesheet">
     <link href="https://chiragbhatia.github.io/ES5-Standards//css/font-awesome.min.css" rel="stylesheet">
     <link href="https://chiragbhatia.github.io/ES5-Standards//css/hybrid.css" rel="stylesheet">
@@ -25,7 +25,7 @@
     
 <link href="https://chiragbhatia.github.io/ES5-Standards//css/custom.css" rel="stylesheet">
   </head>
-  <body class="" data-url="/ES5-Standards/objects/Object.keys/">
+  <body class="" data-url="/ES5-Standards/objects/Array.prototype.indexOf/">
     <nav id="sidebar">
   <div id="header-wrapper">
     <div id="header">
@@ -102,7 +102,7 @@
           
           
           
-            <li class="dd-item " data-nav-id="/ES5-Standards/objects/Array.prototype.indexOf/">
+            <li class="dd-item active" data-nav-id="/ES5-Standards/objects/Array.prototype.indexOf/">
               <a href="/ES5-Standards/objects/Array.prototype.indexOf/">
                 <span>Array.prototype.indexOf()     </i></span>
               </a>
@@ -278,7 +278,7 @@
           
           
           
-            <li class="dd-item active" data-nav-id="/ES5-Standards/objects/Object.keys/">
+            <li class="dd-item " data-nav-id="/ES5-Standards/objects/Object.keys/">
               <a href="/ES5-Standards/objects/Object.keys/">
                 <span>Object.keys()     </i></span>
               </a>
@@ -357,7 +357,7 @@
                     
                   
                 
-                <span itemprop="title"> Object.keys()</span>
+                <span itemprop="title"> Array.prototype.indexOf()</span>
               </div>
               
                   <div class="progress">
@@ -372,39 +372,69 @@
             
     	        <div id="body-inner">
                 
-                <h1>Object.keys()</h1>
+                <h1>Array.prototype.indexOf()</h1>
                 
 
-<p>Object.keys() returns an array whose elements are strings corresponding to the enumerable properties found directly upon object. The ordering of the properties is the same as that given by looping over the properties of the object manually.</p>
+<p>Returns the index of the first occurrence of a value in an array.</p>
 
 <h3>Need for this</h3>
-The Object.keys() method returns an array of a given object's own enumerable properties, in the same order as that provided by a for...in loop (the difference being that a for-in loop enumerates properties in the prototype chain as well). This can be useful when iterating through the keys and values of a JavaScript object.
-
-<h3>Disadvantage</h3>
-<ol>
-  <li>Object.keys might behave slightly differently in different browser versions due to minor changes in ES6. In ES5, if the argument to this method is not an object (a primitive, like string), then it will cause a TypeError. In ES6, a non-object argument will be coerced to an object.</li>
-</ol>
+Array.prototype.indexOf() compares searchElement to elements of the Array using strict equality (the same method used by the === or triple-equals operator).
 
 <h3>Advantages</h3>
 <ol>
-  <li>for-in loops over the object's own enumerable properties and the enumerable properties of its prototype (and its prototype, etc.). Object.keys only lists the object's own enumerable properties.</li>
-    <li>Working polyfills are available for older environments if the developer is required to support older browser versions which do not have support for Object.keys.</li>
+    <li>To locate values in an array.</li>
+    <li>Finding all the occurrences of an element</li>
+    <li>Finding if an element exists in the array or not and updating the array</li>
 </ol>
 
 <h3>Working Example</h3>
 
-<pre><code>    var arr = ['a', 'b', 'c'];
-    console.log(Object.keys(arr)); // console: ['0', '1', '2']
+<pre><code class="language-javascript">
+//Example 1
+var array = [2, 9, 9];
+array.indexOf(2);     // 0
+array.indexOf(7);     // -1
+array.indexOf(9, 2);  // 2
+array.indexOf(2, -1); // -1
+array.indexOf(2, -3); // 0
 
-    // array like object
-    var an_obj = { 100: 'a', 2: 'b', 7: 'c' };
-    console.log(Object.keys(an_obj)); // console: ['2', '7', '100']
+//Example 2
+//Finding all the occurrences of an element
+var indices = [];
+var array = ['a', 'b', 'a', 'c', 'a', 'd'];
+var element = 'a';
+var idx = array.indexOf(element);
+while (idx != -1) {
+  indices.push(idx);
+  idx = array.indexOf(element, idx + 1);
+}
+console.log(indices);
+// [0, 2, 4
+
+//Example 3
+//Finding if an element exists in the array or not and updating the array
+function updateVegetablesCollection (veggies, veggie) {
+    if (veggies.indexOf(veggie) === -1) {
+        veggies.push(veggie);
+        console.log('New veggies collection is : ' + veggies);
+    } else if (veggies.indexOf(veggie) &gt; -1) {
+        console.log(veggie + ' already exists in the veggies collection.');
+    }
+}
+
+var veggies = ['potato', 'tomato', 'chillies', 'green-pepper'];
+
+updateVegetablesCollection(veggies, 'spinach'); 
+// New veggies collection is : potato,tomato,chillies,green-papper,spinach
+updateVegetablesCollection(veggies, 'spinach'); 
+// spinach already exists in the veggies collection.
+
 </code></pre>
 
 <p><h3>References</h3>
-<a href="https://developer.mozilla.org/en/docs/Web/JavaScript/Reference/Global_Objects/Object/keys">https://developer.mozilla.org/en/docs/Web/JavaScript/Reference/Global_Objects/Object/keys</a>
+<a href="https://developer.mozilla.org/en/docs/Web/JavaScript/Reference/Global_Objects/Array/indexOf">https://developer.mozilla.org/en/docs/Web/JavaScript/Reference/Global_Objects/Array/indexOf</a>
 <br>
-<a href="http://stackoverflow.com/questions/29004314/why-are-object-keys-and-for-in-different">http://stackoverflow.com/questions/29004314/why-are-object-keys-and-for-in-different</a></p>
+<a href="https://msdn.microsoft.com/en-us/library/ff679977(v=vs.94).aspx">https://msdn.microsoft.com/en-us/library/ff679977(v=vs.94).aspx</a></p>
 
 
       
@@ -413,8 +443,8 @@ The Object.keys() method returns an array of a given object's own enumerable pro
 
     <div id="navigation">
         
-        <a class="nav nav-prev" href="https://chiragbhatia.github.io/ES5-Standards//objects/Object.isSealed"> <i class="fa fa-chevron-left"></i></a>
-        <a class="nav nav-next" href="https://chiragbhatia.github.io/ES5-Standards//objects/Object.preventExtensions" style="margin-right: 0px;"><i class="fa fa-chevron-right"></i></a>
+        <a class="nav nav-prev" href="https://chiragbhatia.github.io/ES5-Standards//objects/Array.prototype.forEach"> <i class="fa fa-chevron-left"></i></a>
+        <a class="nav nav-next" href="https://chiragbhatia.github.io/ES5-Standards//objects/Array.prototype.lastIndexoF" style="margin-right: 0px;"><i class="fa fa-chevron-right"></i></a>
     </div>
 
     </section>
