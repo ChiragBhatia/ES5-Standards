@@ -2,7 +2,7 @@
 date = "2016-11-11T00:45:05+05:30"
 title = "Array.prototype.reduce()"
 next = "/objects/Array.prototype.reduceRight"
-prev = "/objects/Array.prototype.filter"
+prev = "/objects/Array.prototype.map"
 toc = true
 weight = 4
 

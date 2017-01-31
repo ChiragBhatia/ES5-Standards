@@ -1,7 +1,7 @@
 +++
 date = "2016-11-17T00:45:05+05:30"
 title = "Object.getOwnPropertyDescriptor()"
-next = "/objects/Object.isExtensible"
+next = "/objects/Object.getOwnPropertyName"
 prev = "/objects/Object.freeze"
 toc = true
 weight = 13
