@@ -2,9 +2,9 @@
 date = "2017-01-30T00:45:05+05:30"
 title = "Date.now()"
 next = "/objects/Date.prototype.toISOString"
-prev = "/objects/String.prototype.trim"
+prev = "/objects/Array.prototype.some"
 toc = true
-weight = 21
+weight = 11
 
 +++
 

@@ -4,7 +4,7 @@ title = "Object.isFrozen()"
 next = "/objects/Object.isSealed"
 prev = "/objects/Object.isExtensible"
 toc = true
-weight = 15
+weight = 26
 
 +++
 

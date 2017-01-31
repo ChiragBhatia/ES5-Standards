@@ -1,10 +1,10 @@
 +++
 date = "2017-01-30T00:45:05+05:30"
 title = "Function.prototype.bind()"
-next = "/objects/String.prototype.trim"
-prev = "/objects/Array.prototype.some"
+next = "/objects/index"
+prev = "/objects/Date.prototype.toJSON"
 toc = true
-weight = 19
+weight = 14
 
 +++
 

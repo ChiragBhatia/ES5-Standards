@@ -1,10 +1,10 @@
 +++
 date = "2016-11-04T00:45:05+05:30"
 title = "Object.preventExtensions()"
-next = "/objects/Object.preventExtensions"
+next = "/objects/Object.seal"
 prev = "/objects/Object.keys"
 toc = true
-weight = 18
+weight = 29
 
 +++
 

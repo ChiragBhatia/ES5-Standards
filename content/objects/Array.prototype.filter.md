@@ -1,7 +1,7 @@
 +++
 date = "2016-11-16T00:45:05+05:30"
 title = "Array.prototype.filter()"
-next = "/objects/Array.prototype.reduce"
+next = "/objects/Array.prototype.forEach"
 prev = "/objects/Array.prototype.every"
 toc = true
 weight = 3

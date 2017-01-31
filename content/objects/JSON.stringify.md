@@ -4,7 +4,7 @@ title = "JSON.parse()"
 next = "/objects/Object.create"
 prev = "/objects/JSON.parse"
 toc = true
-weight = 8
+weight = 17
 
 +++
 

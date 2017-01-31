@@ -4,7 +4,7 @@ title = "Object.create()"
 next = "/objects/Object.defineProperties"
 prev = "/objects/JSON.stringify"
 toc = true
-weight = 9
+weight = 18
 
 +++
 

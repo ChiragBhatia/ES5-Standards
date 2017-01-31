@@ -2,9 +2,9 @@
 date = "2016-11-11T00:45:05+05:30"
 title = "JSON.parse()"
 next = "/objects/JSON.stringify"
-prev = "/objects/Array.prototype.some"
+prev = "/objects/index"
 toc = true
-weight = 7
+weight = 16
 
 +++
 

@@ -2,10 +2,10 @@
 chapter = true
 date = "2016-10-01T00:44:16+05:30"
 icon = "<b>1. </b>"
-next = "/objects/Array.isArray"
-prev = "/objects/"
+next = "/objects/JSON.parse"
+prev = "/objects/Function.prototype.bind"
 title = "ES5 Objects"
-weight = 0
+weight = 15
 
 +++
 

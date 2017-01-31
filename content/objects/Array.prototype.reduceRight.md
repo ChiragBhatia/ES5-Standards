@@ -4,7 +4,7 @@ title = "Array.prototype.reduceRight()"
 next = "/objects/Array.prototype.some"
 prev = "/objects/Array.prototype.reduce"
 toc = true
-weight = 5
+weight = 9
 
 +++
 

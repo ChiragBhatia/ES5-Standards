@@ -4,7 +4,7 @@ title = "Object.freeze()"
 next = "/objects/Object.getOwnPropertyDescriptor"
 prev = "/objects/Object.defineProperty"
 toc = true
-weight = 12
+weight = 21
 
 +++
 

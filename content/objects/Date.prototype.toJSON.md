@@ -1,10 +1,10 @@
 +++
 date = "2017-01-30T00:45:05+05:30"
 title = "Date.prototype.toJSON()"
-next = "/objects/strictmode"
+next = "/objects/Function.prototype.bind"
 prev = "/objects/Date.prototype.toISOString"
 toc = true
-weight = 23
+weight = 13
 
 +++
 

@@ -4,7 +4,7 @@ title = "Object.getPrototypeOf()"
 next = "/objects/Object.isExtensible"
 prev = "/objects/Object.getOwnPropertyNames"
 toc = true
-weight = 13
+weight = 24
 
 +++
 

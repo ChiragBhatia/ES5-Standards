@@ -4,7 +4,7 @@ title = "Array.prototype.reduce()"
 next = "/objects/Array.prototype.reduceRight"
 prev = "/objects/Array.prototype.map"
 toc = true
-weight = 4
+weight = 8
 
 +++
 

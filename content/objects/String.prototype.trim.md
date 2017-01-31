@@ -1,10 +1,10 @@
 +++
 date = "2017-01-30T00:45:05+05:30"
 title = "String.prototype.trim()"
-next = "/objects/Date.now"
-prev = "/objects/Function.prototype.bind"
+next = "/objects/String.prototype.trim"
+prev = "/objects/strictmode"
 toc = true
-weight = 20
+weight = 32
 
 +++
 

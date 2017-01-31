@@ -4,7 +4,7 @@ title = "Date.prototype.toISOString()"
 next = "/objects/Date.prototype.toJSON"
 prev = "/objects/Date.now"
 toc = true
-weight = 22
+weight = 12
 
 +++
 

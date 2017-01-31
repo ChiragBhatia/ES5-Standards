@@ -2,9 +2,9 @@
 date = "2016-11-02T00:45:05+05:30"
 title = "Object.isExtensible()"
 next = "/objects/Object.isFrozen"
-prev = "/objects/Object.getOwnPrototypeOf"
+prev = "/objects/Object.getPrototypeOf"
 toc = true
-weight = 14
+weight = 25
 
 +++
 

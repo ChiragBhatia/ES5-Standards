@@ -1,10 +1,10 @@
 +++
 date = "2016-11-11T00:45:05+05:30"
 title = "Array.prototype.some()"
-next = "/objects/JSON.parse"
+next = "/objects/Date.now"
 prev = "/objects/Array.prototype.reduceRight"
 toc = true
-weight = 6
+weight = 10
 
 +++
 

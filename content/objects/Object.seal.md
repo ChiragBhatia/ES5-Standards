@@ -4,7 +4,7 @@ title = "Object.seal()"
 next = "/objects/strictmode"
 prev = "/objects/Object.preventExtensions"
 toc = true
-weight = 13
+weight = 30
 
 +++
 

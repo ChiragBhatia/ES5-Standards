@@ -1,10 +1,10 @@
 +++
 date = "2016-11-17T00:45:05+05:30"
 title = "Object.getOwnPropertyDescriptor()"
-next = "/objects/Object.getOwnPropertyName"
+next = "/objects/Object.getOwnPropertyNames"
 prev = "/objects/Object.freeze"
 toc = true
-weight = 13
+weight = 22
 
 +++
 
