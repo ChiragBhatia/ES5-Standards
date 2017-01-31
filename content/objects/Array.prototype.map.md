@@ -30,7 +30,7 @@ If a thisArg parameter is provided to map, it will be passed to callback when in
 </ol>
 
 <h3>Working Example</h3>
-
+```javascript
 var numbers = [1, 5, 10, 15];
 var roots = numbers.map(function(x) {
    return x * 2;
@@ -42,7 +42,7 @@ var numbers = [1, 4, 9];
 var roots = numbers.map(Math.sqrt);
 // roots is now [1, 2, 3]
 // numbers is still [1, 4, 9]
-
+```
 <h3>References</h3>
 https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Array/map
 <br>
