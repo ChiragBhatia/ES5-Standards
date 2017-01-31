@@ -22,6 +22,7 @@ This method permits examination of the precise description of a property. A prop
 </ol>
 
 <h3>Working Example</h3>
+```javascript
 // Create a user-defined object.
 var obj = {};
 
@@ -49,7 +50,7 @@ for (var prop in desc2) {
 // writable: false
 // enumerable: true
 // configurable: true
-
+```
 <h3>References</h3>
 https://developer.mozilla.org/en/docs/Web/JavaScript/Reference/Global_Objects/Object/getOwnPropertyDescriptor
 <br />

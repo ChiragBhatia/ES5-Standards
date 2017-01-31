@@ -27,9 +27,11 @@ Additionally, it makes it far easier to backport to old implementations since yo
 </ol>
 
 <h3>Working Example</h3>
+```javascript
 var proto = {};
 var obj = Object.create(proto);
 Object.getPrototypeOf(obj) === proto; // true
+```
 
 <h3>References</h3>
 https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Object/getPrototypeOf

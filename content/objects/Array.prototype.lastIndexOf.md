@@ -25,6 +25,7 @@ The lastIndexOf method searches an array for a specified value. The method retur
 </ol>
 
 <h3>Working Example</h3>
+```javascript
 
 // Create an array.
 var ar = ["ab", "cd", "ef", "ab", "cd"];
@@ -49,6 +50,7 @@ document.write(ar.lastIndexOf("gh")+ "<br/>");
 // which is the array length minus 2.
 document.write(ar.lastIndexOf("ab", -3) + "<br/>");
 // Output: 0
+```
 
 <h3>References</h3>
 https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Array/lastIndexOf

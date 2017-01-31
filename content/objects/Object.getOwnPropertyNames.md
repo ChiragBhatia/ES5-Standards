@@ -20,6 +20,7 @@ Object.getOwnPropertyNames() returns an array whose elements are strings corresp
 </ol>
 
 <h3>Working Example</h3>
+```javascript
 var arr = ['a', 'b', 'c'];
 console.log(Object.getOwnPropertyNames(arr).sort()); 
 // logs ["0", "1", "2", "length"]
@@ -49,7 +50,7 @@ my_obj.foo = 1;
 
 console.log(Object.getOwnPropertyNames(my_obj).sort()); 
 // logs ["foo", "getFoo"]
-
+```
 <h3>Exceptions</h3>
 If the value supplied for the object argument is not the name of an object, a TypeError exception is thrown.
 

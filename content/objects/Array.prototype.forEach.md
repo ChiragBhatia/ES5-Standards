@@ -38,18 +38,19 @@ forEach() executes the callback function once for each array element; unlike map
 </ol>
 
 <h3>Working Example</h3>
+```javascript
+function logArrayElements(element, index, array) {
+	console.log('a[' + index + '] = ' + element);
+}
 
-	function logArrayElements(element, index, array) {
-  	console.log('a[' + index + '] = ' + element);
-	}
-
-	// Notice that index 2 is skipped since there is no item at
-	// that position in the array.
-	[2, 5, , 9].forEach(logArrayElements);
-	// logs:
-	// a[0] = 2
-	// a[1] = 5
-	// a[3] = 9
+// Notice that index 2 is skipped since there is no item at
+// that position in the array.
+[2, 5, , 9].forEach(logArrayElements);
+// logs:
+// a[0] = 2
+// a[1] = 5
+// a[3] = 9
+```
 
 <h3>References</h3>
 https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Array/forEach

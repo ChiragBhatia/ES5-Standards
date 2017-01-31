@@ -25,6 +25,7 @@ For more information about how to set property attributes, see Object.defineProp
 </ol>
 
 <h3>Working Example</h3>
+```javascript
 var obj = {
   prop: function() {},
   foo: 'bar'
@@ -61,6 +62,7 @@ fail();
 // Attempted additions through Object.defineProperty will also throw.
 Object.defineProperty(obj, 'ohai', { value: 17 }); // throws a TypeError
 Object.defineProperty(obj, 'foo', { value: 'eit' }); // changes existing property value
+```
 
 <h3>References</h3>
 https://developer.mozilla.org/en/docs/Web/JavaScript/Reference/Global_Objects/Object/seal
