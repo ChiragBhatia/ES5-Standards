@@ -22,6 +22,8 @@ Array.prototype.indexOf() compares searchElement to elements of the Array using 
 
 <h3>Working Example</h3>
 
+```javascript
+
     //Example 1
     var array = [2, 9, 9];
     array.indexOf(2);     // 0
@@ -54,12 +56,14 @@ Array.prototype.indexOf() compares searchElement to elements of the Array using 
         }
     }
 
-var veggies = ['potato', 'tomato', 'chillies', 'green-pepper'];
+    var veggies = ['potato', 'tomato', 'chillies', 'green-pepper'];
 
-updateVegetablesCollection(veggies, 'spinach'); 
-// New veggies collection is : potato,tomato,chillies,green-papper,spinach
-updateVegetablesCollection(veggies, 'spinach'); 
-// spinach already exists in the veggies collection.
+    updateVegetablesCollection(veggies, 'spinach'); 
+    // New veggies collection is : potato,tomato,chillies,green-papper,spinach
+    updateVegetablesCollection(veggies, 'spinach'); 
+    // spinach already exists in the veggies collection.
+
+```
 
 <h3>References</h3>
 https://developer.mozilla.org/en/docs/Web/JavaScript/Reference/Global_Objects/Array/indexOf
