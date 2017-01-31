@@ -1,7 +1,7 @@
 +++
 date = "2017-01-30T00:45:05+05:30"
 title = "Function.prototype.bind()"
-next = "/objects/index"
+next = "/objects/JSON.parse"
 prev = "/objects/Date.prototype.toJSON"
 toc = true
 weight = 14

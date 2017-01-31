@@ -4,7 +4,7 @@ title = "Object.defineProperties()"
 next = "/objects/Object.defineProperty"
 prev = "/objects/Object.create"
 toc = true
-weight = 19
+weight = 18
 
 +++
 

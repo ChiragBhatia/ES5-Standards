@@ -4,7 +4,7 @@ title = "Strict Mode"
 next = "/objects/strictmode"
 prev = "/objects/Date.prototype.toJSON"
 toc = true
-weight = 31
+weight = 30
 
 +++
 

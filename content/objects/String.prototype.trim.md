@@ -2,9 +2,9 @@
 date = "2017-01-30T00:45:05+05:30"
 title = "String.prototype.trim()"
 next = "/objects/String.prototype.trim"
-prev = "/objects/strictmode"
+prev = "/objects/StrictMode"
 toc = true
-weight = 32
+weight = 31
 
 +++
 

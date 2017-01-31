@@ -4,7 +4,7 @@ title = "Object.getOwnPropertyNames()"
 next = "/objects/Object.getPrototypeOf"
 prev = "/objects/Object.getOwnPropertyDescriptor"
 toc = true
-weight = 23
+weight = 22
 
 +++
 

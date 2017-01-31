@@ -4,7 +4,7 @@ title = "Object.defineProperty()"
 next = "/objects/Object.freeze"
 prev = "/objects/Object.defineProperties"
 toc = true
-weight = 20
+weight = 19
 
 +++
 

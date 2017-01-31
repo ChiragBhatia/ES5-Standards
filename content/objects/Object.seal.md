@@ -1,10 +1,10 @@
 +++
 date = "2016-11-17T00:45:05+05:30"
 title = "Object.seal()"
-next = "/objects/strictmode"
+next = "/objects/StrictMode"
 prev = "/objects/Object.preventExtensions"
 toc = true
-weight = 30
+weight = 29
 
 +++
 

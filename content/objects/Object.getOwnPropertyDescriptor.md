@@ -4,7 +4,7 @@ title = "Object.getOwnPropertyDescriptor()"
 next = "/objects/Object.getOwnPropertyNames"
 prev = "/objects/Object.freeze"
 toc = true
-weight = 22
+weight = 21
 
 +++
 

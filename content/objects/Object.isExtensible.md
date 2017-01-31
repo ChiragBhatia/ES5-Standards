@@ -4,7 +4,7 @@ title = "Object.isExtensible()"
 next = "/objects/Object.isFrozen"
 prev = "/objects/Object.getPrototypeOf"
 toc = true
-weight = 25
+weight = 24
 
 +++
 
